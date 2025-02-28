@@ -1,4 +1,4 @@
-baseURL = 'https://jfryusef.link/'
+baseURL = 'https://jopen.jfryusef.workers.dev/'
 languageCode = 'en-us'
 title = 'jopen'
 theme = 'terminal'

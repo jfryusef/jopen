@@ -1,0 +1,4 @@
+baseURL = 'https://jfryusef.link/'
+languageCode = 'en-us'
+title = 'jopen'
+theme = 'terminal'

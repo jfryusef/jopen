@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on jopen</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on jopen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Feb 2025 23:48:24 +0330</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tagtest1</title>
+      <link>http://localhost:1313/tags/tagtest1/</link>
+      <pubDate>Fri, 28 Feb 2025 23:48:24 +0330</pubDate>
+      
+      <guid>http://localhost:1313/tags/tagtest1/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Tagtest2</title>
+      <link>http://localhost:1313/tags/tagtest2/</link>
+      <pubDate>Fri, 28 Feb 2025 23:48:24 +0330</pubDate>
+      
+      <guid>http://localhost:1313/tags/tagtest2/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>

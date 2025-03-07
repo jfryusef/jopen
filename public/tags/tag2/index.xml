@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag2 on jopen</title>
+    <link>https://jfryusef.link/tags/tag2/</link>
+    <description>Recent content in Tag2 on jopen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Mar 2025 12:41:37 +0330</lastBuildDate><atom:link href="https://jfryusef.link/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>https://jfryusef.link/posts/hello-world/</link>
+      <pubDate>Fri, 07 Mar 2025 12:41:37 +0330</pubDate>
+      
+      <guid>https://jfryusef.link/posts/hello-world/</guid>
+      <description>&lt;h1 id=&#34;header-1&#34;&gt;header 1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
+&lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
+&lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;header-2&#34;&gt;header 2&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;first item&lt;/li&gt;
+&lt;li&gt;second item&lt;/li&gt;
+&lt;li&gt;third item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; item&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; checked item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;header-3&#34;&gt;header 3&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
+  &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
+  &amp;#34;age&amp;#34;: 22
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;test url&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;header-1&#34;&gt;header 1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
+&lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
+&lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;header-2&#34;&gt;header 2&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;first item&lt;/li&gt;
+&lt;li&gt;second item&lt;/li&gt;
+&lt;li&gt;third item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; item&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; checked item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;header-3&#34;&gt;header 3&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
+  &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
+  &amp;#34;age&amp;#34;: 22
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;test url&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

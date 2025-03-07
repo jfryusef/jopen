@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://jfryusef.link/posts/hello-world/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/posts/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/tag1/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/tag2/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/</loc>
+    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/categories/</loc>
+  </url>
+</urlset>

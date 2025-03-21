@@ -1,3 +1,5 @@
+{{- if (eq (.Site.Params.disableComments | default false) false) -}}
+    {{- if (eq (.Params.disableComments | default false) false) -}}
 <script src="https://giscus.app/client.js"
         data-repo="jfryusef/jopen"
         data-repo-id="R_kgDOOEtP5w"
@@ -14,3 +16,5 @@
         crossorigin="anonymous"
         async>
 </script>
+{{- end -}}
+{{- end -}}

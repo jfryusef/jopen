@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jopen</title>
-    <link>https://jfryusef.link/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on jopen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Mar 2025 12:41:37 +0330</lastBuildDate><atom:link href="https://jfryusef.link/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Mar 2025 12:41:37 +0330</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>https://jfryusef.link/posts/hello-world/</link>
+      <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Fri, 07 Mar 2025 12:41:37 +0330</pubDate>
       
-      <guid>https://jfryusef.link/posts/hello-world/</guid>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <description>&lt;h1 id=&#34;header-1&#34;&gt;header 1&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;

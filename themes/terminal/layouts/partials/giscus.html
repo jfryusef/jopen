@@ -1,6 +1,4 @@
-{{- if (eq (.Site.Params.disableComments | default false) false) -}}
-    {{- if (eq (.Params.hideComments | default false) false) -}}
-    <script src="https://giscus.app/client.js"
+<script src="https://giscus.app/client.js"
         data-repo="jfryusef/jopen"
         data-repo-id="R_kgDOOEtP5w"
         data-category="Comments"
@@ -16,5 +14,3 @@
         crossorigin="anonymous"
         async>
     </script>
-    {{- end -}}
-{{- end -}}

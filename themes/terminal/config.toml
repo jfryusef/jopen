@@ -2,3 +2,41 @@
   [module.hugoVersion]
     extended = true
     min = '0.90.0'
+
+[params]
+  centerTheme = true
+  autoCover = true
+  showLastUpdated = true
+  updatedDatePrefix = "Last update:"
+
+  languageName = "English"
+  title = "title test"
+  
+  subtitle = "subtitle test"
+  owner = ""
+  keywords = ""
+  copyright = "copyright test"
+  menuMore = "Show more"
+  readMore = "Read"
+  readOtherPosts = "Read other posts"
+  newerPosts = "Newer posts"
+  olderPosts = "Older posts"
+  missingContentMessage = "This is not the webpage you're looking for."
+  missingBackButtonLabel = "Back to home page"
+  minuteReadingTime = "min[s] read"
+  words = "word[s]"
+
+[params.logo]
+  logoText = "jopen"
+  logoHomeLink = "/"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+
+  [[menu.main]]
+    identifier = "showcase"
+    name = "Showcase"
+    url = "/showcase"

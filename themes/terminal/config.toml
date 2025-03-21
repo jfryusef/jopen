@@ -35,8 +35,3 @@
     identifier = "about"
     name = "About"
     url = "/about"
-
-  [[menu.main]]
-    identifier = "showcase"
-    name = "Showcase"
-    url = "/showcase"

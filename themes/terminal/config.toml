@@ -35,3 +35,8 @@
     identifier = "about"
     name = "About"
     url = "/about"
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags"

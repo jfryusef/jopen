@@ -113,7 +113,7 @@
   right: 0;
 }
 
-@media (max-width: 684px) {
+@media (max-width: 100px) {
   .navigation-menu {
     margin: 0;
   }

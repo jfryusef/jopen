@@ -5,26 +5,26 @@ date = "2025-03-07T12:41:37+03:30"
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["tag1", "tag2"]
-keywords = ["keyword1", "keyword2"]
-description = "this is a test for description"
+tags = ["Tag1", "Tag2"]
+keywords = ["KeyWord1", "KeyWord2"]
+description = "This is a test for description"
 showFullContent = false
 readingTime = true
 hideComments = false
 draft = false
 +++
-# header 1
+# Header 1
 - the quick brown fox jumps over the lazy dog
 - THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 - -=`[]\;',./!@#$%^&*()_+~{}|:"<>?
-## header 2
+## Header 2
 > There is **pee** without *poop*, ==but there may not be poop without "p"==.
-1. first item
-2. second item
-3. third item
-- [ ] item
-- [x] checked item
-### header 3
+1. First item
+2. Second item
+3. Third item
+- [ ] Item
+- [x] Checked item
+### Header 3
 ```
 {
   "firstName": "yusef",
@@ -33,4 +33,4 @@ draft = false
 }
 ```
 ---
-[test url](https://www.jfryusef.link)
+[Test URL](https://www.jfryusef.link)

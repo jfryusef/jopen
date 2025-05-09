@@ -1,42 +1,47 @@
 [module]
-  [module.hugoVersion]
-    extended = true
-    min = '0.90.0'
+[module.hugoVersion]
+extended = true
+min = '0.90.0'
 
 [params]
-  centerTheme = true
-  autoCover = true
-  showLastUpdated = true
-  updatedDatePrefix = "Updated on"
+centerTheme = true
+autoCover = true
+showLastUpdated = true
+updatedDatePrefix = "Updated on"
 
-  languageName = "English"
-  title = "title test"
-  
-  subtitle = "To Learn In Public."
-  owner = ""
-  keywords = ""
-  copyright = "copyright test"
-  menuMore = "Show more"
-  readMore = "Read"
-  readOtherPosts = "Read other posts"
-  newerPosts = "Newer posts"
-  olderPosts = "Older posts"
-  missingContentMessage = "This is not the webpage you're looking for."
-  missingBackButtonLabel = "Back to home page"
-  minuteReadingTime = "min[s] read"
-  words = "word[s]"
+languageName = "English"
+title = "title test"
+
+subtitle = "To Learn In Public."
+owner = ""
+keywords = ""
+copyright = "copyright test"
+menuMore = "Show more"
+readMore = "Read"
+readOtherPosts = "Read other posts"
+newerPosts = "Newer posts"
+olderPosts = "Older posts"
+missingContentMessage = "This is not the webpage you're looking for."
+missingBackButtonLabel = "Back to home page"
+minuteReadingTime = "min[s] read"
+words = "word[s]"
 
 [params.logo]
-  logoText = "jopen"
-  logoHomeLink = "/"
+logoText = "jopen"
+logoHomeLink = "/"
 
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
 
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags"
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags"
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"

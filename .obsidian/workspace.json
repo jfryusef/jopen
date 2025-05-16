@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/hello-world.md",
-                "mode": "source",
+                "file": "content/about/index.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "hello-world"
+              "title": "index"
             }
           }
         ]
@@ -170,8 +170,9 @@
   },
   "active": "1d0970890ee48ea5",
   "lastOpenFiles": [
-    "archetypes/default.md",
     "content/posts/hello-world.md",
+    "archetypes/default.md",
+    "content/posts/image-test.jpg",
     "content/posts/Untitled.md",
     "content/posts/Untitled 1.md",
     "archetypes/Untitled.md",

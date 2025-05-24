@@ -1,5 +1,11 @@
 {
   "newFileLocation": "folder",
   "newFileFolderPath": "content/posts",
-  "livePreview": false
+  "livePreview": false,
+  "propertiesInDocument": "visible",
+  "readableLineLength": true,
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "attachmentFolderPath": "./",
+  "showInlineTitle": true
 }

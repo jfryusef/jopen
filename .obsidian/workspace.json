@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/about/index.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -168,11 +168,13 @@
   },
   "active": "1752740856867a93",
   "lastOpenFiles": [
-    "content/about/avatar.jpg",
     "content/posts/hello-world.md",
-    "archetypes/default.md",
     "content/about/index.md",
+    "static/images/yusef-portrait.jpg",
+    "content/about/avatar.jpg",
     "content/posts/image-test.jpg",
+    "static/images/avatar.jpg",
+    "archetypes/default.md",
     "themes/terminal/archetypes/posts.md",
     "README.md",
     "content/posts/Untitled.md",

@@ -19,7 +19,7 @@ draft = false
 - the quick brown fox jumps over the lazy dog
 - THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 - -=`[]\;',./!@#$%^&\*()\_+~{}|:"<>?
-  ![alt text test](./images/image-test.jpg)
+  ![alt text test](/images/image-test.jpg)
 
 ## Header 2
 

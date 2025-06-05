@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about/index.md",
+                "file": "content/support/index.md",
                 "mode": "source",
                 "source": true
               },
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/about/index.md",
+                "file": "content/support/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,8 +195,8 @@
   },
   "active": "b6a2e5023e38d341",
   "lastOpenFiles": [
-    "content/posts/hello-world.md",
     "content/about/index.md",
+    "content/posts/hello-world.md",
     "content/support/index.md",
     "static/images/jopen-icon.jpg",
     "static/images/eth-and-usdt-address.jpg",

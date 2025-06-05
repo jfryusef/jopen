@@ -10,6 +10,8 @@ draft = false
 
 If you'd like to support my work with cryptocurrencies:
 
+---
+
 #### Bitcoin (BTC)
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk

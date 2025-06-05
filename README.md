@@ -1,6 +1,6 @@
 
 # Welcome to [jopen](https://jfryusef.link/)
-![jopen-icon](https://github.com/user-attachments/assets/d2107d35-9335-41cb-bf94-a31570455e8b)
+![jopen-icon](https://github.com/user-attachments/assets/049f371f-9417-46b9-934f-e259381bb633)
 ---
 ## What is jopen?
 
@@ -9,7 +9,7 @@ The name "jopen" is made up of the words "jo" (my nickname) and "open" (referrin
 ## Who is behind this?
 ![yusef-portrait](https://github.com/user-attachments/assets/13bea44d-a2b9-4691-8061-3772b7025c21)
 
-My name is yusef. I was born in 2002, and I'm currently an elementary teacher and web designer based in Tehran. I like computers and am passionate about open source concepts (beyond just software)—a geek/nerd, if you will.  
+My name is yusef. I was born in 2002, and I'm currently an elementary teacher and web designer based in Tehran. I like computers and am passionate about open source concepts (beyond just software) - a geek/nerd, if you will.  
 [This is my portfolio/CV](https://jfryusef.work) and you can find me pretty much everywhere on the internet under the username _jfryusef_ and email me [at] gmail [dot] com.
 
 ## Why did I start it?
@@ -22,5 +22,4 @@ I wanted to take notes on the process of my projects, and there was no reason to
 
 ## How can I support it?
 
-You can support me (and therefore jopen) with cryptocurrencies. [Here is the URL](https://www.jfryusef.link/support/) to a page with the QR codes.  
-Thank you for your interest in supporting me financially!
+You can support me (and therefore jopen) with crypto; [Here is the URL](https://www.jfryusef.link/support/) to a page with the addresses - no pressure, just there if you want it.

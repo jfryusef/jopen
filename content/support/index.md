@@ -1,7 +1,16 @@
-# Support
-If you'd like to support my work with crypto:
++++
+title = 'Support me'
+cover = ""
+keywords = ["", ""]
+description = "Support My Work"
+showFullContent = false
+hideComments = false
+draft = false
++++
 
-### Bitcoin (BTC)
+If you'd like to support my work with cryptocurrencies:
+
+#### Bitcoin (BTC)
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 ```
@@ -9,7 +18,7 @@ bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 
 ---
 
-### Ethereum / Tether USDt (ERC20)
+#### Ethereum (ERC20) / Tether USDt (ERC20)
 ```
 0x5B99F9f7C83d54154719C0B74ae06087bcece661
 ```

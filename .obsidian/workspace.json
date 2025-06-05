@@ -13,42 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/hello-world.md",
-                "mode": "preview",
+                "file": "content/about/index.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "hello-world"
-            }
-          },
-          {
-            "id": "946b9c21350be380",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "74fe56f733da6286",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "758392c2415b3ec7",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "index"
             }
           }
         ]
@@ -124,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/hello-world.md",
+                "file": "content/about/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for hello-world"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -192,15 +162,13 @@
       "command-palette:Open command palette": false,
       "templates:Insert template": false,
       "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
       "switcher:Open quick switcher": false,
-      "daily-notes:Open today's daily note": true,
-      "workspaces:Manage workspace layouts": false,
-      "obsidian-git:Open Git source control": false
+      "workspaces:Manage workspace layouts": false
     }
   },
   "active": "1752740856867a93",
   "lastOpenFiles": [
+    "content/about/avatar.jpg",
     "content/posts/hello-world.md",
     "archetypes/default.md",
     "content/about/index.md",

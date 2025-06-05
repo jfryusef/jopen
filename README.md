@@ -1,6 +1,6 @@
 
 # Welcome to [jopen](https://jfryusef.link/)
-![jopen-icon](https://github.com/user-attachments/assets/d2107d35-9335-41cb-bf94-a31570455e8b)
+![jopen-icon](https://github.com/user-attachments/assets/049f371f-9417-46b9-934f-e259381bb633)
 ---
 ## What is jopen?
 
@@ -22,5 +22,4 @@ I wanted to take notes on the process of my projects, and there was no reason to
 
 ## How can I support it?
 
-You can support me (and therefore jopen) with cryptocurrencies. [Here is the URL](https://www.jfryusef.link/support/) to a page with the QR codes.  
-Thank you for your interest in supporting me financially!
+You can support me (and therefore jopen) with crypto; [Here is the URL](https://www.jfryusef.link/support/) to a page with the addresses - no pressure, just there if you want it.

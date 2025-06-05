@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/about/index.md",
-                "mode": "preview",
+                "file": "content/support/index.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/about/index.md",
+                "file": "content/support/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,8 +168,10 @@
   },
   "active": "1752740856867a93",
   "lastOpenFiles": [
-    "content/posts/hello-world.md",
     "content/about/index.md",
+    "content/support/index.md",
+    "content/support",
+    "content/posts/hello-world.md",
     "static/images/yusef-portrait.jpg",
     "content/about/avatar.jpg",
     "content/posts/image-test.jpg",

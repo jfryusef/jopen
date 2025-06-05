@@ -31,5 +31,5 @@ I wanted to take notes on the process of my projects, and there was no reason to
 
 ## How can I support it?
 
-You can support me (and therefore jopen) with cryptocurrencies. [Here is the URL](https://www.jfryusef.work/support/) to a page with the QR codes.  
+You can support me (and therefore jopen) with cryptocurrencies. [Here is the URL](https://www.jfryusef.link/support/) to a page with the QR codes.  
 Thank you for your interest in supporting me financially!

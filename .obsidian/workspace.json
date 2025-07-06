@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/how-i-made-jopen.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -169,8 +169,9 @@
   },
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
-    "static/images/{5A0DCB7C-9A3E-41AA-8980-D7B99C22548C}.png",
-    "static/images/Screenshot_6-7-2025_2314_github.com.jpeg",
+    "static/images/jopen-vault-ScreenShot.png",
+    "static/images/btc-address.jpg",
+    "static/images/GitHub-Discussions-ScreenShot.jpeg",
     "content/posts/how-i-made-jopen.md",
     "static/images/yusef-portrait.jpg",
     "static/images/image-test.jpg",
@@ -179,7 +180,6 @@
     "content/about/index.md",
     "content/support/index.md",
     "static/images/eth-and-usdt-address.jpg",
-    "static/images/btc-address.jpg",
     "content/support",
     "content/about/avatar.jpg",
     "content/posts/image-test.jpg",

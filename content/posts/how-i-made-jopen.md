@@ -10,7 +10,7 @@ description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
 hideComments = false
-draft = true
+draft = false
 +++
 
 jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, *To Learn In Public*.
@@ -90,7 +90,7 @@ url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
 
 I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on jopen's GitHub repo (so I can use Giscus in step F).
 
-![alt text](/images/Screenshot_6-7-2025_2314_github.com.jpeg)
+![GitHub repository's Discussions screenshot](/images/GitHub-Discussions-ScreenShot.jpeg)
 
 #### D. Deploying via Cloudflare Pages
 

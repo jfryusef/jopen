@@ -27,7 +27,7 @@ I wanted to take notes on the process of my projects, and there was no reason to
 
 #### How did I make it?
 
-[Here](https://jfryusef.link/posts/how-did-i-make-jopen/) is a whole post about how this blog works. But basically, I built it using [Hugo](https://gohugo.io/).
+[Here](https://jfryusef.link/posts/how-i-made-jopen/) is a whole post about how this blog works. But basically, it works using Markdown and [Git](https://git-scm.com/).
 
 #### How can I support it?
 

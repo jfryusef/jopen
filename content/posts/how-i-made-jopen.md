@@ -115,7 +115,7 @@ And here is the list of the community plugins that I use:
 
 ![alt text](/images/%7B5A0DCB7C-9A3E-41AA-8980-D7B99C22548C%7D.png)
 
-And here's the metadata I include in almost every post I write:
+And here's the metadata for this post:
 
 ```
 +++
@@ -123,12 +123,11 @@ title = "How I made jopen?"
 date = "2025-06-20T13:41:37+03:30"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
-cover = "images/"
-tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website"]
+tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
-draft = true # Until a post is finished
+draft = true # Until the post is finished
 +++
 ```
 

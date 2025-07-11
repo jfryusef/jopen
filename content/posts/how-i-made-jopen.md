@@ -18,18 +18,6 @@ I don't like bloated CMSs. This stack is cheap, open-source, and lets me focus o
 
 Here's how I made it:
 
-**Table of Content**
-
-- [Tools](#tools)
-- [Setup](#setup)
-		- [A. Buying a domain](#a-buying-a-domain)
-		- [B. Hugo site and Terminal theme](#b-hugo-site-and-terminal-theme)
-		- [C. Creating a Git Repository and connecting to GitHub](#c-creating-a-git-repository-and-connecting-to-github)
-		- [D. Deploying via Cloudflare Pages](#d-deploying-via-cloudflare-pages)
-		- [E. Setting up Obsidian](#e-setting-up-obsidian)
-		- [F. Enabling Giscus](#f-enabling-giscus)
-
-
 ---
 
 ## Tools
@@ -122,7 +110,6 @@ And here is the list of the community plugins that I use:
 
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) - to control and adjust theme, plugin, and snippet CSS variables
 - [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) - to change the colors, fonts and features of [Mininmal Theme](https://github.com/kepano/obsidian-minimal)
-- [Table of Contents](https://github.com/hipstersmoothie/obsidian-plugin-toc) - to create a table of contents for a post
 - [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
 - [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 

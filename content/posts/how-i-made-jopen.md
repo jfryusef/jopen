@@ -109,7 +109,7 @@ Here is the list of all the core plugins that are enabled in my vault:
 And here is the list of the community plugins that I use:
 
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) - to control and adjust theme, plugin, and snippet CSS variables
-- [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) - to change the colors, fonts and features of [Mininmal Theme](https://github.com/kepano/obsidian-minimal)
+- [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) - to change the colors, fonts and features of [Minimal Theme](https://github.com/kepano/obsidian-minimal)
 - [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
 - [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 

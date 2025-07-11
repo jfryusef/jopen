@@ -4,7 +4,6 @@ date = "2025-07-06T13:41:37+03:30"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
-cover = "images/"
 tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false

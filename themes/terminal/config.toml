@@ -5,7 +5,7 @@ min = '0.90.0'
 
 [params]
 centerTheme = true
-autoCover = true
+autoCover = false
 showLastUpdated = true
 updatedDatePrefix = "Updated on"
 

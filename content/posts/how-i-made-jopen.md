@@ -20,14 +20,14 @@ Here's how I made it:
 
 **Table of Content**
 
-- [Tools](#Tools)
-- [Setup](#Setup)
-		- [A. Buying a domain](#A.%20Buying%20a%20domain)
-		- [B. Hugo site and Terminal theme](#B.%20Hugo%20site%20and%20Terminal%20theme)
-		- [C. Creating a Git Repository and connecting to GitHub](#C.%20Creating%20a%20Git%20Repository%20and%20connecting%20to%20GitHub)
-		- [D. Deploying via Cloudflare Pages](#D.%20Deploying%20via%20Cloudflare%20Pages)
-		- [E. Setting up Obsidian](#E.%20Setting%20up%20Obsidian)
-		- [F. Enabling Giscus](#F.%20Enabling%20Giscus)
+- [Tools](#tools)
+- [Setup](#setup)
+		- [A. Buying a domain](#a-buying-a-domain)
+		- [B. Hugo site and Terminal theme](#b-hugo-site-and-terminal-theme)
+		- [C. Creating a Git Repository and connecting to GitHub](#c-creating-a-git-repository-and-connecting-to-github)
+		- [D. Deploying via Cloudflare Pages](#d-deploying-via-cloudflare-pages)
+		- [E. Setting up Obsidian](#e-setting-up-obsidian)
+		- [F. Enabling Giscus](#f-enabling-giscus)
 
 
 ---

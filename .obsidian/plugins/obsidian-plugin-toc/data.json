@@ -3,5 +3,6 @@
   "maximumDepth": 6,
   "listStyle": "bullet",
   "useMarkdown": true,
-  "title": "**Table of Content**"
+  "title": "**Table of Content**",
+  "githubCompat": true
 }

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/posts/how-i-made-jopen.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -170,6 +170,7 @@
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
     "static/images/jopen-vault-ScreenShot.png",
+    "static/images/{35E0AE51-380B-4E0F-BA28-6F0BFA9D03DD}.png",
     "static/images/{47C31DF0-BB8B-43E9-86B1-40AFEFB57116}.png",
     "static/images/GitHub-Discussions-ScreenShot.jpeg",
     "static/images/image-test.jpg",
@@ -184,7 +185,6 @@
     "content/support",
     "content/about/avatar.jpg",
     "content/posts/image-test.jpg",
-    "static/images/avatar.jpg",
     "archetypes/default.md",
     "themes/terminal/archetypes/posts.md",
     "README.md",

@@ -113,7 +113,7 @@ And here is the list of the community plugins that I use:
 - [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
 - [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 
-![alt text](/images/%7B5A0DCB7C-9A3E-41AA-8980-D7B99C22548C%7D.png)
+![jopen's Obsidian vault screenshot](/images/jopen-vault-ScreenShot.png)
 
 And here's the metadata for this post:
 

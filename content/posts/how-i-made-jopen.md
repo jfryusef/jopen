@@ -1,6 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
+lastmod = "2025-07-19"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -34,16 +35,17 @@ Every push to GitHub updates the blog via Cloudflare and every comment shows up 
 
 #### A. Buying a domain
 
-This was the only step in which I paid for something, purchasing this .link domain for ~$10 a year. But there were cheaper (even free) options as well.
+This was the only step in which I paid for something, purchasing this `.link` domain for ~$10 a year. But there were cheaper (even free) options as well.
 
 #### B. Hugo site and Terminal theme 
 
-I changed the font to [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) in `/themes/terminal/assets/css/terminal.css`. It's a beautiful, open-source, monospace font and I liked it more than my theme's default font, ([Fira Code](https://fonts.google.com/specimen/Fira+Code)).
+I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#000000` as the background, `#ffffff` as the foreground, and `#00ff7f` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
 
 And here's the list of changes I made to the `/themes/terminal/config.toml` file:
 
 ```toml
 [params]
+customCSS = ["css/terminal.css"]
 centerTheme = true
 showLastUpdated = true
 updatedDatePrefix = "Updated on"
@@ -85,7 +87,7 @@ Added `jfryusef.link` and `www.jfryusef.link` as two custom domains.
 
 #### E. Setting up Obsidian
 
-I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git](https://github.com/Vinzent03/obsidian-git) plugin to work properly.
+I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git plugin](https://github.com/Vinzent03/obsidian-git) to work properly.
 
 Here is the list of all the core plugins that are enabled in my vault:
 
@@ -117,7 +119,7 @@ And here is the list of the community plugins that I use:
 
 And here's the metadata for this post:
 
-```
+```toml
 +++
 title = "How I made jopen?"
 date = "2025-06-20T13:41:37+03:30"

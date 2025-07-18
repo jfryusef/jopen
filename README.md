@@ -1,6 +1,5 @@
 
 # Welcome to [jopen](https://jfryusef.link/)
-![jopen-icon](https://github.com/user-attachments/assets/049f371f-9417-46b9-934f-e259381bb633)
 ---
 ## What is jopen?
 

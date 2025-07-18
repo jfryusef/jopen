@@ -11,14 +11,12 @@
             "id": "efc0574c3175a3c4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "content/posts/how-i-made-jopen.md",
-                "mode": "preview",
-                "source": true
+                "file": "static/images/btc-address.jpg"
               },
-              "icon": "lucide-file",
-              "title": "how-i-made-jopen"
+              "icon": "lucide-image",
+              "title": "btc-address"
             }
           }
         ]
@@ -142,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/how-i-made-jopen.md",
+                "file": "static/images/btc-address.jpg",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of how-i-made-jopen"
+              "title": "Outline of btc-address"
             }
           }
         ],
@@ -169,22 +167,22 @@
   },
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
+    "static/images/eth-and-usdt-address.jpg",
+    "static/images/GitHub-Discussions-ScreenShot.jpeg",
+    "static/images/image-test.jpg",
+    "static/images/jopen-icon.jpg",
+    "static/images/jopen-vault-ScreenShot.png",
+    "static/images/yusef-portrait.jpg",
+    "content/about/index.md",
+    "content/posts/how-i-made-jopen.md",
     "static/css/terminal.css",
     "static/css",
     "static/New folder",
     "content/posts/hello-world.md",
     "content/support/index.md",
-    "content/about/index.md",
-    "content/posts/how-i-made-jopen.md",
-    "static/images/jopen-vault-ScreenShot.png",
     "static/images/{35E0AE51-380B-4E0F-BA28-6F0BFA9D03DD}.png",
     "static/images/{47C31DF0-BB8B-43E9-86B1-40AFEFB57116}.png",
-    "static/images/GitHub-Discussions-ScreenShot.jpeg",
-    "static/images/image-test.jpg",
-    "static/images/jopen-icon.jpg",
     "static/images/btc-address.jpg",
-    "static/images/yusef-portrait.jpg",
-    "static/images/eth-and-usdt-address.jpg",
     "content/support",
     "content/about/avatar.jpg",
     "archetypes/default.md",

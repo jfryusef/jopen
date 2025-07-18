@@ -1,6 +1,5 @@
 +++
 title = 'About jopen'
-cover = "images/jopen-icon.jpg"
 keywords = ["", ""]
 description = "What is jopen?"
 showFullContent = false

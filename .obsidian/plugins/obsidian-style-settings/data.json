@@ -22,10 +22,11 @@
   "minimal-style@@titlebar-text-weight": 100,
   "minimal-style@@image-radius": 0,
   "minimal-style@@tabs-style": "tabs-underline",
-  "minimal-style@@code-normal@@dark": "#FF8000",
-  "minimal-style@@blockquote-border-color@@dark": "#FF8000",
+  "minimal-style@@code-normal@@dark": "#00FF7F",
+  "minimal-style@@blockquote-border-color@@dark": "#00FF7F",
   "minimal-style@@inline-title-size": "2em",
   "minimal-style@@inline-title-weight": 900,
-  "minimal-style@@inline-title-color@@dark": "#FF8000",
-  "minimal-style@@tag-color@@dark": "#FF8000"
+  "minimal-style@@inline-title-color@@dark": "#00FF7F",
+  "minimal-style@@tag-color@@dark": "#00FF7F",
+  "minimal-style@@hl2@@dark": "#00FF7F30"
 }

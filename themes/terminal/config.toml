@@ -4,6 +4,7 @@ extended = true
 min = '0.90.0'
 
 [params]
+customCSS = ["css/terminal.css"]
 centerTheme = true
 autoCover = false
 showLastUpdated = true

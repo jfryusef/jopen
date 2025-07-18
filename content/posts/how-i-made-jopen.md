@@ -123,6 +123,7 @@ And here's the metadata for this post:
 +++
 title = "How I made jopen?"
 date = "2025-06-20T13:41:37+03:30"
+lastmod = "2025-07-19"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]

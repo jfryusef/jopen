@@ -11,12 +11,14 @@
             "id": "efc0574c3175a3c4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "static/images/btc-address.jpg"
+                "file": "content/posts/how-i-made-jopen.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-image",
-              "title": "btc-address"
+              "icon": "lucide-file",
+              "title": "how-i-made-jopen"
             }
           }
         ]
@@ -140,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "static/images/btc-address.jpg",
+                "file": "content/posts/how-i-made-jopen.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of btc-address"
+              "title": "Outline of how-i-made-jopen"
             }
           }
         ],
@@ -167,13 +169,15 @@
   },
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
+    "static/images/jopen-vault-ScreenShot.png",
+    "static/images/{3263BE5F-EEDF-42D4-92E5-5A434CAEF076}.png",
+    "content/about/index.md",
+    "static/images/btc-address.jpg",
     "static/images/eth-and-usdt-address.jpg",
     "static/images/GitHub-Discussions-ScreenShot.jpeg",
     "static/images/image-test.jpg",
     "static/images/jopen-icon.jpg",
-    "static/images/jopen-vault-ScreenShot.png",
     "static/images/yusef-portrait.jpg",
-    "content/about/index.md",
     "content/posts/how-i-made-jopen.md",
     "static/css/terminal.css",
     "static/css",
@@ -182,7 +186,6 @@
     "content/support/index.md",
     "static/images/{35E0AE51-380B-4E0F-BA28-6F0BFA9D03DD}.png",
     "static/images/{47C31DF0-BB8B-43E9-86B1-40AFEFB57116}.png",
-    "static/images/btc-address.jpg",
     "content/support",
     "content/about/avatar.jpg",
     "archetypes/default.md",

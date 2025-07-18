@@ -1,8 +1,6 @@
 
 # Welcome to [jopen](https://jfryusef.link/)
 
----
-
 ## What is jopen?
 
 The name "jopen" is made up of the words "jo" (my nickname) and "open" (referring to its [open-source](https://github.com/jfryusef/jopen) nature). jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them!

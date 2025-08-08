@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/how-i-made-jopen.md",
+                "file": "content/about/index.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "how-i-made-jopen"
+              "title": "index"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/how-i-made-jopen.md",
+                "file": "content/about/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of how-i-made-jopen"
+              "title": "Outline of index"
             }
           }
         ],
@@ -169,9 +169,9 @@
   },
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
+    "content/posts/how-i-made-jopen.md",
     "content/posts/hello-world.md",
     "static/images/jopen-vault-ScreenShot.png",
-    "content/posts/how-i-made-jopen.md",
     "static/images/{3263BE5F-EEDF-42D4-92E5-5A434CAEF076}.png",
     "content/about/index.md",
     "static/images/btc-address.jpg",

@@ -13,20 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/how-i-made-jopen.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "how-i-made-jopen"
-            }
-          },
-          {
-            "id": "33a43ed8ba093091",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "content/posts/x230.md",
                 "mode": "source",
                 "source": true
@@ -35,8 +21,7 @@
               "title": "x230"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/x230.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of x230"
+              "title": "Outline of README"
             }
           }
         ],
@@ -171,10 +156,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "command-palette:Open command palette": false,
       "templates:Insert template": false,
       "graph:Open graph view": false,
@@ -182,13 +169,24 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "33a43ed8ba093091",
+  "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
-    "content/posts/how-i-made-jopen.md",
+    "content/posts/Untitled.base",
+    "content/posts/Untitled 5.base",
+    "content/posts/Untitled 4.base",
+    "content/posts/Untitled 3.base",
+    "content/posts/Untitled 2.base",
+    "content/posts/Untitled 1.base",
     "content/posts/x230.md",
+    "content/posts/how-i-made-jopen.md",
+    "static/images/Screenshot_2025-08-23_02-12-58.png",
+    "static/images/jopen-vault-ScreenShot.png",
+    "content/posts/Pasted image 20250818204552.png",
+    "README.md",
+    "Clippings/راهنمای جامع استفاده و ثبت نام در سامانه املاک و اسکان.md",
+    "Clippings",
     "content/posts/hello-world.md",
     "content/about/index.md",
-    "static/images/jopen-vault-ScreenShot.png",
     "static/images/{3263BE5F-EEDF-42D4-92E5-5A434CAEF076}.png",
     "static/images/btc-address.jpg",
     "static/images/eth-and-usdt-address.jpg",
@@ -200,12 +198,9 @@
     "static/css",
     "static/New folder",
     "content/support/index.md",
-    "static/images/{35E0AE51-380B-4E0F-BA28-6F0BFA9D03DD}.png",
-    "static/images/{47C31DF0-BB8B-43E9-86B1-40AFEFB57116}.png",
     "content/support",
     "archetypes/default.md",
     "themes/terminal/archetypes/posts.md",
-    "README.md",
     "content/posts/Untitled 1.md",
     "archetypes/Untitled.md",
     "Untitled.md",

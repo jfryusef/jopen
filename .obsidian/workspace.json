@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/x230.md",
+                "file": "content/posts/how-i-made-jopen.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "x230"
+              "title": "how-i-made-jopen"
             }
           }
         ]
@@ -35,7 +35,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fafce55adffee9d4",
+            "id": "4864ba3eaff01af5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -161,7 +161,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "command-palette:Open command palette": false,
       "templates:Insert template": false,
       "graph:Open graph view": false,
@@ -171,14 +170,14 @@
   },
   "active": "efc0574c3175a3c4",
   "lastOpenFiles": [
+    "content/posts/how-i-made-jopen.md",
+    "content/posts/x230.md",
     "content/posts/Untitled.base",
     "content/posts/Untitled 5.base",
     "content/posts/Untitled 4.base",
     "content/posts/Untitled 3.base",
     "content/posts/Untitled 2.base",
     "content/posts/Untitled 1.base",
-    "content/posts/x230.md",
-    "content/posts/how-i-made-jopen.md",
     "static/images/Screenshot_2025-08-23_02-12-58.png",
     "static/images/jopen-vault-ScreenShot.png",
     "content/posts/Pasted image 20250818204552.png",
@@ -198,7 +197,6 @@
     "static/css",
     "static/New folder",
     "content/support/index.md",
-    "content/support",
     "archetypes/default.md",
     "themes/terminal/archetypes/posts.md",
     "content/posts/Untitled 1.md",

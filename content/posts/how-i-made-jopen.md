@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-07-19"
+lastmod = "2025-08-27"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -137,6 +137,9 @@ draft = true # Until the post is finished
 #### F. Enabling Giscus
 
 Nothing special. I just enabled comments in almost every page, because why not?
+
+## Update
+Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](https://github.com/yzhang-gh/vscode-markdown) and [this theme](https://github.com/primer/github-vscode-theme) instead of Obsidian for writing posts & local Markdown management. It also has built-in GitHub integration.
 
 ---
 

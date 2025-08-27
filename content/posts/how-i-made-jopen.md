@@ -146,7 +146,7 @@ Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](http
 
 I was using Hugo-friendly absolute web paths (`/images/...`) for images in my posts. That worked fine once Hugo built the site (because Hugo mapped `/images/...` to my site’s `static/images/` directory), But VS Code’s preview didn't know anything about Hugo’s web root; Therefore it was blank in preview.
 So I made a symlink (in my jopen's local directory) so VS Code could see images at `/images/...` as if they were inside my project:
-  ```bash (Linux/macOS)
+  ```bash
   ln -s ./static/images ./images
   ```
 Now VS Code preview follows `/images/...` and Hugo will still work unchanged.

@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-08-27"
+lastmod = "2025-10-04"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -137,6 +137,25 @@ draft = true # Until the post is finished
 #### F. Enabling Giscus
 
 Nothing special. I just enabled comments in almost every page, because why not?
+
+```html
+<script src="https://giscus.app/client.js"
+        data-repo="jfryusef/jopen"
+        data-repo-id="[REPO ID]"
+        data-category="Comments"
+        data-category-id="[CATEGORY ID]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="gruvbox_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+```
 
 ## Update
 

@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-07-19"
+lastmod = "2025-08-27"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -137,6 +137,19 @@ draft = true # Until the post is finished
 #### F. Enabling Giscus
 
 Nothing special. I just enabled comments in almost every page, because why not?
+
+## Update
+
+Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](https://github.com/yzhang-gh/vscode-markdown) and [this theme](https://github.com/primer/github-vscode-theme) instead of Obsidian for writing posts & local Markdown management. It also has built-in GitHub integration.
+
+#### But there was a little problem...
+
+I was using Hugo-friendly absolute web paths (`/images/...`) for images in my posts. That worked fine once Hugo built the site (because Hugo mapped `/images/...` to my site’s `static/images/` directory), But VS Code’s preview didn't know anything about Hugo’s web root; Therefore it was blank in preview.
+So I made a symlink (in my jopen's local directory) so VS Code could see images at `/images/...` as if they were inside my project:
+  ```bash
+  ln -s ./static/images ./images
+  ```
+Now VS Code preview follows `/images/...` and Hugo will still work unchanged.
 
 ---
 

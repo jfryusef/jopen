@@ -140,7 +140,7 @@ Nothing special. I just enabled comments in almost every page, because why not?
 
 ## Update
 
-Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](https://github.com/yzhang-gh/vscode-markdown) and [this theme](https://github.com/primer/github-vscode-theme) instead of Obsidian for writing posts & local Markdown management. It also has built-in GitHub integration.
+Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It also has built-in GitHub integration.
 
 #### But there was a little problem...
 

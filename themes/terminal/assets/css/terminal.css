@@ -1,10 +1,10 @@
-/* JetBrains mono: https://github.com/JetBrains/JetBrainsMono */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* Fira Code: https://github.com/tonsky/FiraCode */
+@import url('https://cdn.staticdelivr.com/gfonts/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --accent: #00ff7f;
+  --background: #282828;
+  --foreground: #ebdbb2;
+  --accent: #689d6a;
   --radius: 0;
   --font-size: 1rem;
   --line-height: 1.54em;

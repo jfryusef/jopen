@@ -39,7 +39,7 @@ This was the only step in which I paid for something, purchasing this `.link` do
 
 #### B. Hugo site and Terminal theme 
 
-I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#000000` as the background, `#ffffff` as the foreground, and `#00ff7f` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
+I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#282828` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
 
 And here's the list of changes I made to the `/themes/terminal/config.toml` file:
 

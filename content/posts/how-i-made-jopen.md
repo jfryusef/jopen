@@ -159,16 +159,7 @@ Nothing special. I just enabled comments in almost every page, because why not?
 
 ## Update
 
-Recently I use [VS Code](https://code.visualstudio.com/) + [this extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It also has built-in GitHub integration.
-
-#### But there was a little problem...
-
-I was using Hugo-friendly absolute web paths (`/images/...`) for images in my posts. That worked fine once Hugo built the site (because Hugo mapped `/images/...` to my site’s `static/images/` directory), But VS Code’s preview didn't know anything about Hugo’s web root; Therefore it was blank in preview.
-So I made a symlink (in my jopen's local directory) so VS Code could see images at `/images/...` as if they were inside my project:
-  ```bash
-  ln -s ./static/images ./images
-  ```
-Now VS Code preview follows `/images/...` and Hugo will still work unchanged.
+Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It has built-in GitHub integration as well.
 
 ---
 

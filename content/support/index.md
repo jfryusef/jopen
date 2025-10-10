@@ -28,4 +28,4 @@ bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 
 ---
 
-Thanks for your support - it's never expected, but always appreciated.
+Thanks for your support <3 It's never expected, but always appreciated.

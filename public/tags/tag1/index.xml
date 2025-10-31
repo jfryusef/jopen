@@ -15,9 +15,9 @@
 <description>
   
   
-  &lt;p&gt;coin battery + thermal paste&lt;/p&gt;
-&lt;p&gt;i7 3rd gen + 8gb ram + 180gb ssd&lt;/p&gt;
-&lt;p&gt;windows 10 ram usage: at least 2gb (25%)&lt;/p&gt;
+  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$65. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (up to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;%25 (2GB)
+&lt;img src=&#34;http://localhost:1313/static/images/x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;coin battery + thermal paste&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://archlinux.org/download/&#34;&gt;https://archlinux.org/download/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

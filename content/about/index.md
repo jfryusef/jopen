@@ -16,8 +16,8 @@ draft = false
 The name "jopen" is made up of the words "jo" (my nickname) and "open" (referring to its [open-source](https://github.com/jfryusef/jopen) nature). jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them!
 
 #### Who is behind this?
-![avatar.jpg](/images/yusef-portrait.jpg)
-I'm yusef. I was born in 2002, and I’m currently a fifth-grade teacher in Tehran (GMT +03:30). Right now I'm trying to self-study computer science in my free time.
+![avatar.jpg](/images/yusef-portrait.jpg)  
+I'm yusef. I was born in 2002, and I’m currently a fifth-grade teacher in Tehran (GMT +03:30). Right now I'm trying to self-study computer science in my free time.  
 [This is my GitHub](https://github.com/jfryusef) and [this is my LinkedIn](https://www.linkedin.com/in/jfryusef4th). You can find me pretty much everywhere on the internet under the username jfryusef and email me [at] gmail [dot] com.
 
 #### Why did I start it?

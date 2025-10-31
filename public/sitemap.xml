@@ -2,26 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/hello-world/</loc>
+    <loc>https://jfryusef.link/tags/arch/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/hardware/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/laptop/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/linux/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/obsidian/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/os/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/posts/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/posts/x230/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/software/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/thinkpad/</loc>
+    <lastmod>2025-10-31T13:41:37+03:30</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/git/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/github/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/posts/how-i-made-jopen/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/hugo/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/jopen/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/markdown/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/tags/website/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://jfryusef.link/posts/hello-world/</loc>
     <lastmod>2025-03-07T12:41:37+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://jfryusef.link/tags/tag1/</loc>
     <lastmod>2025-03-07T12:41:37+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://jfryusef.link/tags/tag2/</loc>
     <lastmod>2025-03-07T12:41:37+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tag1/</loc>
-    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+    <loc>https://jfryusef.link/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/tag2/</loc>
-    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
+    <loc>https://jfryusef.link/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-07T12:41:37+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://jfryusef.link/support/</loc>
   </url>
 </urlset>

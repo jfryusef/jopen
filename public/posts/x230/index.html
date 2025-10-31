@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Setting Up Arch On An Old ThinkPad :: jopen</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How I breathed a new life to a ThinkPad X230 using Arch&#43;XFCE" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://jfryusef.link/posts/x230/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/code.min.628b83582b7e3ce5fbec137a2c22e9dd728066c2a25433bc713f3c02f60e9d0d.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/footer.min.8c9933e331d7110a0f9acb75a25892d17384b06d39ea606c8d8cddc6a885a130.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/main.min.89e1ce68f5ae8bacb023257282bc8b962c837342140e7c122c46b31a39bebc5f.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/menu.min.7481b6e4d15ee5127394018840618e2edbc894d971e2c75f107b200570122f10.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/post.min.aee3bce7973384e650a306992c941e09dc6a1e22f04443c00fefb71a7e9484d2.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/syntax.min.28d2d93e80d9fc88428d8438285537c167ec74544ef064da1cc0313254904b54.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/terminal.min.8a1b3145dbb1be274cd84ea12274f46752c7f81fe5473c61c0bff4a4ad489a59.css">
+
+  
+  <link rel="stylesheet" href="https://jfryusef.link/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://jfryusef.link/favicon.png">
+<link rel="apple-touch-icon" href="https://jfryusef.link/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting Up Arch On An Old ThinkPad">
+<meta property="og:description" content="How I breathed a new life to a ThinkPad X230 using Arch&#43;XFCE" />
+<meta property="og:url" content="https://jfryusef.link/posts/x230/" />
+<meta property="og:site_name" content="jopen" />
+
+  
+  
+  <meta property="og:image" content="https://jfryusef.link/images/x230-cover.jpg">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-10-31 13:41:37 &#43;0330 &#43;0330" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    jopen
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY">Search</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY" >Search</a></li>
+        
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://jfryusef.link/posts/x230/">Setting Up Arch On An Old ThinkPad</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-10-31&nbsp;[Updated on 2025-10-31]</time><span class="post-author">yusef</span><span class="post-reading-time">3 min[s] read (557 word[s])</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://jfryusef.link/tags/thinkpad/">ThinkPad</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/laptop/">Laptop</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/linux/">Linux</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/os/">OS</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/arch/">Arch</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/obsidian/">Obsidian</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/hardware/">Hardware</a>&nbsp;
+      
+      #<a href="https://jfryusef.link/tags/software/">Software</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="https://jfryusef.link/images/x230-cover.jpg"
+    class="post-cover"
+    alt="Setting Up Arch On An Old ThinkPad"
+    title="Cover Image" />
+
+
+  
+
+  <div class="post-content"><div>
+        <p>coin battery + thermal paste</p>
+<p>i7 3rd gen + 8gb ram + 180gb ssd</p>
+<p>windows 10 ram usage: at least 2gb (25%)</p>
+<p><strong><a href="https://archlinux.org/download/">https://archlinux.org/download/</a></strong></p>
+<ul>
+<li>
+<p>Pick any mirror <strong>close to your location</strong> (e.g., Europe, Asia).</p>
+</li>
+<li>
+<p>Download <strong><code>archlinux-YYYY.MM.DD-x86_64.iso</code></strong> (around 900MB).</p>
+</li>
+<li>
+<p>Plug in your USB (4GB+)</p>
+</li>
+<li>
+<p>Open (Rufus)[https://rufus.ie/]</p>
+</li>
+<li>
+<p>Settings:</p>
+<ul>
+<li><strong>Device</strong>: your USB stick</li>
+<li><strong>Boot selection</strong>: <code>archlinux-x86_64.iso</code></li>
+<li><strong>Partition scheme</strong>: <code>GPT</code></li>
+<li><strong>Target system</strong>: <code>UEFI (non-CSM)</code></li>
+</ul>
+</li>
+<li>
+<p>Hit <strong>START</strong>, select <strong>Write in ISO Image Mode (Recommended)</strong> if prompted</p>
+</li>
+</ul>
+<p>set uefi instead of legacy in bios</p>
+<p>iwctl
+device list # find your Wi-Fi device (likely wlan0)
+station wlan0 scan # scan for networks
+station wlan0 get-networks # list available Wi-Fi names
+station wlan0 connect YourWiFiName
+exit
+ping -c3 archlinux.org</p>
+<p>archinstall</p>
+<ul>
+<li><strong>Language/keyboard</strong>: en, us (added persian later in the settings)</li>
+<li>mirror regions (Iran failed at first attempt):
+<ul>
+<li>germany</li>
+<li>netherlands</li>
+<li>sweden</li>
+<li>finland</li>
+</ul>
+</li>
+<li><strong>Disk</strong>: pick your 180 GB SSD</li>
+<li><strong>Disk layout</strong>: “<strong>Erase all</strong>” for a clean install (or “Use best effort” if dual-booting, but that’s riskier)</li>
+<li><strong>Bootloader</strong>: <code>systemd-boot</code></li>
+<li><strong>Filesystem</strong>: <code>ext4</code></li>
+<li><strong>Hostname</strong>: e.g., <code>x230</code></li>
+<li><strong>Root password</strong>: set it</li>
+<li><strong>User account</strong>: add one, tick “<strong>superuser (wheel)</strong>”</li>
+<li><strong>Network</strong>: <code>NetworkManager</code></li>
+<li><strong>Kernel</strong>: <code>linux</code> (plain)</li>
+<li><strong>Microcode</strong>: <code>intel-ucode</code></li>
+<li><strong>Profile</strong>: “<strong>Desktop</strong>” → pick <strong>XFCE4</strong> (light, stable)</li>
+<li><strong>Audio</strong>: <code>pipewire</code> (none for now)</li>
+<li><strong>Optional packages</strong>: added <code>git</code>, <code>firefox</code>, (olptional)</li>
+<li><strong>Timezone/locale</strong>: asia/tehran</li>
+</ul>
+<ol>
+<li>Hit <strong>Install</strong>. When it finishes, <strong>reboot</strong> (remove USB).<br>
+You’re done. Log in, you’ll see XFCE’s login screen.</li>
+</ol>
+<p>sudo pacman -S fwupd
+sudo pacman -S bluez bluez-utils
+sudo pacman -S gvfs gvfs-mtp
+sudo pacman -S thunar-archive-plugin p7zip unzip unrar brightnessctl
+sudo pacman -S pipewire pipewire-pulse wireplumber</p>
+<p>systemctl &ndash;user enable &ndash; now pipewire pipewire-pulse wireplumber
+sudo systemctl enable &ndash;now bluetooth
+sudo timedatectl set-ntp true</p>
+<p>sudo pacman -S blueman</p>
+<p>sudo pacman -S &ndash;needed git base-devel
+git clone <a href="https://aur.archlinux.org/yay.git">https://aur.archlinux.org/yay.git</a>
+cd yay
+makepkg -si</p>
+<table>
+  <thead>
+      <tr>
+          <th>App</th>
+          <th>How to install on Arch</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Obsidian</strong></td>
+          <td><code>yay -S obsidian</code></td>
+      </tr>
+      <tr>
+          <td><strong>VS Code</strong></td>
+          <td><code>yay -S visual-studio-code-bin</code> (or <code>code</code> in repos for OSS build)</td>
+      </tr>
+      <tr>
+          <td><strong>Firefox</strong></td>
+          <td><code>sudo pacman -S firefox</code></td>
+      </tr>
+      <tr>
+          <td><strong>Chrome</strong></td>
+          <td><code>yay -S google-chrome</code></td>
+      </tr>
+      <tr>
+          <td><strong>Calculator</strong></td>
+          <td>Already in XFCE (<code>galculator</code>) or install: <code>sudo pacman -S gnome-calculator</code></td>
+      </tr>
+      <tr>
+          <td><strong>Adobe Acrobat</strong></td>
+          <td>Not on Linux — use <code>yay -S masterpdfeditor-free</code> or <code>evince</code></td>
+      </tr>
+      <tr>
+          <td><strong>Hiddify</strong></td>
+          <td><code>yay -S hiddify-app-bin</code></td>
+      </tr>
+      <tr>
+          <td><strong>OBS Studio</strong></td>
+          <td><code>sudo pacman -S obs-studio</code></td>
+      </tr>
+      <tr>
+          <td><strong>Python 3</strong></td>
+          <td><code>sudo pacman -S python</code></td>
+      </tr>
+      <tr>
+          <td><strong>qBittorrent</strong></td>
+          <td><code>sudo pacman -S qbittorrent</code></td>
+      </tr>
+      <tr>
+          <td><strong>WinRAR</strong></td>
+          <td>Use Linux RAR: <code>yay -S rar</code></td>
+      </tr>
+      <tr>
+          <td><strong>7-Zip File Manager</strong></td>
+          <td><code>sudo pacman -S p7zip</code></td>
+      </tr>
+      <tr>
+          <td>mpv</td>
+          <td>sudo pacman -S mpv</td>
+      </tr>
+      <tr>
+          <td>Hugo</td>
+          <td>sudo pacman -S hugo</td>
+      </tr>
+      <tr>
+          <td>Gpick color picker</td>
+          <td>yay -S gpick</td>
+      </tr>
+  </tbody>
+</table>
+<p>wallpaper</p>
+<p>open sans + jetbrains mono</p>
+<p>Alt+1 : Workspace1
+Alt+2 : Workspace2
+Alt+3 : Workspace3
+Alt+4 : Workspace4</p>
+<p>Super L : ApplicationFinder
+volume steps to 10 percent
+mapped <strong>ThinkVantage</strong> button to logout</p>
+<p>elementary theme for cursor</p>
+<p><img src="/images/Screenshot_2025-08-23_02-12-58.png" alt="Panel"></p>
+<p><strong>Intel GPU driver (<code>i915</code>) hard hang</strong></p>
+<ul>
+<li>Common on Ivy Bridge (HD 4000).</li>
+<li>If GPU lockup is severe enough, it can freeze the whole kernel, not just Xorg.</li>
+<li>Check after reboot:
+journalctl -b -1 | grep -i &ldquo;GPU HANG&rdquo;
+journalctl -b -1 | grep -i i915</li>
+</ul>
+<p><strong>Kernel bug / ACPI / power management</strong></p>
+<ul>
+<li>Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states.</li>
+<li>Fix: add this kernel boot parameter in GRUB:
+intel_idle.max_cstate=1</li>
+</ul>
+<p>man</p>
+<p>arch wiki</p>
+<p>Terminal
+xfce4-terminal
+Alt + T (common default)
+maximize windo: alt+f
+tile left: alt+up<br>
+tile right: alt+down<br>
+tile top-left: alt+pgup<br>
+tile top-right: alt+pgdn<br>
+tile down-left: alt+left<br>
+tile down-right: alt+right</p>
+<p><a href="https://www.xfce-look.org/p/1166289">https://www.xfce-look.org/p/1166289</a></p>
+<p>sudo pacman -S ly
+sudo systemctl disable lightdm.service
+sudo systemctl enable ly.service</p>
+<h2 id="ricing">ricing<a href="#ricing" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>wallpaper
+icons: none
+panel
+gtk theme <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme</a>
+window decorations
+terminal color pallete
+firefox theme
+vs code theme
+obsidian theme (export?)</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    <script src="https://giscus.app/client.js"
+        data-repo="jfryusef/jopen"
+        data-repo-id="R_kgDOOEtP5w"
+        data-category="Comments"
+        data-category-id="DIC_kwDOOEtP584CoVYP"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="gruvbox_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+</footer>
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

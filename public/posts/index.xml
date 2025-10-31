@@ -1,52 +1,412 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
   <channel>
-    <title>Posts on jopen</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on jopen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>jopen</title>
+    <link>https://jfryusef.link/</link>
+    <description>jopen</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Mar 2025 12:41:37 +0330</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <item>
+      <title>Setting Up Arch On An Old ThinkPad</title>
+      <link>https://jfryusef.link/posts/x230/</link>
+      <guid>https://jfryusef.link/posts/x230/</guid>
+      <pubDate>Fri, 31 Oct 2025 13:41:37 &#43;0330</pubDate>
+
+<description>
+  
+  
+  &lt;p&gt;coin battery + thermal paste&lt;/p&gt;
+&lt;p&gt;i7 3rd gen + 8gb ram + 180gb ssd&lt;/p&gt;
+&lt;p&gt;windows 10 ram usage: at least 2gb (25%)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://archlinux.org/download/&#34;&gt;https://archlinux.org/download/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pick any mirror &lt;strong&gt;close to your location&lt;/strong&gt; (e.g., Europe, Asia).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download &lt;strong&gt;&lt;code&gt;archlinux-YYYY.MM.DD-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plug in your USB (4GB+)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open (Rufus)[https://rufus.ie/]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: your USB stick&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boot selection&lt;/strong&gt;: &lt;code&gt;archlinux-x86_64.iso&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Partition scheme&lt;/strong&gt;: &lt;code&gt;GPT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target system&lt;/strong&gt;: &lt;code&gt;UEFI (non-CSM)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hit &lt;strong&gt;START&lt;/strong&gt;, select &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt; if prompted&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;set uefi instead of legacy in bios&lt;/p&gt;
+&lt;p&gt;iwctl
+device list # find your Wi-Fi device (likely wlan0)
+station wlan0 scan # scan for networks
+station wlan0 get-networks # list available Wi-Fi names
+station wlan0 connect YourWiFiName
+exit
+ping -c3 archlinux.org&lt;/p&gt;
+&lt;p&gt;archinstall&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en, us (added persian later in the settings)&lt;/li&gt;
+&lt;li&gt;mirror regions (Iran failed at first attempt):
+&lt;ul&gt;
+&lt;li&gt;germany&lt;/li&gt;
+&lt;li&gt;netherlands&lt;/li&gt;
+&lt;li&gt;sweden&lt;/li&gt;
+&lt;li&gt;finland&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disk&lt;/strong&gt;: pick your 180 GB SSD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disk layout&lt;/strong&gt;: “&lt;strong&gt;Erase all&lt;/strong&gt;” for a clean install (or “Use best effort” if dual-booting, but that’s riskier)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bootloader&lt;/strong&gt;: &lt;code&gt;systemd-boot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Filesystem&lt;/strong&gt;: &lt;code&gt;ext4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: e.g., &lt;code&gt;x230&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root password&lt;/strong&gt;: set it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User account&lt;/strong&gt;: add one, tick “&lt;strong&gt;superuser (wheel)&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Network&lt;/strong&gt;: &lt;code&gt;NetworkManager&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt;: &lt;code&gt;linux&lt;/code&gt; (plain)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Microcode&lt;/strong&gt;: &lt;code&gt;intel-ucode&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Profile&lt;/strong&gt;: “&lt;strong&gt;Desktop&lt;/strong&gt;” → pick &lt;strong&gt;XFCE4&lt;/strong&gt; (light, stable)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio&lt;/strong&gt;: &lt;code&gt;pipewire&lt;/code&gt; (none for now)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optional packages&lt;/strong&gt;: added &lt;code&gt;git&lt;/code&gt;, &lt;code&gt;firefox&lt;/code&gt;, (olptional)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Timezone/locale&lt;/strong&gt;: asia/tehran&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Hit &lt;strong&gt;Install&lt;/strong&gt;. When it finishes, &lt;strong&gt;reboot&lt;/strong&gt; (remove USB).&lt;br&gt;
+You’re done. Log in, you’ll see XFCE’s login screen.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;sudo pacman -S fwupd
+sudo pacman -S bluez bluez-utils
+sudo pacman -S gvfs gvfs-mtp
+sudo pacman -S thunar-archive-plugin p7zip unzip unrar brightnessctl
+sudo pacman -S pipewire pipewire-pulse wireplumber&lt;/p&gt;
+&lt;p&gt;systemctl &amp;ndash;user enable &amp;ndash; now pipewire pipewire-pulse wireplumber
+sudo systemctl enable &amp;ndash;now bluetooth
+sudo timedatectl set-ntp true&lt;/p&gt;
+&lt;p&gt;sudo pacman -S blueman&lt;/p&gt;
+&lt;p&gt;sudo pacman -S &amp;ndash;needed git base-devel
+git clone &lt;a href=&#34;https://aur.archlinux.org/yay.git&#34;&gt;https://aur.archlinux.org/yay.git&lt;/a&gt;
+cd yay
+makepkg -si&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;App&lt;/th&gt;
+          &lt;th&gt;How to install on Arch&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;yay -S obsidian&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;VS Code&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;yay -S visual-studio-code-bin&lt;/code&gt; (or &lt;code&gt;code&lt;/code&gt; in repos for OSS build)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Firefox&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;sudo pacman -S firefox&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Chrome&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;yay -S google-chrome&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Calculator&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Already in XFCE (&lt;code&gt;galculator&lt;/code&gt;) or install: &lt;code&gt;sudo pacman -S gnome-calculator&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Adobe Acrobat&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Not on Linux — use &lt;code&gt;yay -S masterpdfeditor-free&lt;/code&gt; or &lt;code&gt;evince&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Hiddify&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;yay -S hiddify-app-bin&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;OBS Studio&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;sudo pacman -S obs-studio&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Python 3&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;sudo pacman -S python&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;qBittorrent&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;sudo pacman -S qbittorrent&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;WinRAR&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Use Linux RAR: &lt;code&gt;yay -S rar&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;7-Zip File Manager&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;sudo pacman -S p7zip&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;mpv&lt;/td&gt;
+          &lt;td&gt;sudo pacman -S mpv&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hugo&lt;/td&gt;
+          &lt;td&gt;sudo pacman -S hugo&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Gpick color picker&lt;/td&gt;
+          &lt;td&gt;yay -S gpick&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;wallpaper&lt;/p&gt;
+&lt;p&gt;open sans + jetbrains mono&lt;/p&gt;
+&lt;p&gt;Alt+1 : Workspace1
+Alt+2 : Workspace2
+Alt+3 : Workspace3
+Alt+4 : Workspace4&lt;/p&gt;
+&lt;p&gt;Super L : ApplicationFinder
+volume steps to 10 percent
+mapped &lt;strong&gt;ThinkVantage&lt;/strong&gt; button to logout&lt;/p&gt;
+&lt;p&gt;elementary theme for cursor&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Intel GPU driver (&lt;code&gt;i915&lt;/code&gt;) hard hang&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Common on Ivy Bridge (HD 4000).&lt;/li&gt;
+&lt;li&gt;If GPU lockup is severe enough, it can freeze the whole kernel, not just Xorg.&lt;/li&gt;
+&lt;li&gt;Check after reboot:
+journalctl -b -1 | grep -i &amp;ldquo;GPU HANG&amp;rdquo;
+journalctl -b -1 | grep -i i915&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Kernel bug / ACPI / power management&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states.&lt;/li&gt;
+&lt;li&gt;Fix: add this kernel boot parameter in GRUB:
+intel_idle.max_cstate=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;man&lt;/p&gt;
+&lt;p&gt;arch wiki&lt;/p&gt;
+&lt;p&gt;Terminal
+xfce4-terminal
+Alt + T (common default)
+maximize windo: alt+f
+tile left: alt+up&lt;br&gt;
+tile right: alt+down&lt;br&gt;
+tile top-left: alt+pgup&lt;br&gt;
+tile top-right: alt+pgdn&lt;br&gt;
+tile down-left: alt+left&lt;br&gt;
+tile down-right: alt+right&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.xfce-look.org/p/1166289&#34;&gt;https://www.xfce-look.org/p/1166289&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;sudo pacman -S ly
+sudo systemctl disable lightdm.service
+sudo systemctl enable ly.service&lt;/p&gt;
+&lt;h2 id=&#34;ricing&#34;&gt;ricing&lt;/h2&gt;
+&lt;p&gt;wallpaper
+icons: none
+panel
+gtk theme &lt;a href=&#34;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&#34;&gt;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&lt;/a&gt;
+window decorations
+terminal color pallete
+firefox theme
+vs code theme
+obsidian theme (export?)&lt;/p&gt;
+
+</description>
+
+
+    </item>
+    <item>
+      <title>How I Made jopen?</title>
+      <link>https://jfryusef.link/posts/how-i-made-jopen/</link>
+      <guid>https://jfryusef.link/posts/how-i-made-jopen/</guid>
+      <pubDate>Sun, 06 Jul 2025 13:41:37 &#43;0330</pubDate>
+
+<description>
+  
+  
+  &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is cheap, open-source, and lets me focus on writing in a tool I already use (Obsidian). Plus, it’s all plain text — future-proof.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt; for writing posts &amp;amp; local Markdown management&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for cloud-based version control + repo hosting&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; (with &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/&#34;&gt;Terminal&lt;/a&gt; theme) as the static site generator&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt; for free, automated deployment&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://giscus.app/&#34;&gt;Giscus&lt;/a&gt; to integrate a comment system via &lt;a href=&#34;https://github.com/features/discussions&#34;&gt;GitHub Discussions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every push to GitHub updates the blog via Cloudflare and every comment shows up on GitHub as well.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h4 id=&#34;a-buying-a-domain&#34;&gt;A. Buying a domain&lt;/h4&gt;
+&lt;p&gt;This was the only step in which I paid for something, purchasing this &lt;code&gt;.link&lt;/code&gt; domain for ~$10 a year. But there were cheaper (even free) options as well.&lt;/p&gt;
+&lt;h4 id=&#34;b-hugo-site-and-terminal-theme&#34;&gt;B. Hugo site and Terminal theme&lt;/h4&gt;
+&lt;p&gt;I customized the color scheme using the &lt;a href=&#34;https://panr.github.io/terminal-css/&#34;&gt;Terminal CSS customizer&lt;/a&gt; and chose &lt;code&gt;#282828&lt;/code&gt; as the background, &lt;code&gt;#ebdbb2&lt;/code&gt; as the foreground, and &lt;code&gt;#689d6a&lt;/code&gt; as the accent color. This generated a &lt;code&gt;.css&lt;/code&gt; file, a &lt;strong&gt;favicon&lt;/strong&gt;, and an &lt;strong&gt;OG image&lt;/strong&gt; that I added to my site.&lt;/p&gt;
+&lt;p&gt;And here&amp;rsquo;s the list of changes I made to the &lt;code&gt;/themes/terminal/config.toml&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;customCSS&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;css/terminal.css&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;centerTheme&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;showLastUpdated&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Updated on&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;missingContentMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is not the webpage you&amp;#39;re looking for.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# A reference from the movie Star Wars: Episode IV - A New Hope&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;minuteReadingTime&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min[s] read&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;words&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;word[s]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;logo&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;logoText&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jopen&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tags&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/tags&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;search&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Search&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.google.com/search?q=site%3Ajfryusef.link+QUERY&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;c-creating-a-git-repository-and-connecting-to-github&#34;&gt;C. Creating a Git Repository and connecting to GitHub&lt;/h4&gt;
+&lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on jopen&amp;rsquo;s GitHub repo (so I can use Giscus in step F).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h4&gt;
+&lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
+&lt;h4 id=&#34;e-setting-up-obsidian&#34;&gt;E. Setting up Obsidian&lt;/h4&gt;
+&lt;p&gt;I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn&amp;rsquo;t make the &lt;a href=&#34;https://github.com/Vinzent03/obsidian-git&#34;&gt;Git plugin&lt;/a&gt; to work properly.&lt;/p&gt;
+&lt;p&gt;Here is the list of all the core plugins that are enabled in my vault:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Backlinks&lt;/li&gt;
+&lt;li&gt;Bookmarks&lt;/li&gt;
+&lt;li&gt;Command palette&lt;/li&gt;
+&lt;li&gt;File recovery&lt;/li&gt;
+&lt;li&gt;Files&lt;/li&gt;
+&lt;li&gt;Graph view&lt;/li&gt;
+&lt;li&gt;Outgoing links&lt;/li&gt;
+&lt;li&gt;Outline&lt;/li&gt;
+&lt;li&gt;Page preview&lt;/li&gt;
+&lt;li&gt;Quick switcher&lt;/li&gt;
+&lt;li&gt;Search&lt;/li&gt;
+&lt;li&gt;Slash commands&lt;/li&gt;
+&lt;li&gt;Tags view&lt;/li&gt;
+&lt;li&gt;Template&lt;/li&gt;
+&lt;li&gt;Word count&lt;/li&gt;
+&lt;li&gt;Workspaces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here is the list of the community plugins that I use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mgmeyers/obsidian-style-settings&#34;&gt;Style Settings&lt;/a&gt; - to control and adjust theme, plugin, and snippet CSS variables&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kepano/obsidian-minimal-settings&#34;&gt;Minimal Theme Settings&lt;/a&gt; - to change the colors, fonts and features of &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ozntel/file-explorer-note-count&#34;&gt;File Explorer Note Count&lt;/a&gt; - to see the number of notes under each folder within the file explorer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/javalent/settings-search&#34;&gt;Settings Search&lt;/a&gt; - to globally search settings in Obsidian&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/jopen-vault-ScreenShot.png&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And here&amp;rsquo;s the metadata (frontmatter) for this post:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How I made jopen?&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-06-20T13:41:37+03:30&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lastmod&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-07-19&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#dateFormat = &amp;#34;2006-01-02&amp;#34; # This value can be configured for per-post date formatting‍&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;yusef&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cover&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tags&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jopen&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Markdown&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Obsidian&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Git&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GitHub&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hugo&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Website&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Software&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How I built a blog using just Markdown and Git&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;showFullContent&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readingTime&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;draft&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Until the post is finished&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;f-enabling-giscus&#34;&gt;F. Enabling Giscus&lt;/h4&gt;
+&lt;p&gt;Nothing special. I just enabled comments in almost every page, because why not?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://giscus.app/client.js&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-repo&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jfryusef/jopen&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-repo-id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[REPO ID]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-category&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Comments&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-category-id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[CATEGORY ID]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-mapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pathname&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-strict&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-reactions-enabled&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-emit-metadata&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-input-position&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;top&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-theme&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gruvbox_dark&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;data-loading&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lazy&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;crossorigin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;async&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;updates&#34;&gt;Updates&lt;/h2&gt;
+&lt;h4 id=&#34;a-using-vs-code-instead-of-obsidian&#34;&gt;A. Using VS Code instead of Obsidian&lt;/h4&gt;
+&lt;p&gt;Recently I use &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VS Code&lt;/a&gt; + &lt;a href=&#34;https://github.com/yzhang-gh/vscode-markdown&#34;&gt;this md extension&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this Gruvbox theme&lt;/a&gt; instead of Obsidian for writing posts &amp;amp; local Markdown management. It has built-in GitHub integration as well.&lt;/p&gt;
+&lt;h4 id=&#34;b-showing-full-post-content-instead-of-summary-in-rss-readers&#34;&gt;B. Showing full post content instead of summary in RSS readers&lt;/h4&gt;
+&lt;p&gt;I noticed the full content of my posts didn&amp;rsquo;t show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in &lt;code&gt;/layouts/_default/rss.xml&lt;/code&gt; which I think overrides the one in &lt;code&gt;/themes/terminal/layouts/_default/rss.xml&lt;/code&gt;&lt;br&gt;
+I added the following content to the file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- $pctx := . -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- $pages := where site.RegularPages &amp;#34;Type&amp;#34; &amp;#34;in&amp;#34; site.Params.mainSections -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- $pages = $pages | first 50 -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{- printf &amp;#34;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=\&amp;#34;1.0\&amp;#34; encoding=\&amp;#34;utf-8\&amp;#34;?&amp;gt;&lt;/span&gt;&amp;#34; | safeHTML }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;rss&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;version=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;channel&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ site.Title }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;link&amp;gt;&lt;/span&gt;{{ site.BaseURL }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/link&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;{{ site.Params.description | default site.Title }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;language&amp;gt;&lt;/span&gt;{{ site.LanguageCode | default &amp;#34;en-us&amp;#34; }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/language&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;generator&amp;gt;&lt;/span&gt;Hugo -- gohugo.io&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/generator&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- range $pages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;item&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ .Title }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;link&amp;gt;&lt;/span&gt;{{ .Permalink }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/link&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;guid&amp;gt;&lt;/span&gt;{{ .Permalink }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/guid&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;pubDate&amp;gt;&lt;/span&gt;{{ .Date.Format &amp;#34;Mon, 02 Jan 2006 15:04:05 -0700&amp;#34; }}&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/pubDate&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--  This is the key line that gave me FULL CONTENT --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {{ $content := .Content }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {{ $content = replaceRE &amp;#34;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;img&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;[^&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]+)&amp;gt;&amp;#34; &amp;#34;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;img&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;&amp;#34; $content }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {{ $content | htmlEscape | safeHTML }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/channel&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/rss&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.&lt;/p&gt;
+
+</description>
+
+
+    </item>
     <item>
       <title>Hello World!</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Fri, 07 Mar 2025 12:41:37 +0330</pubDate>
-      
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
+      <link>https://jfryusef.link/posts/hello-world/</link>
+      <guid>https://jfryusef.link/posts/hello-world/</guid>
+      <pubDate>Fri, 07 Mar 2025 12:41:37 &#43;0330</pubDate>
+
+<description>
+  
+  
+  &lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
 &lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
 &lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?
-&lt;img src=&#34;http://localhost:1313/images/image-test.jpg&#34; alt=&#34;alt text test&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://jfryusef.link/images/image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
-  &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
-  &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
-  &amp;#34;age&amp;#34;: 22
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;Test URL&lt;/a&gt;&lt;/p&gt;</description>
-      <content>&lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
-&lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
-&lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?
-&lt;img src=&#34;http://localhost:1313/images/image-test.jpg&#34; alt=&#34;alt text test&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked item&lt;/li&gt;
@@ -59,8 +419,10 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;Test URL&lt;/a&gt;&lt;/p&gt;
-</content>
+
+</description>
+
+
     </item>
-    
   </channel>
 </rss>

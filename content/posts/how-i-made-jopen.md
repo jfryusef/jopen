@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-10-04"
+lastmod = "2025-10-31"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -117,7 +117,7 @@ And here is the list of the community plugins that I use:
 
 ![jopen's Obsidian vault screenshot](/images/jopen-vault-ScreenShot.png)
 
-And here's the metadata for this post:
+And here's the metadata (frontmatter) for this post:
 
 ```toml
 +++
@@ -157,9 +157,47 @@ Nothing special. I just enabled comments in almost every page, because why not?
 </script>
 ```
 
-## Update
+---
 
+## Updates
+
+#### A. Using VS Code instead of Obsidian
 Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It has built-in GitHub integration as well.
+
+#### B. Showing full post content instead of summary in RSS readers
+I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`
+I added the following content to the file:
+```xml
+{{- $pctx := . -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- $pages = $pages | first 50 -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0">
+  <channel>
+    <title>{{ site.Title }}</title>
+    <link>{{ site.BaseURL }}</link>
+    <description>{{ site.Params.description | default site.Title }}</description>
+    <language>{{ site.LanguageCode | default "en-us" }}</language>
+    <generator>Hugo -- gohugo.io</generator>
+
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+
+      <!--  This is the key line that gave me FULL CONTENT -->
+      <description>
+        {{ $content := .Content }}
+        {{ $content = replaceRE "<img( [^>]+)>" "<img$1 />" $content }}
+        {{ $content | htmlEscape | safeHTML }}
+      </description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
+```
 
 ---
 

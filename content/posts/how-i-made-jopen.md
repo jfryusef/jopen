@@ -165,7 +165,7 @@ Nothing special. I just enabled comments in almost every page, because why not?
 Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It has built-in GitHub integration as well.
 
 #### B. Showing full post content instead of summary in RSS readers
-I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`
+I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`  
 I added the following content to the file:
 ```xml
 {{- $pctx := . -}}

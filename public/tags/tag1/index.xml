@@ -2,14 +2,14 @@
 <rss version="2.0">
   <channel>
     <title>jopen</title>
-    <link>https://jfryusef.link/</link>
+    <link>http://localhost:1313/</link>
     <description>jopen</description>
     <language>en-us</language>
     <generator>Hugo -- gohugo.io</generator>
     <item>
       <title>Setting Up Arch On An Old ThinkPad</title>
-      <link>https://jfryusef.link/posts/x230/</link>
-      <guid>https://jfryusef.link/posts/x230/</guid>
+      <link>http://localhost:1313/posts/x230/</link>
+      <guid>http://localhost:1313/posts/x230/</guid>
       <pubDate>Fri, 31 Oct 2025 13:41:37 &#43;0330</pubDate>
 
 <description>
@@ -176,7 +176,7 @@ Alt+4 : Workspace4&lt;/p&gt;
 volume steps to 10 percent
 mapped &lt;strong&gt;ThinkVantage&lt;/strong&gt; button to logout&lt;/p&gt;
 &lt;p&gt;elementary theme for cursor&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Intel GPU driver (&lt;code&gt;i915&lt;/code&gt;) hard hang&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Common on Ivy Bridge (HD 4000).&lt;/li&gt;
@@ -224,8 +224,8 @@ obsidian theme (export?)&lt;/p&gt;
     </item>
     <item>
       <title>How I Made jopen?</title>
-      <link>https://jfryusef.link/posts/how-i-made-jopen/</link>
-      <guid>https://jfryusef.link/posts/how-i-made-jopen/</guid>
+      <link>http://localhost:1313/posts/how-i-made-jopen/</link>
+      <guid>http://localhost:1313/posts/how-i-made-jopen/</guid>
       <pubDate>Sun, 06 Jul 2025 13:41:37 &#43;0330</pubDate>
 
 <description>
@@ -281,7 +281,7 @@ obsidian theme (export?)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.google.com/search?q=site%3Ajfryusef.link+QUERY&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;c-creating-a-git-repository-and-connecting-to-github&#34;&gt;C. Creating a Git Repository and connecting to GitHub&lt;/h4&gt;
 &lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on jopen&amp;rsquo;s GitHub repo (so I can use Giscus in step F).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h4&gt;
 &lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
 &lt;h4 id=&#34;e-setting-up-obsidian&#34;&gt;E. Setting up Obsidian&lt;/h4&gt;
@@ -312,7 +312,7 @@ obsidian theme (export?)&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ozntel/file-explorer-note-count&#34;&gt;File Explorer Note Count&lt;/a&gt; - to see the number of notes under each folder within the file explorer&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/javalent/settings-search&#34;&gt;Settings Search&lt;/a&gt; - to globally search settings in Obsidian&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://jfryusef.link/images/jopen-vault-ScreenShot.png&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/jopen-vault-ScreenShot.png&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here&amp;rsquo;s the metadata (frontmatter) for this post:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How I made jopen?&amp;#34;&lt;/span&gt;
@@ -390,8 +390,8 @@ I added the following content to the file:&lt;/p&gt;
     </item>
     <item>
       <title>Hello World!</title>
-      <link>https://jfryusef.link/posts/hello-world/</link>
-      <guid>https://jfryusef.link/posts/hello-world/</guid>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <pubDate>Fri, 07 Mar 2025 12:41:37 &#43;0330</pubDate>
 
 <description>
@@ -402,7 +402,7 @@ I added the following content to the file:&lt;/p&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
 &lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
 &lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?
-&lt;img src=&#34;https://jfryusef.link/images/image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;http://localhost:1313/images/image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
 &lt;blockquote&gt;

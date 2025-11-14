@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-10-31"
+lastmod = "2025-11-01"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -164,9 +164,11 @@ Nothing special. I just enabled comments in almost every page, because why not?
 ## Updates
 
 #### A. Using VS Code instead of Obsidian
+
 Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It has built-in GitHub integration as well.
 
 #### B. Showing full post content instead of summary in RSS readers
+
 I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`  
 I added the following content to the file:
 ```xml
@@ -200,6 +202,9 @@ I added the following content to the file:
   </channel>
 </rss>
 ```
+#### C. Using Cloudflare Email Routing
+
+From now on, cloudflare will forward every email sent to mail@jfryusef.link to my main Gmail inbox. This way people can't see my actual email address until I answer them.
 
 ---
 

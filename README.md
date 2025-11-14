@@ -10,7 +10,7 @@ The name "jopen" is made up of the words "jo" (my nickname) and "open" (referrin
 ![yusef-portrait](https://github.com/user-attachments/assets/13bea44d-a2b9-4691-8061-3772b7025c21)
 
 I'm yusef. I was born in 2002, and I’m currently a fifth-grade teacher in Tehran (GMT +03:30). Right now I'm trying to self-study computer science in my free time.  
-[This is my GitHub](https://github.com/jfryusef) and [this is my LinkedIn](https://www.linkedin.com/in/jfryusef4th). You can find me pretty much everywhere on the internet under the username jfryusef and email me [at] gmail [dot] com.
+[This is my GitHub](https://github.com/jfryusef) and [this is my LinkedIn](https://www.linkedin.com/in/jfryusef4th). You can find me pretty much everywhere on the internet under the username jfryusef and mail [at] jfryusef [dot] link.
 
 ## Why did I start it?
 

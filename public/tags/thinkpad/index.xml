@@ -15,9 +15,13 @@
 <description>
   
   
-  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$65. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (up to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;%25 (2GB)
-&lt;img src=&#34;http://localhost:1313/static/images/x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;coin battery + thermal paste&lt;/p&gt;
+  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (upgradable to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;%25 (2GB)
+&lt;img src=&#34;../../images/x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
+&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
+&lt;img src=&#34;http://localhost:1313/images/coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
+Alright you got me I had no reason to tear up the whole device; I just wanted to =)&lt;/p&gt;
+&lt;h3 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://archlinux.org/download/&#34;&gt;https://archlinux.org/download/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -161,6 +165,10 @@ makepkg -si&lt;/p&gt;
           &lt;td&gt;sudo pacman -S hugo&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;td&gt;AnyDesk&lt;/td&gt;
+          &lt;td&gt;yay -S anydesk-bin&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
           &lt;td&gt;Gpick color picker&lt;/td&gt;
           &lt;td&gt;yay -S gpick&lt;/td&gt;
       &lt;/tr&gt;
@@ -191,6 +199,7 @@ journalctl -b -1 | grep -i i915&lt;/li&gt;
 &lt;li&gt;Fix: add this kernel boot parameter in GRUB:
 intel_idle.max_cstate=1&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;A RAM stick health test (memtest86)&lt;/p&gt;
 &lt;p&gt;man&lt;/p&gt;
 &lt;p&gt;arch wiki&lt;/p&gt;
 &lt;p&gt;Terminal
@@ -381,7 +390,9 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- end }}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/channel&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/rss&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;c-using-cloudflare-email-routing&#34;&gt;C. Using Cloudflare Email Routing&lt;/h4&gt;
+&lt;p&gt;From now on, cloudflare will forward every email sent to &lt;a href=&#34;mailto:mail@jfryusef.link&#34;&gt;mail@jfryusef.link&lt;/a&gt; to my main Gmail inbox. This way people can&amp;rsquo;t see my actual email address until I answer them.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.&lt;/p&gt;
 
 </description>
@@ -406,7 +417,8 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked item&lt;/li&gt;

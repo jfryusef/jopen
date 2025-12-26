@@ -80,7 +80,7 @@ url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
 
 I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on jopen's GitHub repo (so I can use Giscus in step F).
 
-![GitHub repository's Discussions screenshot](/images/GitHub-Discussions-ScreenShot.jpeg)
+![GitHub repository's Discussions screenshot](../../images/GitHub-Discussions-ScreenShot.jpeg)
 
 #### D. Deploying via Cloudflare Pages
 
@@ -116,7 +116,7 @@ And here is the list of the community plugins that I use:
 - [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
 - [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 
-![jopen's Obsidian vault screenshot](/images/jopen-vault-ScreenShot.png)
+![jopen's Obsidian vault screenshot](../../images/jopen-vault-ScreenShot.png)
 
 And here's the metadata (frontmatter) for this post:
 

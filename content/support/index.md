@@ -16,7 +16,7 @@ If you'd like to support my work with cryptocurrencies:
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 ```
-![](/images/btc-address.jpg)
+![](../../images/btc-address.jpg)
 
 ---
 
@@ -24,7 +24,7 @@ bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 ```
 0x5B99F9f7C83d54154719C0B74ae06087bcece661
 ```
-![](/images/eth-and-usdt-address.jpg)
+![](../../images/eth-and-usdt-address.jpg)
 
 ---
 

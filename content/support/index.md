@@ -12,7 +12,7 @@ If you'd like to support my work with cryptocurrencies:
 
 ---
 
-#### Bitcoin (BTC)
+## Bitcoin (BTC)
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 ```
@@ -20,7 +20,7 @@ bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 
 ---
 
-#### Ethereum / Tether USDt (ERC20)
+## Ethereum / Tether USDt (ERC20)
 ```
 0x5B99F9f7C83d54154719C0B74ae06087bcece661
 ```

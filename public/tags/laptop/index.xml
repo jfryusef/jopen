@@ -16,12 +16,14 @@
   
   
   &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (upgradable to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;%25 (2GB)
-&lt;img src=&#34;../../images/x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
-&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
-&lt;img src=&#34;http://localhost:1313/images/coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
+&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU.&lt;br&gt;
+Also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
+&lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
 Alright you got me I had no reason to tear up the whole device; I just wanted to =)&lt;/p&gt;
-&lt;h3 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h3&gt;
+&lt;h2 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;x230-before.jpg&#34; alt=&#34;Before&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://archlinux.org/download/&#34;&gt;https://archlinux.org/download/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -184,7 +186,7 @@ Alt+4 : Workspace4&lt;/p&gt;
 volume steps to 10 percent
 mapped &lt;strong&gt;ThinkVantage&lt;/strong&gt; button to logout&lt;/p&gt;
 &lt;p&gt;elementary theme for cursor&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Intel GPU driver (&lt;code&gt;i915&lt;/code&gt;) hard hang&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Common on Ivy Bridge (HD 4000).&lt;/li&gt;
@@ -290,7 +292,7 @@ obsidian theme (export?)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.google.com/search?q=site%3Ajfryusef.link+QUERY&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;c-creating-a-git-repository-and-connecting-to-github&#34;&gt;C. Creating a Git Repository and connecting to GitHub&lt;/h4&gt;
 &lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on jopen&amp;rsquo;s GitHub repo (so I can use Giscus in step F).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h4&gt;
 &lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
 &lt;h4 id=&#34;e-setting-up-obsidian&#34;&gt;E. Setting up Obsidian&lt;/h4&gt;
@@ -321,7 +323,7 @@ obsidian theme (export?)&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ozntel/file-explorer-note-count&#34;&gt;File Explorer Note Count&lt;/a&gt; - to see the number of notes under each folder within the file explorer&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/javalent/settings-search&#34;&gt;Settings Search&lt;/a&gt; - to globally search settings in Obsidian&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/jopen-vault-ScreenShot.png&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jopen-vault-ScreenShot.png&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here&amp;rsquo;s the metadata (frontmatter) for this post:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How I made jopen?&amp;#34;&lt;/span&gt;
@@ -413,7 +415,7 @@ I added the following content to the file:&lt;/p&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
 &lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
 &lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?
-&lt;img src=&#34;http://localhost:1313/images/image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
 &lt;blockquote&gt;

@@ -22,7 +22,7 @@ Here's how I made it:
 
 ---
 
-## Tools
+# Tools
 
 - [Obsidian](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
@@ -32,13 +32,13 @@ Here's how I made it:
 
 Every push to GitHub updates the blog via Cloudflare and every comment shows up on GitHub as well.
 
-## Setup
+# Setup
 
-#### A. Buying a domain
+## A. Buying a domain
 
 This was the only step in which I paid for something, purchasing this `.link` domain for ~$10 a year. But there were cheaper (even free) options as well.
 
-#### B. Hugo site and Terminal theme 
+## B. Hugo site and Terminal theme 
 
 I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#282828` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
 
@@ -76,17 +76,17 @@ name = "Search"
 url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
 ```
 
-#### C. Creating a Git Repository and connecting to GitHub
+## C. Creating a Git Repository and connecting to GitHub
 
 I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on jopen's GitHub repo (so I can use Giscus in step F).
 
 ![GitHub repository's Discussions screenshot](GitHub-Discussions-ScreenShot.jpeg)
 
-#### D. Deploying via Cloudflare Pages
+## D. Deploying via Cloudflare Pages
 
 Added `jfryusef.link` and `www.jfryusef.link` as two custom domains.
 
-#### E. Setting up Obsidian
+## E. Setting up Obsidian
 
 I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git plugin](https://github.com/Vinzent03/obsidian-git) to work properly.
 
@@ -136,7 +136,7 @@ draft = true # Until the post is finished
 +++
 ```
 
-#### F. Enabling Giscus
+## F. Enabling Giscus
 
 Nothing special. I just enabled comments in almost every page, because why not?
 
@@ -161,13 +161,13 @@ Nothing special. I just enabled comments in almost every page, because why not?
 
 ---
 
-## Updates
+# Updates
 
-#### A. Using VS Code instead of Obsidian
+## A. Using VS Code instead of Obsidian
 
 Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](https://github.com/yzhang-gh/vscode-markdown) and [this Gruvbox theme](https://github.com/jdinhify/vscode-theme-gruvbox) instead of Obsidian for writing posts & local Markdown management. It has built-in GitHub integration as well.
 
-#### B. Showing full post content instead of summary in RSS readers
+## B. Showing full post content instead of summary in RSS readers
 
 I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`  
 I added the following content to the file:
@@ -202,7 +202,7 @@ I added the following content to the file:
   </channel>
 </rss>
 ```
-#### C. Using Cloudflare Email Routing
+## C. Using Cloudflare Email Routing
 
 From now on, cloudflare will forward every email sent to mail@jfryusef.link to my main Gmail inbox. This way people can't see my actual email address until I answer them.
 

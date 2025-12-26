@@ -5,7 +5,7 @@ lastmod = ""
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
-cover = "../../images/x230-cover.jpg"
+cover = "x230-cover.jpg"
 tags = ["ThinkPad", "Laptop", "Linux", "OS", "Arch", "Obsidian", "Hardware", "Software"]
 description = "Breathing a new life to a ThinkPad X230 using Arch+XFCE"
 showFullContent = false
@@ -15,18 +15,18 @@ draft = false
 +++
 
 Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (upgradable to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was >%25 (2GB)
-![Minimum RAM usage on a fresh install of windows 10](../../images/x230-windows10ram.PNG)
+![Minimum RAM usage on a fresh install of windows 10](x230-windows10ram.PNG)
 
 # Hardware
 
 Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU.  
 Also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn't need network connection or manual set-up.
-![The error I got when trying to boot without the main battery](../../images/coin-battery-error.jpg)
+![The error I got when trying to boot without the main battery](coin-battery-error.jpg)
 Alright you got me I had no reason to tear up the whole device; I just wanted to =)
 
 ## Let the tear up begin!
 
-![Before](../../images/X230-Before.jpeg) 
+![Before](x230-before.jpg)  
 
 **https://archlinux.org/download/**
 
@@ -130,7 +130,7 @@ mapped **ThinkVantage** button to logout
 
 elementary theme for cursor
 
-![Panel](../../images/Screenshot_2025-08-23_02-12-58.png)
+![Panel](Screenshot_2025-08-23_02-12-58.png)
 
 **Intel GPU driver (`i915`) hard hang**
 

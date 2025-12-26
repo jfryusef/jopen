@@ -7,7 +7,7 @@ hideComments = false
 draft = false
 +++
 
-## Welcome to my corner of the internet =)
+## Welcome to my little corner of the Internet =)
 
 ---
 

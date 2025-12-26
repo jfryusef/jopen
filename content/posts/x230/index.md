@@ -11,7 +11,7 @@ description = "Breathing a new life to a ThinkPad X230 using Arch+XFCE"
 showFullContent = false
 readingTime = true
 hideComments = false
-draft = false
+draft = true
 +++
 
 Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8GB RAM (upgradable to 16GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was >%25 (2GB)

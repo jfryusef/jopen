@@ -12,7 +12,7 @@ If you'd like to support my work with cryptocurrencies:
 
 ---
 
-## Bitcoin (BTC)
+## Bitcoin (BRC20)
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
 ```

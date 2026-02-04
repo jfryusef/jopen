@@ -27,25 +27,40 @@ Alright you got me I had no reason to tear up the whole device; I just wanted to
 ## Let the tear up begin!
 
 ![Before](x230-before.jpg)  
+![After](X230-TearUp.jpeg)
 
-**https://archlinux.org/download/**
+I took out the old coin battery,
+![Old Coin Battery](X230-Old-Coin-Battery.jpeg)
 
-- Pick any mirror **close to your location** (e.g., Europe, Asia).
-- Download **`archlinux-YYYY.MM.DD-x86_64.iso`** (around 900MB).
+And Replaced it with the new one:
+![New coin battery (front)](X230-New-Coin-Battery-Front.jpeg)
+![New coin battery (back)](X230-New-Coin-Battery-Back.jpeg)
+![New coin battery](X230-New-Coin-Battery.jpeg)
 
-- Plug in your USB (4GB+)
-- Open (Rufus)[https://rufus.ie/]
-- Settings:
-  - **Device**: your USB stick
-  - **Boot selection**: `archlinux-x86_64.iso`
-  - **Partition scheme**: `GPT`
-  - **Target system**: `UEFI (non-CSM)`
-- Hit **START**, select **Write in ISO Image Mode (Recommended)** if prompted
+Then I cleaned the old thermal paste,
+![Old thermal paste on CPU](X230-Old-Thermal-Paste.jpeg)
+![Cleaned thermal paste on GPU](X230-GPU-CleanedUp.jpeg)
 
-set uefi instead of legacy in bios
+And replaced it with a new one:
+![CPU and GPU woth the new thermal paste](X230-CPU-and-GPU-New-Thermal-Paste.jpeg)
 
-iwctl
-device list # find your Wi-Fi device (likely wlan0)
+## Installing Arch
+
+I went to [the official arch linux download page](https://archlinux.org/download/**), picked a mirror close to my location and downloaded **`archlinux-2025.08.01-x86_64.iso`** (around 900MB). Then I plugged in my USB memory (64GB. but only 8 was needed) and opened [Rufus](https://rufus.ie/) with these settings:
+- **Device**: my USB stick
+- **Boot selection**: `archlinux-2025.08.01-x86_64.iso`
+- **Partition scheme**: `GPT`
+- **Target system**: `UEFI (non-CSM)`  
+
+Then I hit **START** and selected **Write in ISO Image Mode (Recommended)**
+
+Then I setted UEFI instead of Legacy in BIOS because it's the less painful choice.
+
+### archinstall
+
+I fetched Arch Linux package database and these are the commands I typed:
+- `iwctl` (to enable network configuration)
+- `device list` # find your Wi-Fi device (likely wlan0)
 station wlan0 scan # scan for networks
 station wlan0 get-networks # list available Wi-Fi names
 station wlan0 connect YourWiFiName

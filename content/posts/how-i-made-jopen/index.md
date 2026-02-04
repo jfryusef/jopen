@@ -64,21 +64,24 @@ logoText = "jopen"
 identifier = "about"
 name = "About"
 url = "/about"
+weight = 10
 
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags"
+weight = 20
 
 [[menu.main]]
 identifier = "search"
 name = "Search"
 url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
+weight = 30
 ```
 
 ## C. Creating a Git Repository and connecting to GitHub
 
-I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on jopen's GitHub repo (so I can use Giscus in step F).
+I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on [jopen's GitHub repo](https://github.com/jfryusef/jopen) (so I can use Giscus in step F).
 
 ![GitHub repository's Discussions screenshot](GitHub-Discussions-ScreenShot.jpeg)
 
@@ -206,6 +209,27 @@ I added the following content to the file:
 
 From now on, cloudflare will forward every email sent to mail@jfryusef.link to my main Gmail inbox. This way people can't see my actual email address until I answer them.
 
+## D. Adding an intro card on top of my homepage
+
+I created `content/_index.md` with this content:
+
+```markdown
+---
+
+title: ""
+
+---
+
+---
+
+# Welcome to my little corner of the Internet =)
+jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!  
+I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made jopen, *to learn in public.*
+
+---
+
+<!-- more -->
+```
 ---
 
 Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.

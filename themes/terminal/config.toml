@@ -36,13 +36,16 @@ logoHomeLink = "/"
 identifier = "about"
 name = "About"
 url = "/about"
+weight = 10
 
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags"
+weight = 20
 
 [[menu.main]]
 identifier = "search"
 name = "Search"
 url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
+weight = 30

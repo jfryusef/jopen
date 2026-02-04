@@ -23,42 +23,40 @@ Also change the coin battery so when booting without the main battery (which was
 &lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
 Alright you got me I had no reason to tear up the whole device; I just wanted to =)&lt;/p&gt;
 &lt;h2 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;x230-before.jpg&#34; alt=&#34;Before&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://archlinux.org/download/&#34;&gt;https://archlinux.org/download/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;x230-before.jpg&#34; alt=&#34;Before&#34; /&gt;&lt;br&gt;
+&lt;img src=&#34;X230-TearUp.jpeg&#34; alt=&#34;After&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I took out the old coin battery,
+&lt;img src=&#34;X230-Old-Coin-Battery.jpeg&#34; alt=&#34;Old Coin Battery&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And Replaced it with the new one:
+&lt;img src=&#34;X230-New-Coin-Battery-Front.jpeg&#34; alt=&#34;New coin battery (front)&#34; /&gt;
+&lt;img src=&#34;X230-New-Coin-Battery-Back.jpeg&#34; alt=&#34;New coin battery (back)&#34; /&gt;
+&lt;img src=&#34;X230-New-Coin-Battery.jpeg&#34; alt=&#34;New coin battery&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then I cleaned the old thermal paste,
+&lt;img src=&#34;X230-Old-Thermal-Paste.jpeg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;
+&lt;img src=&#34;X230-GPU-CleanedUp.jpeg&#34; alt=&#34;Cleaned thermal paste on GPU&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And replaced it with a new one:
+&lt;img src=&#34;X230-CPU-and-GPU-New-Thermal-Paste.jpeg&#34; alt=&#34;CPU and GPU woth the new thermal paste&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;installing-arch&#34;&gt;Installing Arch&lt;/h2&gt;
+&lt;p&gt;I went to &lt;a href=&#34;https://archlinux.org/download/**&#34;&gt;the official arch linux download page&lt;/a&gt;, picked a mirror close to my location and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB). Then I plugged in my USB memory (64GB. but only 8 was needed) and opened &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; with these settings:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Pick any mirror &lt;strong&gt;close to your location&lt;/strong&gt; (e.g., Europe, Asia).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Download &lt;strong&gt;&lt;code&gt;archlinux-YYYY.MM.DD-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Plug in your USB (4GB+)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open (Rufus)[https://rufus.ie/]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Settings:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: your USB stick&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Boot selection&lt;/strong&gt;: &lt;code&gt;archlinux-x86_64.iso&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: my USB stick&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boot selection&lt;/strong&gt;: &lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Partition scheme&lt;/strong&gt;: &lt;code&gt;GPT&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Target system&lt;/strong&gt;: &lt;code&gt;UEFI (non-CSM)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hit &lt;strong&gt;START&lt;/strong&gt;, select &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt; if prompted&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;set uefi instead of legacy in bios&lt;/p&gt;
-&lt;p&gt;iwctl
-device list # find your Wi-Fi device (likely wlan0)
+&lt;p&gt;Then I hit &lt;strong&gt;START&lt;/strong&gt; and selected &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then I setted UEFI instead of Legacy in BIOS because it&amp;rsquo;s the less painful choice.&lt;/p&gt;
+&lt;h3 id=&#34;archinstall&#34;&gt;archinstall&lt;/h3&gt;
+&lt;p&gt;I fetched Arch Linux package database and these are the commands I typed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;iwctl&lt;/code&gt; (to enable network configuration)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device list&lt;/code&gt; # find your Wi-Fi device (likely wlan0)
 station wlan0 scan # scan for networks
 station wlan0 get-networks # list available Wi-Fi names
 station wlan0 connect YourWiFiName
 exit
-ping -c3 archlinux.org&lt;/p&gt;
+ping -c3 archlinux.org&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;archinstall&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en, us (added persian later in the settings)&lt;/li&gt;
@@ -291,7 +289,7 @@ obsidian theme (export?)&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Search&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.google.com/search?q=site%3Ajfryusef.link+QUERY&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;c-creating-a-git-repository-and-connecting-to-github&#34;&gt;C. Creating a Git Repository and connecting to GitHub&lt;/h2&gt;
-&lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on jopen&amp;rsquo;s GitHub repo (so I can use Giscus in step F).&lt;/p&gt;
+&lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on &lt;a href=&#34;https://github.com/jfryusef/jopen&#34;&gt;jopen&amp;rsquo;s GitHub repo&lt;/a&gt; (so I can use Giscus in step F).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;GitHub-Discussions-ScreenShot.jpeg&#34; alt=&#34;GitHub repository&amp;rsquo;s Discussions screenshot&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h2&gt;
 &lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
@@ -394,7 +392,24 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/rss&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;c-using-cloudflare-email-routing&#34;&gt;C. Using Cloudflare Email Routing&lt;/h2&gt;
 &lt;p&gt;From now on, cloudflare will forward every email sent to &lt;a href=&#34;mailto:mail@jfryusef.link&#34;&gt;mail@jfryusef.link&lt;/a&gt; to my main Gmail inbox. This way people can&amp;rsquo;t see my actual email address until I answer them.&lt;/p&gt;
-&lt;hr&gt;
+&lt;h2 id=&#34;d-adding-an-intro-card-on-top-of-my-homepage&#34;&gt;D. Adding an intro card on top of my homepage&lt;/h2&gt;
+&lt;p&gt;I created &lt;code&gt;content/_index.md&lt;/code&gt; with this content:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Welcome to my little corner of the Internet =)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, [&lt;span style=&#34;color:#f92672&#34;&gt;jopen itself is one of them&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://jfryusef.link/posts/how-i-made-jopen/&lt;/span&gt;)!  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;I wanted to take notes on the process of my projects, and there was [&lt;span style=&#34;color:#f92672&#34;&gt;no reason to keep them private&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://github.com/jfryusef/jopen&lt;/span&gt;). So, I made jopen, &lt;span style=&#34;font-style:italic&#34;&gt;*to learn in public.*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!-- more --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;p&gt;Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.&lt;/p&gt;
 
 </description>

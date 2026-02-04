@@ -130,11 +130,11 @@
         
       
         
-          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY">Search</a></li>
+          <li><a href="/tags">Tags</a></li>
         
       
         
-          <li><a href="/tags">Tags</a></li>
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY">Search</a></li>
         
       
       
@@ -155,11 +155,11 @@
         
       
         
-          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY" >Search</a></li>
+          <li><a href="/tags" >Tags</a></li>
         
       
         
-          <li><a href="/tags" >Tags</a></li>
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY" >Search</a></li>
         
       
     
@@ -176,7 +176,7 @@
   <h1 class="post-title">
     <a href="http://localhost:1313/posts/x230/">Setting Up Arch On An Old ThinkPad</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025-10-31&nbsp;[Updated on 2025-10-31]</time><span class="post-author">yusef</span><span class="post-reading-time">4 min[s] read (666 word[s])</span></div>
+  <div class="post-meta"><time class="post-date">2025-10-31&nbsp;[Updated on 2025-10-31]</time><span class="post-author">yusef</span><span class="post-reading-time">4 min[s] read (740 word[s])</span></div>
 
   
     <span class="post-tags">
@@ -217,42 +217,40 @@ Also change the coin battery so when booting without the main battery (which was
 <img src="coin-battery-error.jpg" alt="The error I got when trying to boot without the main battery">
 Alright you got me I had no reason to tear up the whole device; I just wanted to =)</p>
 <h2 id="let-the-tear-up-begin">Let the tear up begin!<a href="#let-the-tear-up-begin" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><img src="x230-before.jpg" alt="Before"></p>
-<p><strong><a href="https://archlinux.org/download/">https://archlinux.org/download/</a></strong></p>
+<p><img src="x230-before.jpg" alt="Before"><br>
+<img src="X230-TearUp.jpeg" alt="After"></p>
+<p>I took out the old coin battery,
+<img src="X230-Old-Coin-Battery.jpeg" alt="Old Coin Battery"></p>
+<p>And Replaced it with the new one:
+<img src="X230-New-Coin-Battery-Front.jpeg" alt="New coin battery (front)">
+<img src="X230-New-Coin-Battery-Back.jpeg" alt="New coin battery (back)">
+<img src="X230-New-Coin-Battery.jpeg" alt="New coin battery"></p>
+<p>Then I cleaned the old thermal paste,
+<img src="X230-Old-Thermal-Paste.jpeg" alt="Old thermal paste on CPU">
+<img src="X230-GPU-CleanedUp.jpeg" alt="Cleaned thermal paste on GPU"></p>
+<p>And replaced it with a new one:
+<img src="X230-CPU-and-GPU-New-Thermal-Paste.jpeg" alt="CPU and GPU woth the new thermal paste"></p>
+<h2 id="installing-arch">Installing Arch<a href="#installing-arch" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I went to <a href="https://archlinux.org/download/**">the official arch linux download page</a>, picked a mirror close to my location and downloaded <strong><code>archlinux-2025.08.01-x86_64.iso</code></strong> (around 900MB). Then I plugged in my USB memory (64GB. but only 8 was needed) and opened <a href="https://rufus.ie/">Rufus</a> with these settings:</p>
 <ul>
-<li>
-<p>Pick any mirror <strong>close to your location</strong> (e.g., Europe, Asia).</p>
-</li>
-<li>
-<p>Download <strong><code>archlinux-YYYY.MM.DD-x86_64.iso</code></strong> (around 900MB).</p>
-</li>
-<li>
-<p>Plug in your USB (4GB+)</p>
-</li>
-<li>
-<p>Open (Rufus)[https://rufus.ie/]</p>
-</li>
-<li>
-<p>Settings:</p>
-<ul>
-<li><strong>Device</strong>: your USB stick</li>
-<li><strong>Boot selection</strong>: <code>archlinux-x86_64.iso</code></li>
+<li><strong>Device</strong>: my USB stick</li>
+<li><strong>Boot selection</strong>: <code>archlinux-2025.08.01-x86_64.iso</code></li>
 <li><strong>Partition scheme</strong>: <code>GPT</code></li>
 <li><strong>Target system</strong>: <code>UEFI (non-CSM)</code></li>
 </ul>
-</li>
-<li>
-<p>Hit <strong>START</strong>, select <strong>Write in ISO Image Mode (Recommended)</strong> if prompted</p>
-</li>
-</ul>
-<p>set uefi instead of legacy in bios</p>
-<p>iwctl
-device list # find your Wi-Fi device (likely wlan0)
+<p>Then I hit <strong>START</strong> and selected <strong>Write in ISO Image Mode (Recommended)</strong></p>
+<p>Then I setted UEFI instead of Legacy in BIOS because it&rsquo;s the less painful choice.</p>
+<h3 id="archinstall">archinstall<a href="#archinstall" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>I fetched Arch Linux package database and these are the commands I typed:</p>
+<ul>
+<li><code>iwctl</code> (to enable network configuration)</li>
+<li><code>device list</code> # find your Wi-Fi device (likely wlan0)
 station wlan0 scan # scan for networks
 station wlan0 get-networks # list available Wi-Fi names
 station wlan0 connect YourWiFiName
 exit
-ping -c3 archlinux.org</p>
+ping -c3 archlinux.org</li>
+</ul>
 <p>archinstall</p>
 <ul>
 <li><strong>Language/keyboard</strong>: en, us (added persian later in the settings)</li>

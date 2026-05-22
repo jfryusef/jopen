@@ -7,25 +7,11 @@ showFullContent = false
 hideComments = false
 draft = false
 +++
-
-You can support me with USDT (Tether):
-
----
-
-## Bitcoin (BRC20)
+## Litecoin (minimum 0.0005 LTC)
+> **Only send from personal wallets (not exchanges)**
 ```
-bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk
+ltc1q2u7gzswvftusppj566a86nwkgx548gqpa7kny8
 ```
-![btc qr code](btc-address.jpg)
-
----
-
-## Ethereum / Tether USDt (ERC20)
-```
-0x5B99F9f7C83d54154719C0B74ae06087bcece661
-```
-![eth/usdt qr code](eth-and-usdt-address.jpg)
-
----
+![ltc qr code](ltc.jpg)
 
 Thanks for your support <2 It's never expected, but always appreciated.

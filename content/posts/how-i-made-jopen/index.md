@@ -1,7 +1,7 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T13:41:37+03:30"
-lastmod = "2025-11-01"
+lastmod = "2026-05-22"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
@@ -16,15 +16,15 @@ draft = false
 
 jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, _To Learn In Public_.
 
-I don't like bloated CMSs. This stack is cheap, open-source, and lets me focus on writing in a tool I already use (Obsidian). Plus, it’s all plain text — future-proof.
+I don't like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (~~Obsidian~~ VS Code). Plus, it’s all plain text — future-proof.
 
 Here's how I made it:
 
 ---
 
-# Tools
+## Tools
 
-- [Obsidian](https://obsidian.md/) for writing posts & local Markdown management
+- [~Obsidian~](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
 - [Hugo](https://gohugo.io/) (with [Terminal](https://github.com/panr/hugo-theme-terminal/) theme) as the static site generator
 - [Cloudflare Pages](https://pages.cloudflare.com/) for free, automated deployment
@@ -32,7 +32,7 @@ Here's how I made it:
 
 Every push to GitHub updates the blog via Cloudflare and every comment shows up on GitHub as well.
 
-# Setup
+## Setup
 
 ## A. Buying a domain
 
@@ -40,7 +40,7 @@ This was the only step in which I paid for something, purchasing this `.link` do
 
 ## B. Hugo site and Terminal theme
 
-I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#1d2021` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
+I customized the font family to [JetBrains Mono](https://www.jetbrains.com/lp/mono/) and the color scheme to gruvbox-dark-hard-aqua using the [Terminal CSS customizer](https://panr.github.io/terminal-css/), and chose ~~#282828~~ `#1d2021` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to the site.
 
 And here's the list of changes I made to the `/themes/terminal/config.toml` file:
 
@@ -51,7 +51,8 @@ centerTheme = true
 showLastUpdated = true
 updatedDatePrefix = "Updated on"
 readMore = "Read"
-missingContentMessage = "This is not the webpage you're looking for." # A reference from the movie Star Wars: Episode IV - A New Hope
+# A reference from the movie Star Wars: Episode IV - A New Hope:
+missingContentMessage = "This is not the webpage you're looking for."
 minuteReadingTime = "min[s] read"
 words = "word[s]"
 
@@ -83,13 +84,11 @@ weight = 30
 
 I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on [jopen's GitHub repo](https://github.com/jfryusef/jopen) (so I can use Giscus in step F).
 
-![GitHub repository's Discussions screenshot](GitHub-Discussions-ScreenShot.jpeg)
-
 ## D. Deploying via Cloudflare Pages
 
 Added `jfryusef.link` and `www.jfryusef.link` as two custom domains.
 
-## E. Setting up Obsidian
+## ~~E. Setting up Obsidian~~
 
 I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git plugin](https://github.com/Vinzent03/obsidian-git) to work properly.
 
@@ -119,7 +118,7 @@ And here is the list of the community plugins that I use:
 - [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
 - [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 
-![jopen's Obsidian vault screenshot](jopen-vault-ScreenShot.png)
+![jopen's Obsidian vault screenshot](jopen-obsidian-vault.jpg)
 
 And here's the metadata (frontmatter) for this post:
 
@@ -128,14 +127,16 @@ And here's the metadata (frontmatter) for this post:
 title = "How I made jopen?"
 date = "2025-06-20T13:41:37+03:30"
 lastmod = "2025-07-19"
-#dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
+# This value can be configured for per-post date formatting‍:
+#dateFormat = "2006-01-02"
 author = "yusef"
 cover = ""
 tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
-draft = true # Until the post is finished
+# Until the post is finished:
+draft = true
 +++
 ```
 

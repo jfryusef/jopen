@@ -14,7 +14,7 @@ I'm yusef. I was born in 2002, and I’m currently a fifth-grade teacher in Tehr
 
 ## Contact me
 
-[This is my GitHub](https://github.com/jfryusef) and [this is my LinkedIn](https://www.linkedin.com/in/jfryusef4th). You can find me pretty much everywhere on the internet under the username `jfryusef` and `mail [at] jfryusef [dot] link`.
+[This is my GitHub](https://github.com/jfryusef). You can find me pretty much everywhere on the internet under the username `jfryusef` and `mail [at] jfryusef [dot] link`.
 
 ### Support me
-You can support me with crypto; [Here is the URL](https://www.jfryusef.link/support/) to a web page with the addresses - no pressure, just there if you want it.
+If you'd like to support my work with cryptocurrencies; [Here is the URL](https://www.jfryusef.link/support/) to a web page with the addresses - no pressure, just there if you want it.

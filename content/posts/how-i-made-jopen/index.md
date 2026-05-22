@@ -14,7 +14,7 @@ hideComments = false
 draft = false
 +++
 
-jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, *To Learn In Public*.
+jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, _To Learn In Public_.
 
 I don't like bloated CMSs. This stack is cheap, open-source, and lets me focus on writing in a tool I already use (Obsidian). Plus, it’s all plain text — future-proof.
 
@@ -38,9 +38,9 @@ Every push to GitHub updates the blog via Cloudflare and every comment shows up 
 
 This was the only step in which I paid for something, purchasing this `.link` domain for ~$10 a year. But there were cheaper (even free) options as well.
 
-## B. Hugo site and Terminal theme 
+## B. Hugo site and Terminal theme
 
-I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#282828` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
+I customized the color scheme using the [Terminal CSS customizer](https://panr.github.io/terminal-css/) and chose `#1d2021` as the background, `#ebdbb2` as the foreground, and `#689d6a` as the accent color. This generated a `.css` file, a **favicon**, and an **OG image** that I added to my site.
 
 And here's the list of changes I made to the `/themes/terminal/config.toml` file:
 
@@ -144,22 +144,23 @@ draft = true # Until the post is finished
 Nothing special. I just enabled comments in almost every page, because why not?
 
 ```html
-<script src="https://giscus.app/client.js"
-        data-repo="jfryusef/jopen"
-        data-repo-id="[REPO ID]"
-        data-category="Comments"
-        data-category-id="[CATEGORY ID]"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="gruvbox_dark"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+<script
+	src="https://giscus.app/client.js"
+	data-repo="jfryusef/jopen"
+	data-repo-id="[REPO ID]"
+	data-category="Comments"
+	data-category-id="[CATEGORY ID]"
+	data-mapping="pathname"
+	data-strict="0"
+	data-reactions-enabled="1"
+	data-emit-metadata="0"
+	data-input-position="top"
+	data-theme="gruvbox_dark"
+	data-lang="en"
+	data-loading="lazy"
+	crossorigin="anonymous"
+	async
+></script>
 ```
 
 ---
@@ -174,6 +175,7 @@ Recently I use [VS Code](https://code.visualstudio.com/) + [this md extension](h
 
 I noticed the full content of my posts didn't show up on RSS readers, with the help of ChatGPT, I figured out it was because of the Terminal theme. So I made this custom RSS template in `/layouts/_default/rss.xml` which I think overrides the one in `/themes/terminal/layouts/_default/rss.xml`  
 I added the following content to the file:
+
 ```xml
 {{- $pctx := . -}}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}
@@ -205,6 +207,7 @@ I added the following content to the file:
   </channel>
 </rss>
 ```
+
 ## C. Using Cloudflare Email Routing
 
 From now on, cloudflare will forward every email sent to mail@jfryusef.link to my main Gmail inbox. This way people can't see my actual email address until I answer them.
@@ -215,21 +218,21 @@ I created `content/_index.md` with this content:
 
 ```markdown
 ---
-
 title: ""
-
 ---
 
 ---
 
 # Welcome to my little corner of the Internet =)
+
 jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!  
-I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made jopen, *to learn in public.*
+I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made jopen, _to learn in public._
 
 ---
 
 <!-- more -->
 ```
+
 ---
 
 Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.

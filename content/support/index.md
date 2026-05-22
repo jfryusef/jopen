@@ -8,7 +8,7 @@ hideComments = false
 draft = false
 +++
 
-If you'd like to support my work with cryptocurrencies:
+You can support me with USDT (Tether):
 
 ---
 

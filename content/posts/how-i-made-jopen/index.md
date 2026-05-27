@@ -22,7 +22,7 @@ Here's how I made it:
 
 ---
 
-## Tools
+# Tools & WorkFlow
 
 - [~Obsidian~](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
@@ -32,7 +32,7 @@ Here's how I made it:
 
 Every push to GitHub updates the blog via Cloudflare and every comment shows up on GitHub as well.
 
-## Setup
+# Setup
 
 ## A. Buying a domain
 

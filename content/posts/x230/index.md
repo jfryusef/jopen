@@ -1,11 +1,11 @@
 +++
 title = "Setting Up Arch On An Old ThinkPad"
-date = "2025-10-31T13:41:37+03:30"
+date = "2026-05-27T13:41:37+03:30"
 lastmod = ""
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
-cover = "x230-cover.jpg"
+cover = "cover.jpg"
 tags = ["ThinkPad", "Laptop", "Linux", "OS", "Arch", "Obsidian", "Hardware", "Software"]
 description = "Breathing a new life to a ThinkPad X230 using Arch+XFCE"
 showFullContent = false
@@ -14,40 +14,34 @@ hideComments = false
 draft = true
 +++
 
-Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8 GB RAM (upgradable to 16 GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was >2 GB:
-![Minimum RAM usage on a fresh install of windows 10](x230-windows10ram.PNG)
-While in a fresh install of Arch + XFCE it got down to >1 GB:
-![Minimum RAM usage on a fresh install of arch+xfce](image-1.png)
+Recently I bought a used ThinkPad X230 for ~$60. It had an i7 3rd-gen CPU, 8GB RAM, and 180GB SSD. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was >2GB:
+![Minimum RAM usage on a fresh install of windows 10](ram-before.jpg)
+While on Arch + XFCE it got down to <1GB:
+![RAM usage on a fresh install of Arch + XFCE](ram-after.jpg)
 
 # Hardware
 
-Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU.  
-Also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn't need network connection or manual set-up.
+Bofore trying to install linux, I wanted to change the thermal paste on CPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn't need network connection or manual set-up.
 ![The error I got when trying to boot without the main battery](coin-battery-error.jpg)
-Alright you got me I had no reason to tear up the whole device; I just wanted to =)
+Alright you got me I had no good  reason to tear-up the whole device; I just wanted to =)
 
 ## Let the tear up begin!
 
-![After](X230-TearUp.jpeg)
+![In the middle of it](tearup.jpg)
 
-I took out the old coin battery,
-![Old Coin Battery](X230-Old-Coin-Battery.jpeg)
-
-And Replaced it with the new one:
-![New coin battery (back)](X230-New-Coin-Battery-Back.jpeg)
+I took out the old coin battery and Replaced it with the new one:
+![New coin battery (back)](new2032.jpg)
 
 Then I cleaned the old thermal paste,
-![Old thermal paste on CPU](X230-Old-Thermal-Paste.jpeg)
-![Cleaned thermal paste on GPU](X230-GPU-CleanedUp.jpeg)
-
-And replaced it with a new one:
-![CPU and GPU woth the new thermal paste](X230-CPU-and-GPU-New-Thermal-Paste.jpeg)
+![Old thermal paste on CPU](cpu-oldpaste.jpg)
+And replaced it with a new one (probably a little too much):
+![CPU and GPU woth the new thermal paste](cpu-newpaste.jpg)
 
 # Software
 
 ## Installing Arch
 
-With the help of [Arch Linux Wiki](https://wiki.archlinux.org/), I went to [the official arch linux download page](https://archlinux.org/download/**), picked a mirror close to my location and downloaded **`archlinux-2025.08.01-x86_64.iso`** (around 900MB). Then I plugged in my 64 GB USB memory (only 8 was needed) and opened [Rufus](https://rufus.ie/) with these settings:
+With the help of [Arch Linux Wiki](https://wiki.archlinux.org/), I went to [the official Arch Linux download page](https://archlinux.org/download/**), picked a mirror close to my location and downloaded **`archlinux-2025.08.01-x86_64.iso`** (around 900MB). Then I plugged in my USB memory (only 8GB was needed) and opened [Rufus](https://rufus.ie/) with these settings:
 - **Device**: my USB stick
 - **Boot selection**: `archlinux-2025.08.01-x86_64.iso`
 - **Partition scheme**: `GPT`
@@ -57,49 +51,46 @@ Then I hit **START** and selected **Write in ISO Image Mode (Recommended)**
 
 Then I setted UEFI instead of Legacy in BIOS because it's the less painful choice.
 
-### archinstall
+## archinstall
 
-After booting up at archiso, I connected my device to Wi-Fi using `iwtcl` network configuration tool.
-Then I typed  `archinstall` to fetch the Arch Linux database and go to guided installer. these are my settings:
+After booting up at archiso, I connected my device to a Wi-Fi using `iwtcl` network configuration tool.
+Then I typed  `archinstall` to fetch the Arch Linux database and go to guided installer. these were my settings:
 
-- **Language/keyboard**: en, us (added persian later in the settings)
-- **mirror regions** (Iran failed at first attempt):
+- **Language/keyboard**: en, us (added Persian later in the settings)
+- **mirror regions**
+  - (~~Iran~~ failed at first attempt):
   - Germany
   - Netherlands
   - Sweden
   - Finland
-![archinstall mirrors and repositries](archinstall-mirrors.jpeg)
+![archinstall mirrors and repositries](archinstall-mirrors.jpg)
 - **Disk**: picked my 180 GB SSD
 - **Disk layout**: “**Erase all**” for a clean install
 - **Bootloader**: `systemd-boot`
 - **Filesystem**: `ext4`
 - **Hostname**: e.g., `jfryusef`
 - **Root password**: really?
-- **User account**: add one, tick “**superuser (wheel)**”
+- **User account**: added one, ticked “**superuser (wheel)**”
 - **Network**: `NetworkManager`
 - **Kernel**: `linux` (plain)
 - **Microcode**: `intel-ucode`
-- **Profile**: “**Desktop**” → picked **XFCE4** (light, stable)
-- **Audio**: `pipewire` (none for now)
+- **Profile**: “**Desktop**” → picked **XFCE4** (light and stable)
+- **Audio**: ~~`pipewire`~~ (Could not get it to workfor now)
 - **Optional packages**: added `firefox` and a few more (optional)
 - **Timezone**: Asia/Tehran
 
-Then I hit **Install**. When it finished, **Reboot** (removed USB).
-![Installation completed](archinstall-complete.jpeg)
+Then I hit **Install**. When it finished, **Reboot** (removed USB).  
 I saw XFCE’s login screen and logged in!
 
-Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states.  
+Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states. Mine was having it too.  
 Fix: added this kernel boot parameter in GRUB:
 `intel_idle.max_cstate=1`
 
-I alsp took a a RAM stick health test (memtest86) just in case.
-![memetest86](memtest86.jpeg)
-
-### Installing Stuff
+## Installing Stuff
 
 I opened Terminal and installed these:
 
-- sudo pacman -S `man-db` `man-pages`
+- sudo pacman -S `man-db` `man-pages`  
   (built-in documentation system for commands)
 - sudo pacman -S `fwupd`  
   (firmware updater)  
@@ -151,25 +142,25 @@ makepkg -si
 I set some of these keyboard shortcuts:  
 
 Alt+T: Terminal (xfce4-terminal)  
-Super L: Application Finder (xfce4-appfinder)  
+Windows button (Super L): Application Finder (xfce4-appfinder)  
 Super+E: ThunarFileManager (thunar)  
 [ThinkVantage](https://en.wikipedia.org/wiki/ThinkVantage_Technologies) button (Launch1): Log out (xfce4-session-logout)  
 
 Alt+1: Workspace 1  
 Alt+2: Workspace 2  
 Alt+3: Workspace 3  
-Alt+4: Workspace 4
+Alt+4: Workspace 4  
 Alt+F: maximize window  
 Alt+Up: Tile window to the left  
 Alt+Down: Tile window to the right  
 Alt+Page Up: Tile window to the top-left  
-Alt+Page Down: Tile window to the top-right
-Alt+Left: Tile window to the bottom-left  
-Alt+Up: Tile window to the bottom-right  
+Alt+Page Down: Tile window to the top-right  
+Alt+Left: Tile window to the bottom-left (regret it because it interfears with going backwards for browsers)  
+Alt+Right: Tile window to the bottom-right  
 
 also I changed Volume steps to 10% in Volume Control (xfce4-pulseaudio-plugin)
 
-## ricing
+## Ricing?
 
 I tried to use [Open Sans](https://github.com/googlefonts/opensans) + [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) as my main fonts and [Gruvbox](https://github.com/morhetz/gruvbox) as my main color palatte using [this theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) throughout the whole UI.
 
@@ -183,16 +174,13 @@ sudo pacman -S ly
 sudo systemctl enable ly.service
 ```
 
-Then I set this gruvbox themed picture as my wallpaper:
-![Wallpaper](gruvbox-wallapper.png)
-
 These are the items on my panel (a 24px buttom row):
-![Panel](Screenshot_2025-08-23_02-12-58.png)
-
+![Panel ScreenShot](panel.png)
+![Panel items](Screenshot_2025-08-23_02-12-58.png)
 I set `Smoothwall` as my window decorations
 
-I downloaded [this ?????  Firefox theme](addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr) and [Th?is VS Co?de theme?](jdinh?life.gr?uvbox)
-and created this Obsidian theme (put on github?????):
+I downloaded [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/) and [This VS Code theme](https://github.com/jdinhify/vscode-theme-gruvbox)
+and created this Obsidian theme:
 ```json
 {
   "minimal-style@@ax1@@dark": "#83A598",
@@ -290,5 +278,6 @@ and created this Obsidian theme (put on github?????):
   "minimal-style@@tx3@@dark": "#665C54"
 }
 ```
+[Here](https://github.com/jfryusef/obsidian-gruvbox-aqua) is the GitHub page for the Obsidian theme.
 
-but I use the default "elementary" theme for my cursor and icons.
+I used the default "elementary" theme for my cursor and icons.

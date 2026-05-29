@@ -48,7 +48,7 @@ Then I cleaned off the old thermal paste:
 
 And replaced it with new paste (probably a little too much):
 
-![CPU and GPU with the new thermal paste](cpu-newpaste.jpg)
+![CPU with the new thermal paste](cpu-newpaste.jpg)
 
 # Software
 

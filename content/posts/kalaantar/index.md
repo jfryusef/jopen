@@ -206,7 +206,7 @@ For icons and cursors, I kept the default `elementary` theme.
 
 These:
 
-![Panel items](Screenshot_2025-08-23_02-12-58.png)
+![Panel items](panel-items.png)
 
  are the items on my panel (a 24px bottom row):
 

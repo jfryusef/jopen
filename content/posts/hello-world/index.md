@@ -16,23 +16,15 @@ draft = false
 +++
 
 # Header 1
-## Header 2
-### Header 3
 
-1. the quick brown fox jumps over the lazy dog  
-   ~~THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG~~
-2. 1234567890!?@#$%^&*~()[]{}-=+_.,;'"`:<>/|\
+1. the quick brown fox jumps over the lazy dog;
 
----
-
-[Test URL](https://www.jfryusef.link)
+[URL](https://www.jfryusef.link) test
 
 > There is **pee** without _poop_, `but there may not be poop without "p"`.
 
-
 - [ ] Unchecked Item
-- [x] Checked Item
-
+- [x] ~~Checked Item~~
 
 ```
 {
@@ -41,5 +33,3 @@ draft = false
   "age": 22
 }
 ```
-
-![alt text test](image-test.jpg)

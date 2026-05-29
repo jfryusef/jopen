@@ -1,12 +1,12 @@
 +++
 title = "How I Made jopen?"
-date = "2025-07-06T13:41:37+03:30"
-lastmod = "2026-05-22"
+date = "2025-07-06T18:00:00+03:30"
+lastmod = "2026-05-29"
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]
+tags = ["Software", "Markdown", "Obsidian", "Git", "GitHub", "Blog", "Hugo", "jopen"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
@@ -22,7 +22,7 @@ Here's how I made it:
 
 ---
 
-# Tools & WorkFlow
+# Tools & workflow
 
 - [~Obsidian~](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
@@ -80,7 +80,7 @@ url = "https://www.google.com/search?q=site%3Ajfryusef.link+QUERY"
 weight = 30
 ```
 
-## C. Creating a Git Repository and connecting to GitHub
+## C. Creating a Git repo and connecting it to GitHub
 
 I initialized the local Hugo files in [Git](https://git-scm.com/) and turned on Discussions as a feature on [jopen's GitHub repo](https://github.com/jfryusef/jopen) (so I can use Giscus in step F).
 
@@ -236,4 +236,4 @@ I wanted to take notes on the process of my projects, and there was [no reason t
 
 ---
 
-Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.
+Feel free to share similar projects and ask questions.

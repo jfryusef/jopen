@@ -2,11 +2,11 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Setting Up Arch On An Old ThinkPad :: jopen</title>
+    <title>Setting Up Arch on an Old ThinkPad :: jopen</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Breathing a new life to a ThinkPad X230 using Arch&#43;XFCE" />
+<meta name="description" content="Breathing new life into a ThinkPad X230 using Arch &#43; XFCE" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -75,8 +75,8 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Setting Up Arch On An Old ThinkPad">
-<meta property="og:description" content="Breathing a new life to a ThinkPad X230 using Arch&#43;XFCE" />
+<meta property="og:title" content="Setting Up Arch on an Old ThinkPad">
+<meta property="og:description" content="Breathing new life into a ThinkPad X230 using Arch &#43; XFCE" />
 <meta property="og:url" content="http://localhost:1313/posts/x230/" />
 <meta property="og:site_name" content="jopen" />
 
@@ -90,7 +90,7 @@
 <meta property="og:image:height" content="627">
 
 
-  <meta property="article:published_time" content="2026-05-27 13:41:37 &#43;0330 &#43;0330" />
+  <meta property="article:published_time" content="2026-05-29 18:00:00 &#43;0330 &#43;0330" />
 
 
 
@@ -174,128 +174,150 @@
     
 <article class="post">
   <h1 class="post-title">
-    <a href="http://localhost:1313/posts/x230/">Setting Up Arch On An Old ThinkPad</a>
+    <a href="http://localhost:1313/posts/x230/">Setting Up Arch on an Old ThinkPad</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2026-05-27&nbsp;[Updated on 2026-05-27]</time><span class="post-author">yusef</span><span class="post-reading-time">5 min[s] read (979 word[s])</span></div>
+  <div class="post-meta"><time class="post-date">2026-05-29&nbsp;[Updated on 2026-05-29]</time><span class="post-author">yusef</span><span class="post-reading-time">4 min[s] read (817 word[s])</span></div>
 
   
     <span class="post-tags">
       
-      #<a href="http://localhost:1313/tags/thinkpad/">ThinkPad</a>&nbsp;
+      #<a href="http://localhost:1313/tags/software/">Software</a>&nbsp;
       
-      #<a href="http://localhost:1313/tags/laptop/">Laptop</a>&nbsp;
+      #<a href="http://localhost:1313/tags/hardware/">Hardware</a>&nbsp;
       
       #<a href="http://localhost:1313/tags/linux/">Linux</a>&nbsp;
-      
-      #<a href="http://localhost:1313/tags/os/">OS</a>&nbsp;
       
       #<a href="http://localhost:1313/tags/arch/">Arch</a>&nbsp;
       
       #<a href="http://localhost:1313/tags/obsidian/">Obsidian</a>&nbsp;
       
-      #<a href="http://localhost:1313/tags/hardware/">Hardware</a>&nbsp;
+      #<a href="http://localhost:1313/tags/gruvbox/">Gruvbox</a>&nbsp;
       
-      #<a href="http://localhost:1313/tags/software/">Software</a>&nbsp;
+      #<a href="http://localhost:1313/tags/laptop/">Laptop</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/thinkpad/">ThinkPad</a>&nbsp;
       
     </span>
   
   
   <img src="/posts/x230/cover.jpg"
     class="post-cover"
-    alt="Setting Up Arch On An Old ThinkPad"
+    alt="Setting Up Arch on an Old ThinkPad"
     title="Cover Image" />
 
 
   
 
   <div class="post-content"><div>
-        <p>Recently I bought a used ThinkPad X230 for ~$60. It had an i7 3rd-gen CPU, 8GB RAM, and 180GB SSD. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &gt;2GB:
-<img src="ram-before.jpg" alt="Minimum RAM usage on a fresh install of windows 10">
-While on Arch + XFCE it got down to &lt;1GB:
-<img src="ram-after.jpg" alt="RAM usage on a fresh install of Arch + XFCE"></p>
+        <p>Recently, I bought a used ThinkPad X230 for around $60. It came with a 3rd-gen i7 CPU, 8GB RAM, and a 180GB SSD. Decent specs for a family laptop.</p>
+<p>The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:</p>
+<p><img src="ram-before.jpg" alt="Minimum RAM usage on a fresh install of Windows 10"></p>
+<p>While on Arch + XFCE, it dropped to under 1GB:</p>
+<p><img src="ram-after.jpg" alt="RAM usage on a fresh install of Arch + XFCE"></p>
+<p>Here is how.</p>
 <h1 id="hardware">Hardware<a href="#hardware" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Bofore trying to install linux, I wanted to change the thermal paste on CPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&rsquo;t need network connection or manual set-up.
-<img src="coin-battery-error.jpg" alt="The error I got when trying to boot without the main battery">
-Alright you got me I had no good  reason to tear-up the whole device; I just wanted to =)</p>
-<h2 id="let-the-tear-up-begin">Let the tear up begin!<a href="#let-the-tear-up-begin" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><img src="tearup.jpg" alt="In the middle of it"></p>
-<p>I took out the old coin battery and Replaced it with the new one:
-<img src="new2032.jpg" alt="New coin battery (back)"></p>
-<p>Then I cleaned the old thermal paste,
-<img src="cpu-oldpaste.jpg" alt="Old thermal paste on CPU">
-And replaced it with a new one (probably a little too much):
-<img src="cpu-newpaste.jpg" alt="CPU and GPU woth the new thermal paste"></p>
+<p>Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.</p>
+<p><img src="coin-battery-error.jpg" alt="The error I got when trying to boot without the main battery"></p>
+<p>Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)</p>
+<h2 id="let-the-tear-down-begin">Let the tear-down begin<a href="#let-the-tear-down-begin" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="tearup.jpg" alt="In the middle of it tearup"></p>
+<p>I removed the old coin battery and replaced it with a new one:</p>
+<p><img src="new2032.jpg" alt="New coin battery (back)"></p>
+<p>Then I cleaned off the old thermal paste:</p>
+<p><img src="cpu-oldpaste.jpg" alt="Old thermal paste on CPU"></p>
+<p>And replaced it with new paste (probably a little too much):</p>
+<p><img src="cpu-newpaste.jpg" alt="CPU and GPU with the new thermal paste"></p>
 <h1 id="software">Software<a href="#software" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <h2 id="installing-arch">Installing Arch<a href="#installing-arch" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>With the help of <a href="https://wiki.archlinux.org/">Arch Linux Wiki</a>, I went to <a href="https://archlinux.org/download/**">the official Arch Linux download page</a>, picked a mirror close to my location and downloaded <strong><code>archlinux-2025.08.01-x86_64.iso</code></strong> (around 900MB). Then I plugged in my USB memory (only 8GB was needed) and opened <a href="https://rufus.ie/">Rufus</a> with these settings:</p>
+<p>With the help of the <a href="https://wiki.archlinux.org/">Arch Wiki</a>, I went to <a href="https://archlinux.org/download/">the official Arch Linux download page</a>, picked a mirror close to my location, and downloaded <strong><code>archlinux-2025.08.01-x86_64.iso</code></strong> (around 900MB).</p>
+<p>Then I plugged in a USB drive (8GB was enough) and opened <a href="https://rufus.ie/">Rufus</a> to make it bootable with these settings:</p>
 <ul>
 <li><strong>Device</strong>: my USB stick</li>
 <li><strong>Boot selection</strong>: <code>archlinux-2025.08.01-x86_64.iso</code></li>
 <li><strong>Partition scheme</strong>: <code>GPT</code></li>
 <li><strong>Target system</strong>: <code>UEFI (non-CSM)</code></li>
 </ul>
-<p>Then I hit <strong>START</strong> and selected <strong>Write in ISO Image Mode (Recommended)</strong></p>
-<p>Then I setted UEFI instead of Legacy in BIOS because it&rsquo;s the less painful choice.</p>
-<h2 id="archinstall">archinstall<a href="#archinstall" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>After booting up at archiso, I connected my device to a Wi-Fi using <code>iwtcl</code> network configuration tool.
-Then I typed  <code>archinstall</code> to fetch the Arch Linux database and go to guided installer. these were my settings:</p>
+<p>Then I clicked <strong>START</strong> and selected <strong>Write in ISO Image Mode (Recommended)</strong></p>
+<p>After that, I switched the BIOS mode from Legacy to UEFI because apparently it&rsquo;s the less painful option nowadays.</p>
+<h3 id="archinstall">archinstall<a href="#archinstall" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>After booting into Arch ISO, I connected to Wi-Fi using the <code>iwctl</code> network configuration tool.</p>
+<p>Then I typed  <code>archinstall</code> to go to the guided installer. Because I&rsquo;m not a wierdo.</p>
+<p>These were my settings:</p>
 <ul>
-<li><strong>Language/keyboard</strong>: en, us (added Persian later in the settings)</li>
-<li><strong>mirror regions</strong>
+<li><strong>Language/keyboard</strong>: en_US (added Persian later)</li>
+<li><strong>mirror regions:</strong>:
 <ul>
-<li>(<del>Iran</del> failed at first attempt):</li>
+<li><del>Iran</del> (failed at first attempt)</li>
 <li>Germany</li>
 <li>Netherlands</li>
 <li>Sweden</li>
-<li>Finland
-<img src="archinstall-mirrors.jpg" alt="archinstall mirrors and repositries"></li>
+<li>Finland</li>
 </ul>
 </li>
-<li><strong>Disk</strong>: picked my 180 GB SSD</li>
-<li><strong>Disk layout</strong>: “<strong>Erase all</strong>” for a clean install</li>
+</ul>
+<p><img src="archinstall-mirrors.jpg" alt="archinstall mirrors"></p>
+<ul>
+<li><strong>Disk</strong>: selected the 180GB SSD</li>
+<li><strong>Disk layout</strong>: <code>Erase all</code></li>
 <li><strong>Bootloader</strong>: <code>systemd-boot</code></li>
 <li><strong>Filesystem</strong>: <code>ext4</code></li>
-<li><strong>Hostname</strong>: e.g., <code>jfryusef</code></li>
-<li><strong>Root password</strong>: really?</li>
-<li><strong>User account</strong>: added one, ticked “<strong>superuser (wheel)</strong>”</li>
+<li><strong>Hostname</strong>: <code>jfryusef</code></li>
+<li><strong>Root password</strong>: I&rsquo;m not gonna tell you that</li>
+<li><strong>User account</strong>: created one and enabled <code>(wheel)</code> (admin)</li>
 <li><strong>Network</strong>: <code>NetworkManager</code></li>
-<li><strong>Kernel</strong>: <code>linux</code> (plain)</li>
+<li><strong>Kernel</strong>: <code>linux</code></li>
 <li><strong>Microcode</strong>: <code>intel-ucode</code></li>
-<li><strong>Profile</strong>: “<strong>Desktop</strong>” → picked <strong>XFCE4</strong> (light and stable)</li>
-<li><strong>Audio</strong>: <del><code>pipewire</code></del> (Could not get it to workfor now)</li>
-<li><strong>Optional packages</strong>: added <code>firefox</code> and a few more (optional)</li>
+<li><strong>Profile</strong>: <code>Desktop</code> → <code>XFCE4</code> (light and stable)</li>
+<li><strong>Audio</strong>: <del><code>pipewire</code></del> (could not get it working at first)</li>
+<li><strong>Optional packages</strong>: <code>firefox</code> and a few others (optional)</li>
 <li><strong>Timezone</strong>: Asia/Tehran</li>
 </ul>
-<p>Then I hit <strong>Install</strong>. When it finished, <strong>Reboot</strong> (removed USB).<br>
-I saw XFCE’s login screen and logged in!</p>
-<p>Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states. Mine was having it too.<br>
-Fix: added this kernel boot parameter in GRUB:
-<code>intel_idle.max_cstate=1</code></p>
-<h2 id="installing-stuff">Installing Stuff<a href="#installing-stuff" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>I opened Terminal and installed these:</p>
+<p>Then I hit <strong>Install</strong>.</p>
+<p>Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.</p>
+<h3 id="the-hard-freeze-problem">The hard-freeze problem<a href="#the-hard-freeze-problem" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.</p>
+<p>Fix: add this kernel boot parameter: <code>intel_idle.max_cstate=1</code></p>
+<h2 id="installing-stuff">Installing stuff<a href="#installing-stuff" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I opened a terminal and installed these packages:</p>
 <ul>
-<li>sudo pacman -S <code>man-db</code> <code>man-pages</code><br>
-(built-in documentation system for commands)</li>
-<li>sudo pacman -S <code>fwupd</code><br>
-(firmware updater)</li>
-<li>sudo pacman -S <code>bluez</code> <code>bluez-utils</code><br>
-(core Bluetooth protocol stack)</li>
-<li>sudo pacman -S <code>gvfs</code> <code>gvfs-mtp</code><br>
-(virtual filesystem support and MTP support for Android devices)</li>
-<li>sudo pacman -S <code>thunar-archive-plugin</code> <code>p7zip</code> <code>unzip</code> <code>unrar</code><br>
-(file manager integration tools and archive utilities)</li>
-<li>sudo pacman -S <code>brightnessctl</code><br>
-(screen brightness control utility)</li>
-<li>sudo pacman -S <code>pipewire</code> <code>pipewire-pulse</code> <code>wireplumber</code><br>
-(Linux audio stack)</li>
-<li>sudo pacman -S <code>blueman</code><br>
-(GUI Bluetooth manager)</li>
+<li>
+<p>sudo pacman -S <code>man-db</code> <code>man-pages</code><br>
+(built-in documentation system for commands)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>fwupd</code><br>
+(firmware updater)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>bluez</code> <code>bluez-utils</code><br>
+(Bluetooth stack)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>gvfs</code> <code>gvfs-mtp</code><br>
+(virtual filesystem support + Android MTP support)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>thunar-archive-plugin</code> <code>p7zip</code> <code>unzip</code> <code>unrar</code><br>
+(archive utilities + Thunar integration)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>brightnessctl</code><br>
+(screen brightness utility)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>pipewire</code> <code>pipewire-pulse</code> <code>wireplumber</code><br>
+(Linux audio stack)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>blueman</code><br>
+(GUI Bluetooth manager)</p>
+</li>
 </ul>
-<p>Then I typed these commands to enable the ones that needed enabling:</p>
+<p>Then I enabled the required services:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl --user enable -- now pipewire pipewire-pulse wireplumber
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable --now bluetooth
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo timedatectl set-ntp true
-</span></span></code></pre></div><p>I needed yay AUR to install some of my apps so I installed it:</p>
+</span></span></code></pre></div><p>I also needed an AUR helper, so I installed yay:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S --needed git base-devel
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay.git
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd yay
@@ -327,133 +349,50 @@ Fix: added this kernel boot parameter in GRUB:
   </tbody>
 </table>
 <h2 id="tweaking-things">Tweaking things<a href="#tweaking-things" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>I set some of these keyboard shortcuts:</p>
-<p>Alt+T: Terminal (xfce4-terminal)<br>
-Windows button (Super L): Application Finder (xfce4-appfinder)<br>
-Super+E: ThunarFileManager (thunar)<br>
-<a href="https://en.wikipedia.org/wiki/ThinkVantage_Technologies">ThinkVantage</a> button (Launch1): Log out (xfce4-session-logout)</p>
-<p>Alt+1: Workspace 1<br>
-Alt+2: Workspace 2<br>
-Alt+3: Workspace 3<br>
-Alt+4: Workspace 4<br>
-Alt+F: maximize window<br>
-Alt+Up: Tile window to the left<br>
-Alt+Down: Tile window to the right<br>
-Alt+Page Up: Tile window to the top-left<br>
-Alt+Page Down: Tile window to the top-right<br>
-Alt+Left: Tile window to the bottom-left (regret it because it interfears with going backwards for browsers)<br>
-Alt+Right: Tile window to the bottom-right</p>
-<p>also I changed Volume steps to 10% in Volume Control (xfce4-pulseaudio-plugin)</p>
+<h3 id="keyboard-shortcuts">Keyboard shortcuts<a href="#keyboard-shortcuts" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+T</code>: terminal (<code>xfce4-terminal</code>)</li>
+<li><code>Super</code>: application finder (<code>xfce4-appfinder</code>)</li>
+<li><code>Super+E</code>: Thunar (<code>thunar</code>)</li>
+<li><a href="https://en.wikipedia.org/wiki/ThinkVantage_Technologies">ThinkVantage</a> button (<code>Launch1</code>): logout menu (<code>xfce4-session-logout</code>)</li>
+</ul>
+<p>I also changed the volume step size to 10% in <code>xfce4-pulseaudio-plugin</code>.</p>
+<h3 id="workspace-shortcut">Workspace shortcut<a href="#workspace-shortcut" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+1</code>: workspace 1</li>
+<li><code>Alt+2</code>: workspace 2</li>
+<li><code>Alt+3</code>: workspace 3</li>
+<li><code>Alt+4</code>: workspace 4</li>
+</ul>
+<h3 id="winndows-management">Winndows management<a href="#winndows-management" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+F</code>: maximize window</li>
+<li><code>Alt+Up</code>: tile window to the left</li>
+<li><code>Alt+Down</code>: tile window to the right</li>
+<li><code>Alt+Page Up</code>: tile window to the top-left</li>
+<li><code>Alt+Page Down</code>: tile window to the top-right</li>
+<li><code>Alt+Left</code>: tile window to the bottom-left</li>
+<li><code>Alt+Right</code>: tile window to the bottom-right</li>
+</ul>
+<p>(later regretted using Alt+Left and Alt+Right because they interfere with browser navigation shortcuts. But I kept using them anyway.)</p>
 <h2 id="ricing">Ricing?<a href="#ricing" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>I tried to use <a href="https://github.com/googlefonts/opensans">Open Sans</a> + <a href="https://github.com/JetBrains/JetBrainsMono">JetBrains Mono</a> as my main fonts and <a href="https://github.com/morhetz/gruvbox">Gruvbox</a> as my main color palatte using <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">this theme</a> throughout the whole UI.</p>
-<p>I switched my diplay manager from LighDM,</p>
+<p>I used <a href="https://github.com/googlefonts/opensans">Open Sans</a> + <a href="https://github.com/JetBrains/JetBrainsMono">JetBrains Mono</a> as my main fonts, and <a href="https://github.com/morhetz/gruvbox">Gruvbox</a> as the primary color palatte using <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">this GTK theme</a>.</p>
+<p>For icons and cursors, I kept the default <code>elementary</code> theme.</p>
+<p>These:</p>
+<p><img src="Screenshot_2025-08-23_02-12-58.png" alt="Panel items"></p>
+<p>are the items on my panel (a 24px bottom row):</p>
+<p><img src="panel.png" alt="Panel ScreenShot"></p>
+<p>I set <code>Smoothwall</code> as my window decoration theme. A practical choice.</p>
+<p>Then I switched my display manager from LightDM:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl disable lightdm.service
-</span></span></code></pre></div><p>to Ly (a lightweight login manager that runs in the terminal):</p>
+</span></span></code></pre></div><p>to Ly (a TUI login manager):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S ly
 </span></span><span style="display:flex;"><span>sudo systemctl enable ly.service
-</span></span></code></pre></div><p>These are the items on my panel (a 24px buttom row):
-<img src="panel.png" alt="Panel ScreenShot">
-<img src="Screenshot_2025-08-23_02-12-58.png" alt="Panel items">
-I set <code>Smoothwall</code> as my window decorations</p>
-<p>I downloaded <a href="https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/">this Gruvbox Firefox theme</a> and <a href="https://github.com/jdinhify/vscode-theme-gruvbox">This VS Code theme</a>
-and created this Obsidian theme:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ax1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#83A598&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@callouts-style&#34;</span>: <span style="color:#e6db74">&#34;callouts-default&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h1-l&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h1-size&#34;</span>: <span style="color:#e6db74">&#34;2em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h1-weight&#34;</span>: <span style="color:#ae81ff">900</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h2-weight&#34;</span>: <span style="color:#ae81ff">800</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h2-size&#34;</span>: <span style="color:#e6db74">&#34;1.8em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h2-l&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h3-l&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h3-size&#34;</span>: <span style="color:#e6db74">&#34;1.6em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h6-weight&#34;</span>: <span style="color:#ae81ff">400</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h5-weight&#34;</span>: <span style="color:#ae81ff">500</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h1-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h6-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h5-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h4-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h2-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h3-weight&#34;</span>: <span style="color:#ae81ff">700</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h4-weight&#34;</span>: <span style="color:#ae81ff">600</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h6-size&#34;</span>: <span style="color:#e6db74">&#34;1em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h4-size&#34;</span>: <span style="color:#e6db74">&#34;1.4em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h5-size&#34;</span>: <span style="color:#e6db74">&#34;1.2em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@icon-muted&#34;</span>: <span style="color:#ae81ff">0.5</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@active-line-on&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@checkbox-shape&#34;</span>: <span style="color:#e6db74">&#34;checkbox-square&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@metadata-heading-off&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@metadata-add-property-off&#34;</span>: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@metadata-dividers&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@metadata-icons-off&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@sidebar-tabs-style&#34;</span>: <span style="color:#e6db74">&#34;sidebar-tabs-underline&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@sidebar-tabs-names&#34;</span>: <span style="color:#e6db74">&#34;tab-names-off&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@vault-profile-display&#34;</span>: <span style="color:#e6db74">&#34;vault-profile-default&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@hide-help&#34;</span>: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ribbon-style&#34;</span>: <span style="color:#e6db74">&#34;ribbon-hidden&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tabs-style&#34;</span>: <span style="color:#e6db74">&#34;tabs-underline&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tag-radius&#34;</span>: <span style="color:#e6db74">&#34;4px&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@hl2@@dark&#34;</span>: <span style="color:#e6db74">&#34;#665C54&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@window-title-off&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@titlebar-text-weight&#34;</span>: <span style="color:#ae81ff">100</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-advanced@@hide-settings-desc&#34;</span>: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-advanced@@cursor&#34;</span>: <span style="color:#e6db74">&#34;default&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@inline-title-size&#34;</span>: <span style="color:#e6db74">&#34;2em&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@inline-title-weight&#34;</span>: <span style="color:#ae81ff">900</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@inline-title-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#689D6A&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-red@@dark&#34;</span>: <span style="color:#e6db74">&#34;#CC241D&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-orange@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D65D0E&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-yellow@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D79921&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-green@@dark&#34;</span>: <span style="color:#e6db74">&#34;#98971A&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-blue@@dark&#34;</span>: <span style="color:#e6db74">&#34;#458588&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-purple@@dark&#34;</span>: <span style="color:#e6db74">&#34;#B16286&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-cyan@@dark&#34;</span>: <span style="color:#e6db74">&#34;#689D6A&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@color-pink@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D3869B&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ax2@@dark&#34;</span>: <span style="color:#e6db74">&#34;#458588&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@blockquote-border-thickness&#34;</span>: <span style="color:#ae81ff">3</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@blockquote-border-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D5C4A1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@blockquote-font-style&#34;</span>: <span style="color:#e6db74">&#34;normal&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@blockquote-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D5C4A1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-node@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D65D0E&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-line@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D79921&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@icon-color-hover@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D5C4A1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@icon-color-active@@dark&#34;</span>: <span style="color:#e6db74">&#34;#EBDBB2&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@icon-color-focused@@dark&#34;</span>: <span style="color:#e6db74">&#34;#FBF1C7&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@indentation-guide-color-active@@dark&#34;</span>: <span style="color:#e6db74">&#34;#504945&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@indentation-guide-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#32302F&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@minimal-tab-text-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#BDAE93&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@minimal-tab-text-color-active@@dark&#34;</span>: <span style="color:#e6db74">&#34;#FBF1C7&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tag-background-hover@@dark&#34;</span>: <span style="color:#e6db74">&#34;#282828&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tx1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#EBDBB2&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@text-formatting@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D5C4A1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tag-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D5C4A1&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@sp1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#1D2021&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-node-attachment@@dark&#34;</span>: <span style="color:#e6db74">&#34;#B16286&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@base@@dark&#34;</span>: <span style="color:#e6db74">&#34;#282828&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@bg1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#1D2021&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ui3@@dark&#34;</span>: <span style="color:#e6db74">&#34;#665C54&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ui1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#3C3836&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ui2@@dark&#34;</span>: <span style="color:#e6db74">&#34;#504945&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@ax3@@dark&#34;</span>: <span style="color:#e6db74">&#34;#689D6A&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@canvas-dot-pattern@@dark&#34;</span>: <span style="color:#e6db74">&#34;#3C3836&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@code-normal@@dark&#34;</span>: <span style="color:#e6db74">&#34;#EBDBB2&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@code-background@@dark&#34;</span>: <span style="color:#e6db74">&#34;#282828&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@code-comment@@dark&#34;</span>: <span style="color:#e6db74">&#34;#928374&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@code-operator@@dark&#34;</span>: <span style="color:#e6db74">&#34;#D65D0E&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@code-punctuation@@dark&#34;</span>: <span style="color:#e6db74">&#34;#458588&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-node-focused@@dark&#34;</span>: <span style="color:#e6db74">&#34;#8EC07C&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-node-tag@@dark&#34;</span>: <span style="color:#e6db74">&#34;#458588&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@graph-node-unresolved@@dark&#34;</span>: <span style="color:#e6db74">&#34;#928374&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@h3-variant&#34;</span>: <span style="color:#e6db74">&#34;small-caps&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@icon-color@@dark&#34;</span>: <span style="color:#e6db74">&#34;#BDAE93&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@image-muted&#34;</span>: <span style="color:#ae81ff">0.7</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@hl1@@dark&#34;</span>: <span style="color:#e6db74">&#34;#3C3836&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tx2@@dark&#34;</span>: <span style="color:#e6db74">&#34;#A89984&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimal-style@@tx3@@dark&#34;</span>: <span style="color:#e6db74">&#34;#665C54&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><a href="https://github.com/jfryusef/obsidian-gruvbox-aqua">Here</a> is the GitHub page for the Obsidian theme.</p>
-<p>I used the default &ldquo;elementary&rdquo; theme for my cursor and icons.</p>
+</span></span></code></pre></div><p>I also installed <a href="https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/">this Gruvbox Firefox theme</a> and <a href="https://github.com/jdinhify/vscode-theme-gruvbox">this VS Code theme</a>.</p>
+<h3 id="my-obsidian-theme">My Obsidian theme<a href="#my-obsidian-theme" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Since I couldn&rsquo;t find any good ones for my usecases, I created <a href="https://github.com/jfryusef/obsidian-gruvbox-aqua">my own Obsidian Gruvbox theme</a> that uses <a href="https://github.com/kepano/obsidian-minimal">Minimal theme</a> as the base.</p>
+<hr>
+<p>Once again, feel free to share similar projects and ask questions.</p>
 
       </div></div>
 

@@ -1,113 +1,143 @@
 +++
-title = "Setting Up Arch On An Old ThinkPad"
-date = "2026-05-27T13:41:37+03:30"
+title = "Setting Up Arch on an Old ThinkPad"
+date = "2026-05-29T18:00:00+03:30"
 lastmod = ""
 #dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = "cover.jpg"
-tags = ["ThinkPad", "Laptop", "Linux", "OS", "Arch", "Obsidian", "Hardware", "Software"]
-description = "Breathing a new life to a ThinkPad X230 using Arch+XFCE"
+tags = ["Software", "Hardware", "Linux", "Arch", "Obsidian", "Gruvbox", "Laptop", "ThinkPad"]
+description = "Breathing new life into a ThinkPad X230 using Arch + XFCE"
 showFullContent = false
 readingTime = true
 hideComments = false
-draft = true
+draft = false
 +++
 
-Recently I bought a used ThinkPad X230 for ~$60. It had an i7 3rd-gen CPU, 8GB RAM, and 180GB SSD. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was >2GB:
-![Minimum RAM usage on a fresh install of windows 10](ram-before.jpg)
-While on Arch + XFCE it got down to <1GB:
+Recently, I bought a used ThinkPad X230 for around $60. It came with a 3rd-gen i7 CPU, 8GB RAM, and a 180GB SSD. Decent specs for a family laptop.
+
+The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:
+
+![Minimum RAM usage on a fresh install of Windows 10](ram-before.jpg)
+
+While on Arch + XFCE, it dropped to under 1GB:
+
 ![RAM usage on a fresh install of Arch + XFCE](ram-after.jpg)
+
+Here is how.
 
 # Hardware
 
-Bofore trying to install linux, I wanted to change the thermal paste on CPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn't need network connection or manual set-up.
+Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.
+
 ![The error I got when trying to boot without the main battery](coin-battery-error.jpg)
-Alright you got me I had no good  reason to tear-up the whole device; I just wanted to =)
 
-## Let the tear up begin!
+Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)
 
-![In the middle of it](tearup.jpg)
+## Let the tear-down begin
 
-I took out the old coin battery and Replaced it with the new one:
+![In the middle of it tearup](tearup.jpg)
+
+I removed the old coin battery and replaced it with a new one:
+
 ![New coin battery (back)](new2032.jpg)
 
-Then I cleaned the old thermal paste,
+Then I cleaned off the old thermal paste:
+
 ![Old thermal paste on CPU](cpu-oldpaste.jpg)
-And replaced it with a new one (probably a little too much):
-![CPU and GPU woth the new thermal paste](cpu-newpaste.jpg)
+
+And replaced it with new paste (probably a little too much):
+
+![CPU and GPU with the new thermal paste](cpu-newpaste.jpg)
 
 # Software
 
 ## Installing Arch
 
-With the help of [Arch Linux Wiki](https://wiki.archlinux.org/), I went to [the official Arch Linux download page](https://archlinux.org/download/**), picked a mirror close to my location and downloaded **`archlinux-2025.08.01-x86_64.iso`** (around 900MB). Then I plugged in my USB memory (only 8GB was needed) and opened [Rufus](https://rufus.ie/) with these settings:
+With the help of the [Arch Wiki](https://wiki.archlinux.org/), I went to [the official Arch Linux download page](https://archlinux.org/download/), picked a mirror close to my location, and downloaded **`archlinux-2025.08.01-x86_64.iso`** (around 900MB).
+
+Then I plugged in a USB drive (8GB was enough) and opened [Rufus](https://rufus.ie/) to make it bootable with these settings:
+
 - **Device**: my USB stick
 - **Boot selection**: `archlinux-2025.08.01-x86_64.iso`
 - **Partition scheme**: `GPT`
 - **Target system**: `UEFI (non-CSM)`  
 
-Then I hit **START** and selected **Write in ISO Image Mode (Recommended)**
+Then I clicked **START** and selected **Write in ISO Image Mode (Recommended)**
 
-Then I setted UEFI instead of Legacy in BIOS because it's the less painful choice.
+After that, I switched the BIOS mode from Legacy to UEFI because apparently it's the less painful option nowadays.
 
-## archinstall
+### archinstall
 
-After booting up at archiso, I connected my device to a Wi-Fi using `iwtcl` network configuration tool.
-Then I typed  `archinstall` to fetch the Arch Linux database and go to guided installer. these were my settings:
+After booting into Arch ISO, I connected to Wi-Fi using the `iwctl` network configuration tool.
 
-- **Language/keyboard**: en, us (added Persian later in the settings)
-- **mirror regions**
-  - (~~Iran~~ failed at first attempt):
+Then I typed  `archinstall` to go to the guided installer. Because I'm not a wierdo.
+
+These were my settings:
+
+- **Language/keyboard**: en_US (added Persian later)
+- **mirror regions:**:
+  - ~~Iran~~ (failed at first attempt)
   - Germany
   - Netherlands
   - Sweden
   - Finland
-![archinstall mirrors and repositries](archinstall-mirrors.jpg)
-- **Disk**: picked my 180 GB SSD
-- **Disk layout**: “**Erase all**” for a clean install
+
+![archinstall mirrors](archinstall-mirrors.jpg)
+
+- **Disk**: selected the 180GB SSD
+- **Disk layout**: `Erase all`
 - **Bootloader**: `systemd-boot`
 - **Filesystem**: `ext4`
-- **Hostname**: e.g., `jfryusef`
-- **Root password**: really?
-- **User account**: added one, ticked “**superuser (wheel)**”
+- **Hostname**: `jfryusef`
+- **Root password**: I'm not gonna tell you that
+- **User account**: created one and enabled `(wheel)` (admin)
 - **Network**: `NetworkManager`
-- **Kernel**: `linux` (plain)
+- **Kernel**: `linux`
 - **Microcode**: `intel-ucode`
-- **Profile**: “**Desktop**” → picked **XFCE4** (light and stable)
-- **Audio**: ~~`pipewire`~~ (Could not get it to workfor now)
-- **Optional packages**: added `firefox` and a few more (optional)
+- **Profile**: `Desktop` → `XFCE4` (light and stable)
+- **Audio**: ~~`pipewire`~~ (could not get it working at first)
+- **Optional packages**: `firefox` and a few others (optional)
 - **Timezone**: Asia/Tehran
 
-Then I hit **Install**. When it finished, **Reboot** (removed USB).  
-I saw XFCE’s login screen and logged in!
+Then I hit **Install**.
 
-Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states. Mine was having it too.  
-Fix: added this kernel boot parameter in GRUB:
-`intel_idle.max_cstate=1`
+Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.
 
-## Installing Stuff
+### The hard-freeze problem
+Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.
 
-I opened Terminal and installed these:
+Fix: add this kernel boot parameter: `intel_idle.max_cstate=1`
+
+## Installing stuff
+
+I opened a terminal and installed these packages:
 
 - sudo pacman -S `man-db` `man-pages`  
   (built-in documentation system for commands)
+
 - sudo pacman -S `fwupd`  
   (firmware updater)  
+
 - sudo pacman -S `bluez` `bluez-utils`  
-  (core Bluetooth protocol stack)
+  (Bluetooth stack)
+
 - sudo pacman -S `gvfs` `gvfs-mtp`  
-  (virtual filesystem support and MTP support for Android devices)
+  (virtual filesystem support + Android MTP support)
+
 - sudo pacman -S `thunar-archive-plugin` `p7zip` `unzip` `unrar`  
-  (file manager integration tools and archive utilities)
+  (archive utilities + Thunar integration)
+
 - sudo pacman -S `brightnessctl`  
-  (screen brightness control utility)
+  (screen brightness utility)
+
 - sudo pacman -S `pipewire` `pipewire-pulse` `wireplumber`  
   (Linux audio stack)
+
 - sudo pacman -S `blueman`  
   (GUI Bluetooth manager)
 
-Then I typed these commands to enable the ones that needed enabling:
+Then I enabled the required services:
 
 ```bash
 systemctl --user enable -- now pipewire pipewire-pulse wireplumber
@@ -118,7 +148,7 @@ sudo systemctl enable --now bluetooth
 ```bash
 sudo timedatectl set-ntp true
 ```
-I needed yay AUR to install some of my apps so I installed it:
+I also needed an AUR helper, so I installed yay:
 ```bash
 sudo pacman -S --needed git base-devel
 ```
@@ -139,145 +169,72 @@ makepkg -si
 
 ## Tweaking things
 
-I set some of these keyboard shortcuts:  
+### Keyboard shortcuts
 
-Alt+T: Terminal (xfce4-terminal)  
-Windows button (Super L): Application Finder (xfce4-appfinder)  
-Super+E: ThunarFileManager (thunar)  
-[ThinkVantage](https://en.wikipedia.org/wiki/ThinkVantage_Technologies) button (Launch1): Log out (xfce4-session-logout)  
+- `Alt+T`: terminal (`xfce4-terminal`)
+- `Super`: application finder (`xfce4-appfinder`)
+- `Super+E`: Thunar (`thunar`)
+- [ThinkVantage](https://en.wikipedia.org/wiki/ThinkVantage_Technologies) button (`Launch1`): logout menu (`xfce4-session-logout`)  
 
-Alt+1: Workspace 1  
-Alt+2: Workspace 2  
-Alt+3: Workspace 3  
-Alt+4: Workspace 4  
-Alt+F: maximize window  
-Alt+Up: Tile window to the left  
-Alt+Down: Tile window to the right  
-Alt+Page Up: Tile window to the top-left  
-Alt+Page Down: Tile window to the top-right  
-Alt+Left: Tile window to the bottom-left (regret it because it interfears with going backwards for browsers)  
-Alt+Right: Tile window to the bottom-right  
+I also changed the volume step size to 10% in `xfce4-pulseaudio-plugin`.
 
-also I changed Volume steps to 10% in Volume Control (xfce4-pulseaudio-plugin)
+
+### Workspace shortcut
+
+- `Alt+1`: workspace 1  
+- `Alt+2`: workspace 2  
+- `Alt+3`: workspace 3  
+- `Alt+4`: workspace 4
+
+### Winndows management
+
+- `Alt+F`: maximize window
+- `Alt+Up`: tile window to the left
+- `Alt+Down`: tile window to the right
+- `Alt+Page Up`: tile window to the top-left
+- `Alt+Page Down`: tile window to the top-right
+- `Alt+Left`: tile window to the bottom-left
+- `Alt+Right`: tile window to the bottom-right  
+
+(later regretted using Alt+Left and Alt+Right because they interfere with browser navigation shortcuts. But I kept using them anyway.)
 
 ## Ricing?
 
-I tried to use [Open Sans](https://github.com/googlefonts/opensans) + [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) as my main fonts and [Gruvbox](https://github.com/morhetz/gruvbox) as my main color palatte using [this theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) throughout the whole UI.
+I used [Open Sans](https://github.com/googlefonts/opensans) + [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) as my main fonts, and [Gruvbox](https://github.com/morhetz/gruvbox) as the primary color palatte using [this GTK theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme).
 
-I switched my diplay manager from LighDM,
+For icons and cursors, I kept the default `elementary` theme.
+
+These:
+
+![Panel items](Screenshot_2025-08-23_02-12-58.png)
+
+ are the items on my panel (a 24px bottom row):
+
+![Panel ScreenShot](panel.png)
+
+I set `Smoothwall` as my window decoration theme. A practical choice.
+
+Then I switched my display manager from LightDM:
+
 ```bash
 sudo systemctl disable lightdm.service
 ```
-to Ly (a lightweight login manager that runs in the terminal):
+
+to Ly (a TUI login manager):
+
 ```bash
 sudo pacman -S ly
 sudo systemctl enable ly.service
 ```
 
-These are the items on my panel (a 24px buttom row):
-![Panel ScreenShot](panel.png)
-![Panel items](Screenshot_2025-08-23_02-12-58.png)
-I set `Smoothwall` as my window decorations
+I also installed [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/) and [this VS Code theme](https://github.com/jdinhify/vscode-theme-gruvbox).
 
-I downloaded [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/) and [This VS Code theme](https://github.com/jdinhify/vscode-theme-gruvbox)
-and created this Obsidian theme:
-```json
-{
-  "minimal-style@@ax1@@dark": "#83A598",
-  "minimal-style@@callouts-style": "callouts-default",
-  "minimal-style@@h1-l": false,
-  "minimal-style@@h1-size": "2em",
-  "minimal-style@@h1-weight": 900,
-  "minimal-style@@h2-weight": 800,
-  "minimal-style@@h2-size": "1.8em",
-  "minimal-style@@h2-l": false,
-  "minimal-style@@h3-l": false,
-  "minimal-style@@h3-size": "1.6em",
-  "minimal-style@@h6-weight": 400,
-  "minimal-style@@h5-weight": 500,
-  "minimal-style@@h1-variant": "small-caps",
-  "minimal-style@@h6-variant": "small-caps",
-  "minimal-style@@h5-variant": "small-caps",
-  "minimal-style@@h4-variant": "small-caps",
-  "minimal-style@@h2-variant": "small-caps",
-  "minimal-style@@h3-weight": 700,
-  "minimal-style@@h4-weight": 600,
-  "minimal-style@@h6-size": "1em",
-  "minimal-style@@h4-size": "1.4em",
-  "minimal-style@@h5-size": "1.2em",
-  "minimal-style@@icon-muted": 0.5,
-  "minimal-style@@active-line-on": false,
-  "minimal-style@@checkbox-shape": "checkbox-square",
-  "minimal-style@@metadata-heading-off": false,
-  "minimal-style@@metadata-add-property-off": true,
-  "minimal-style@@metadata-dividers": false,
-  "minimal-style@@metadata-icons-off": false,
-  "minimal-style@@sidebar-tabs-style": "sidebar-tabs-underline",
-  "minimal-style@@sidebar-tabs-names": "tab-names-off",
-  "minimal-style@@vault-profile-display": "vault-profile-default",
-  "minimal-style@@hide-help": true,
-  "minimal-style@@ribbon-style": "ribbon-hidden",
-  "minimal-style@@tabs-style": "tabs-underline",
-  "minimal-style@@tag-radius": "4px",
-  "minimal-style@@hl2@@dark": "#665C54",
-  "minimal-style@@window-title-off": false,
-  "minimal-style@@titlebar-text-weight": 100,
-  "minimal-advanced@@hide-settings-desc": false,
-  "minimal-advanced@@cursor": "default",
-  "minimal-style@@inline-title-size": "2em",
-  "minimal-style@@inline-title-weight": 900,
-  "minimal-style@@inline-title-color@@dark": "#689D6A",
-  "minimal-style@@color-red@@dark": "#CC241D",
-  "minimal-style@@color-orange@@dark": "#D65D0E",
-  "minimal-style@@color-yellow@@dark": "#D79921",
-  "minimal-style@@color-green@@dark": "#98971A",
-  "minimal-style@@color-blue@@dark": "#458588",
-  "minimal-style@@color-purple@@dark": "#B16286",
-  "minimal-style@@color-cyan@@dark": "#689D6A",
-  "minimal-style@@color-pink@@dark": "#D3869B",
-  "minimal-style@@ax2@@dark": "#458588",
-  "minimal-style@@blockquote-border-thickness": 3,
-  "minimal-style@@blockquote-border-color@@dark": "#D5C4A1",
-  "minimal-style@@blockquote-font-style": "normal",
-  "minimal-style@@blockquote-color@@dark": "#D5C4A1",
-  "minimal-style@@graph-node@@dark": "#D65D0E",
-  "minimal-style@@graph-line@@dark": "#D79921",
-  "minimal-style@@icon-color-hover@@dark": "#D5C4A1",
-  "minimal-style@@icon-color-active@@dark": "#EBDBB2",
-  "minimal-style@@icon-color-focused@@dark": "#FBF1C7",
-  "minimal-style@@indentation-guide-color-active@@dark": "#504945",
-  "minimal-style@@indentation-guide-color@@dark": "#32302F",
-  "minimal-style@@minimal-tab-text-color@@dark": "#BDAE93",
-  "minimal-style@@minimal-tab-text-color-active@@dark": "#FBF1C7",
-  "minimal-style@@tag-background-hover@@dark": "#282828",
-  "minimal-style@@tx1@@dark": "#EBDBB2",
-  "minimal-style@@text-formatting@@dark": "#D5C4A1",
-  "minimal-style@@tag-color@@dark": "#D5C4A1",
-  "minimal-style@@sp1@@dark": "#1D2021",
-  "minimal-style@@graph-node-attachment@@dark": "#B16286",
-  "minimal-style@@base@@dark": "#282828",
-  "minimal-style@@bg1@@dark": "#1D2021",
-  "minimal-style@@ui3@@dark": "#665C54",
-  "minimal-style@@ui1@@dark": "#3C3836",
-  "minimal-style@@ui2@@dark": "#504945",
-  "minimal-style@@ax3@@dark": "#689D6A",
-  "minimal-style@@canvas-dot-pattern@@dark": "#3C3836",
-  "minimal-style@@code-normal@@dark": "#EBDBB2",
-  "minimal-style@@code-background@@dark": "#282828",
-  "minimal-style@@code-comment@@dark": "#928374",
-  "minimal-style@@code-operator@@dark": "#D65D0E",
-  "minimal-style@@code-punctuation@@dark": "#458588",
-  "minimal-style@@graph-node-focused@@dark": "#8EC07C",
-  "minimal-style@@graph-node-tag@@dark": "#458588",
-  "minimal-style@@graph-node-unresolved@@dark": "#928374",
-  "minimal-style@@h3-variant": "small-caps",
-  "minimal-style@@icon-color@@dark": "#BDAE93",
-  "minimal-style@@image-muted": 0.7,
-  "minimal-style@@hl1@@dark": "#3C3836",
-  "minimal-style@@tx2@@dark": "#A89984",
-  "minimal-style@@tx3@@dark": "#665C54"
-}
-```
-[Here](https://github.com/jfryusef/obsidian-gruvbox-aqua) is the GitHub page for the Obsidian theme.
+###  My Obsidian theme
 
-I used the default "elementary" theme for my cursor and icons.
+Since I couldn't find any good ones for my usecases, I created [my own Obsidian Gruvbox theme](https://github.com/jfryusef/obsidian-gruvbox-aqua) that uses [Minimal theme](https://github.com/kepano/obsidian-minimal) as the base.
+
+<!-- TODO: add obsidian-gruvbox-aqua screenshot. -->
+
+---
+
+Once again, feel free to share similar projects and ask questions.

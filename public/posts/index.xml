@@ -15,29 +15,26 @@
 <description>
   
   
-  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$60. It had an Intel Core i7 (3rd gen) CPU, 8 GB RAM (upgradable to 16 GB), and 180GB SSD storage. The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;2 GB:
-&lt;img src=&#34;x230-windows10ram.PNG&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;
-While in a fresh install of Arch + XFCE it got down to &amp;gt;1 GB:
-&lt;img src=&#34;image-1.png&#34; alt=&#34;Minimum RAM usage on a fresh install of arch+xfce&#34; /&gt;&lt;/p&gt;
+  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$60. It had an i7 3rd-gen CPU, 8GB RAM, and 180GB SSD. Enough specs for a family laptop (for my house). The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;2GB:
+&lt;img src=&#34;ram-before.jpg&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;
+While on Arch + XFCE it got down to &amp;lt;1GB:
+&lt;img src=&#34;ram-after.jpg&#34; alt=&#34;RAM usage on a fresh install of Arch + XFCE&#34; /&gt;
+Here is how:&lt;/p&gt;
 &lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
-&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and GPU.&lt;br&gt;
-Also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
+&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
 &lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
-Alright you got me I had no reason to tear up the whole device; I just wanted to =)&lt;/p&gt;
+Alright you got me. I had no good  reason to tear-up the whole device; I just wanted to =)&lt;/p&gt;
 &lt;h2 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;X230-TearUp.jpeg&#34; alt=&#34;After&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;I took out the old coin battery,
-&lt;img src=&#34;X230-Old-Coin-Battery.jpeg&#34; alt=&#34;Old Coin Battery&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And Replaced it with the new one:
-&lt;img src=&#34;X230-New-Coin-Battery-Back.jpeg&#34; alt=&#34;New coin battery (back)&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Then I cleaned the old thermal paste,
-&lt;img src=&#34;X230-Old-Thermal-Paste.jpeg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;
-&lt;img src=&#34;X230-GPU-CleanedUp.jpeg&#34; alt=&#34;Cleaned thermal paste on GPU&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And replaced it with a new one:
-&lt;img src=&#34;X230-CPU-and-GPU-New-Thermal-Paste.jpeg&#34; alt=&#34;CPU and GPU woth the new thermal paste&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tearup.jpg&#34; alt=&#34;In the middle of it tearup&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I took out the old coin battery and replaced it with the new one:
+&lt;img src=&#34;new2032.jpg&#34; alt=&#34;New coin battery (back)&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then I cleaned the old thermal paste,&lt;br&gt;
+&lt;img src=&#34;cpu-oldpaste.jpg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And replaced it with a new one (probably a little too much):&lt;br&gt;
+&lt;img src=&#34;cpu-newpaste.jpg&#34; alt=&#34;CPU and GPU woth the new thermal paste&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
 &lt;h2 id=&#34;installing-arch&#34;&gt;Installing Arch&lt;/h2&gt;
-&lt;p&gt;With the help of &lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Linux Wiki&lt;/a&gt;, I went to &lt;a href=&#34;https://archlinux.org/download/**&#34;&gt;the official arch linux download page&lt;/a&gt;, picked a mirror close to my location and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB). Then I plugged in my 64 GB USB memory (only 8 was needed) and opened &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; with these settings:&lt;/p&gt;
+&lt;p&gt;With the help of &lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Linux Wiki&lt;/a&gt;, I went to &lt;a href=&#34;https://archlinux.org/download/**&#34;&gt;the official Arch Linux download page&lt;/a&gt;, picked a mirror close to my location and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB). Then I plugged in my USB memory (an 8GB one was enough) and opened &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; to make it bootable with these settings:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: my USB stick&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Boot selection&lt;/strong&gt;: &lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/li&gt;
@@ -45,19 +42,20 @@ Alright you got me I had no reason to tear up the whole device; I just wanted to
 &lt;li&gt;&lt;strong&gt;Target system&lt;/strong&gt;: &lt;code&gt;UEFI (non-CSM)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Then I hit &lt;strong&gt;START&lt;/strong&gt; and selected &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Then I setted UEFI instead of Legacy in BIOS because it&amp;rsquo;s the less painful choice.&lt;/p&gt;
-&lt;h3 id=&#34;archinstall&#34;&gt;archinstall&lt;/h3&gt;
-&lt;p&gt;After booting up at archiso, I connected my device to Wi-Fi using &lt;code&gt;iwtcl&lt;/code&gt; network configuration tool.
-Then I typed  &lt;code&gt;archinstall&lt;/code&gt; to fetch the Arch Linux database and go to guided installer. these are my settings:&lt;/p&gt;
+&lt;p&gt;Then I setted UEFI instead of Legacy in BIOS because appearently it&amp;rsquo;s the less painful choice.&lt;/p&gt;
+&lt;h2 id=&#34;archinstall&#34;&gt;archinstall&lt;/h2&gt;
+&lt;p&gt;After booting up at archiso, I connected my device to a Wi-Fi using &lt;code&gt;iwtcl&lt;/code&gt; network configuration tool.
+Then I typed  &lt;code&gt;archinstall&lt;/code&gt; to fetch the Arch Linux database and go to guided installer. these were my settings:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en, us (added persian later in the settings)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;mirror regions&lt;/strong&gt; (Iran failed at first attempt):
+&lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en, us (added Persian later in the settings)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mirror regions&lt;/strong&gt;
 &lt;ul&gt;
+&lt;li&gt;(&lt;del&gt;Iran&lt;/del&gt; failed at first attempt):&lt;/li&gt;
 &lt;li&gt;Germany&lt;/li&gt;
 &lt;li&gt;Netherlands&lt;/li&gt;
 &lt;li&gt;Sweden&lt;/li&gt;
 &lt;li&gt;Finland
-&lt;img src=&#34;archinstall-mirrors.jpeg&#34; alt=&#34;archinstall mirrors and repositries&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;archinstall-mirrors.jpg&#34; alt=&#34;archinstall mirrors and repositries&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Disk&lt;/strong&gt;: picked my 180 GB SSD&lt;/li&gt;
@@ -66,27 +64,24 @@ Then I typed  &lt;code&gt;archinstall&lt;/code&gt; to fetch the Arch Linux datab
 &lt;li&gt;&lt;strong&gt;Filesystem&lt;/strong&gt;: &lt;code&gt;ext4&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: e.g., &lt;code&gt;jfryusef&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Root password&lt;/strong&gt;: really?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;User account&lt;/strong&gt;: add one, tick “&lt;strong&gt;superuser (wheel)&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User account&lt;/strong&gt;: added one, ticked “&lt;strong&gt;superuser (wheel)&lt;/strong&gt;”&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Network&lt;/strong&gt;: &lt;code&gt;NetworkManager&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt;: &lt;code&gt;linux&lt;/code&gt; (plain)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Microcode&lt;/strong&gt;: &lt;code&gt;intel-ucode&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Profile&lt;/strong&gt;: “&lt;strong&gt;Desktop&lt;/strong&gt;” → picked &lt;strong&gt;XFCE4&lt;/strong&gt; (light, stable)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Audio&lt;/strong&gt;: &lt;code&gt;pipewire&lt;/code&gt; (none for now)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Profile&lt;/strong&gt;: “&lt;strong&gt;Desktop&lt;/strong&gt;” → picked &lt;strong&gt;XFCE4&lt;/strong&gt; (light and stable)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio&lt;/strong&gt;: &lt;del&gt;&lt;code&gt;pipewire&lt;/code&gt;&lt;/del&gt; (Could not get it to workfor now)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Optional packages&lt;/strong&gt;: added &lt;code&gt;firefox&lt;/code&gt; and a few more (optional)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Timezone&lt;/strong&gt;: Asia/Tehran&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then I hit &lt;strong&gt;Install&lt;/strong&gt;. When it finished, &lt;strong&gt;Reboot&lt;/strong&gt; (removed USB).
-&lt;img src=&#34;archinstall-complete.jpeg&#34; alt=&#34;Installation completed&#34; /&gt;
+&lt;p&gt;Then I hit &lt;strong&gt;Install&lt;/strong&gt;. When it finished, &lt;strong&gt;Reboot&lt;/strong&gt; (removed USB).&lt;br&gt;
 I saw XFCE’s login screen and logged in!&lt;/p&gt;
-&lt;p&gt;Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states.&lt;br&gt;
+&lt;p&gt;Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states. Mine was having it too.&lt;br&gt;
 Fix: added this kernel boot parameter in GRUB:
 &lt;code&gt;intel_idle.max_cstate=1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;I alsp took a a RAM stick health test (memtest86) just in case.
-&lt;img src=&#34;memtest86.jpeg&#34; alt=&#34;memetest86&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;installing-stuff&#34;&gt;Installing Stuff&lt;/h3&gt;
+&lt;h2 id=&#34;installing-stuff&#34;&gt;Installing Stuff&lt;/h2&gt;
 &lt;p&gt;I opened Terminal and installed these:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;man-db&lt;/code&gt; &lt;code&gt;man-pages&lt;/code&gt;
+&lt;li&gt;sudo pacman -S &lt;code&gt;man-db&lt;/code&gt; &lt;code&gt;man-pages&lt;/code&gt;&lt;br&gt;
 (built-in documentation system for commands)&lt;/li&gt;
 &lt;li&gt;sudo pacman -S &lt;code&gt;fwupd&lt;/code&gt;&lt;br&gt;
 (firmware updater)&lt;/li&gt;
@@ -141,35 +136,34 @@ Fix: added this kernel boot parameter in GRUB:
 &lt;h2 id=&#34;tweaking-things&#34;&gt;Tweaking things&lt;/h2&gt;
 &lt;p&gt;I set some of these keyboard shortcuts:&lt;/p&gt;
 &lt;p&gt;Alt+T: Terminal (xfce4-terminal)&lt;br&gt;
-Super L: Application Finder (xfce4-appfinder)&lt;br&gt;
+Windows button (Super L): Application Finder (xfce4-appfinder)&lt;br&gt;
 Super+E: ThunarFileManager (thunar)&lt;br&gt;
 &lt;a href=&#34;https://en.wikipedia.org/wiki/ThinkVantage_Technologies&#34;&gt;ThinkVantage&lt;/a&gt; button (Launch1): Log out (xfce4-session-logout)&lt;/p&gt;
 &lt;p&gt;Alt+1: Workspace 1&lt;br&gt;
 Alt+2: Workspace 2&lt;br&gt;
 Alt+3: Workspace 3&lt;br&gt;
-Alt+4: Workspace 4
+Alt+4: Workspace 4&lt;br&gt;
 Alt+F: maximize window&lt;br&gt;
 Alt+Up: Tile window to the left&lt;br&gt;
 Alt+Down: Tile window to the right&lt;br&gt;
 Alt+Page Up: Tile window to the top-left&lt;br&gt;
-Alt+Page Down: Tile window to the top-right
-Alt+Left: Tile window to the bottom-left&lt;br&gt;
-Alt+Up: Tile window to the bottom-right&lt;/p&gt;
+Alt+Page Down: Tile window to the top-right&lt;br&gt;
+Alt+Left: Tile window to the bottom-left (regret it because it interfears with going backwards for browsers)&lt;br&gt;
+Alt+Right: Tile window to the bottom-right&lt;/p&gt;
 &lt;p&gt;also I changed Volume steps to 10% in Volume Control (xfce4-pulseaudio-plugin)&lt;/p&gt;
-&lt;h2 id=&#34;ricing&#34;&gt;ricing&lt;/h2&gt;
+&lt;h2 id=&#34;ricing&#34;&gt;Ricing?&lt;/h2&gt;
 &lt;p&gt;I tried to use &lt;a href=&#34;https://github.com/googlefonts/opensans&#34;&gt;Open Sans&lt;/a&gt; + &lt;a href=&#34;https://github.com/JetBrains/JetBrainsMono&#34;&gt;JetBrains Mono&lt;/a&gt; as my main fonts and &lt;a href=&#34;https://github.com/morhetz/gruvbox&#34;&gt;Gruvbox&lt;/a&gt; as my main color palatte using &lt;a href=&#34;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&#34;&gt;this theme&lt;/a&gt; throughout the whole UI.&lt;/p&gt;
 &lt;p&gt;I switched my diplay manager from LighDM,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl disable lightdm.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to Ly (a lightweight login manager that runs in the terminal):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ly
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ly.service
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then I set this gruvbox themed picture as my wallpaper:
-&lt;img src=&#34;gruvbox-wallapper.png&#34; alt=&#34;Wallpaper&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;These are the items on my panel (a 24px buttom row):
-&lt;img src=&#34;Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decorations&lt;/p&gt;
-&lt;p&gt;I downloaded &lt;a href=&#34;addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr&#34;&gt;this ?????  Firefox theme&lt;/a&gt; and &lt;a href=&#34;jdinh?life.gr?uvbox&#34;&gt;Th?is VS Co?de theme?&lt;/a&gt;
-and created this Obsidian theme (put on github?????):&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These are the items on my panel (a 24px buttom row):
+&lt;img src=&#34;panel.png&#34; alt=&#34;Panel ScreenShot&#34; /&gt;
+&lt;img src=&#34;Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel items&#34; /&gt;
+I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decorations&lt;/p&gt;
+&lt;p&gt;I downloaded &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;This VS Code theme&lt;/a&gt;
+and created this Obsidian theme:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ax1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#83A598&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@callouts-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;callouts-default&amp;#34;&lt;/span&gt;,
@@ -265,7 +259,8 @@ and created this Obsidian theme (put on github?????):&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tx2@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#A89984&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tx3@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#665C54&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but I use the default &amp;ldquo;elementary&amp;rdquo; theme for my cursor and icons.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;Here&lt;/a&gt; is the GitHub page for the Obsidian theme.&lt;/p&gt;
+&lt;p&gt;I used the default &amp;ldquo;elementary&amp;rdquo; theme for my cursor and icons.&lt;/p&gt;
 
 </description>
 
@@ -284,7 +279,7 @@ and created this Obsidian theme (put on github?????):&lt;/p&gt;
 &lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s all plain text — future-proof.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;
+&lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; WorkFlow&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://obsidian.md/&#34;&gt;&lt;del&gt;Obsidian&lt;/del&gt;&lt;/a&gt; for writing posts &amp;amp; local Markdown management&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for cloud-based version control + repo hosting&lt;/li&gt;
@@ -293,7 +288,7 @@ and created this Obsidian theme (put on github?????):&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://giscus.app/&#34;&gt;Giscus&lt;/a&gt; to integrate a comment system via &lt;a href=&#34;https://github.com/features/discussions&#34;&gt;GitHub Discussions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Every push to GitHub updates the blog via Cloudflare and every comment shows up on GitHub as well.&lt;/p&gt;
-&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h1 id=&#34;setup&#34;&gt;Setup&lt;/h1&gt;
 &lt;h2 id=&#34;a-buying-a-domain&#34;&gt;A. Buying a domain&lt;/h2&gt;
 &lt;p&gt;This was the only step in which I paid for something, purchasing this &lt;code&gt;.link&lt;/code&gt; domain for ~$10 a year. But there were cheaper (even free) options as well.&lt;/p&gt;
 &lt;h2 id=&#34;b-hugo-site-and-terminal-theme&#34;&gt;B. Hugo site and Terminal theme&lt;/h2&gt;
@@ -470,18 +465,19 @@ I added the following content to the file:&lt;/p&gt;
 <description>
   
   
-  &lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
+  &lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
 &lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
 &lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
+&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;Test URL&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked item&lt;/li&gt;

@@ -374,15 +374,27 @@ I added the following content to the file:&lt;/p&gt;
 &lt;h2 id=&#34;d-adding-an-intro-card-on-top-of-my-homepage&#34;&gt;D. Adding an intro card on top of my homepage&lt;/h2&gt;
 &lt;p&gt;I created &lt;code&gt;content/_index.md&lt;/code&gt; with this content:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Welcome to my little corner of the Internet =)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, [&lt;span style=&#34;color:#f92672&#34;&gt;jopen itself is one of them&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://jfryusef.link/posts/how-i-made-jopen/&lt;/span&gt;)!  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;I wanted to take notes on the process of my projects, and there was [&lt;span style=&#34;color:#f92672&#34;&gt;no reason to keep them private&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://github.com/jfryusef/jopen&lt;/span&gt;). So, I made jopen, &lt;span style=&#34;font-style:italic&#34;&gt;_to learn in public._&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ██╗ ██████╗ ██████╗ ███████╗███╗   ██╗
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ██║██╔═══██╗██╔══██╗██╔════╝████╗  ██║
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      ██║██║   ██║██████╔╝█████╗  ██╔██╗ ██║
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ██   ██║██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ╚█████╔╝╚██████╔╝██║     ███████╗██║ ╚████║
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ╚════╝  ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Welcome to my little corner of the Internet =)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, [&lt;span style=&#34;color:#f92672&#34;&gt;jopen itself is one of them&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://jfryusef.link/posts/how-i-made-jopen/&lt;/span&gt;)!
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;I wanted to take notes on the process of my projects, and there was [&lt;span style=&#34;color:#f92672&#34;&gt;no reason to keep them private&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://github.com/jfryusef/jopen&lt;/span&gt;). So, I made jopen, &lt;span style=&#34;font-style:italic&#34;&gt;*to learn in public.*&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;

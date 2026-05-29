@@ -8,7 +8,7 @@ customCSS = ["css/terminal.css"]
 centerTheme = true
 autoCover = false
 showLastUpdated = true
-updatedDatePrefix = "@"
+updatedDatePrefix = ""
 
 languageName = "English"
 title = "jopen"
@@ -18,7 +18,7 @@ owner = ""
 keywords = ""
 copyright = "CC0-1.0"
 menuMore = "Show more"
-readMore = ">"
+readMore = ""
 readOtherPosts = "Read other posts"
 newerPosts = "Newer posts"
 olderPosts = "Older posts"

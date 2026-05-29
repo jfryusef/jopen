@@ -7,102 +7,123 @@
     <language>en-us</language>
     <generator>Hugo -- gohugo.io</generator>
     <item>
-      <title>Setting Up Arch On An Old ThinkPad</title>
-      <link>http://localhost:1313/posts/x230/</link>
-      <guid>http://localhost:1313/posts/x230/</guid>
-      <pubDate>Wed, 27 May 2026 13:41:37 &#43;0330</pubDate>
+      <title>Setting Up Arch on an Old ThinkPad</title>
+      <link>http://localhost:1313/posts/kalaantar/</link>
+      <guid>http://localhost:1313/posts/kalaantar/</guid>
+      <pubDate>Fri, 29 May 2026 18:00:00 &#43;0330</pubDate>
 
 <description>
   
   
-  &lt;p&gt;Recently I bought a used ThinkPad X230 for ~$60. It had an i7 3rd-gen CPU, 8GB RAM, and 180GB SSD. Enough specs for a family laptop (for my house). The previous owner had a fresh install of Windows 10 on it and idle RAM usage was &amp;gt;2GB:
-&lt;img src=&#34;ram-before.jpg&#34; alt=&#34;Minimum RAM usage on a fresh install of windows 10&#34; /&gt;
-While on Arch + XFCE it got down to &amp;lt;1GB:
-&lt;img src=&#34;ram-after.jpg&#34; alt=&#34;RAM usage on a fresh install of Arch + XFCE&#34; /&gt;
-Here is how:&lt;/p&gt;
+  &lt;p&gt;Recently, I bought a used ThinkPad X230 for around $60. It came with a 3rd-gen i7 CPU, 8GB RAM, and a 180GB SSD. Decent specs for a family laptop.&lt;/p&gt;
+&lt;p&gt;The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ram-before.jpg&#34; alt=&#34;Minimum RAM usage on a fresh install of Windows 10&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;While on Arch + XFCE, it dropped to under 1GB:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ram-after.jpg&#34; alt=&#34;RAM usage on a fresh install of Arch + XFCE&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is how.&lt;/p&gt;
 &lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
-&lt;p&gt;Bofore trying to install linux, I wanted to change the thermal paste on CPU and also change the coin battery so when booting without the main battery (which was the upgraded 9-cell version but dead and useless anyway), updating date and time wouldn&amp;rsquo;t need network connection or manual set-up.
-&lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;
-Alright you got me. I had no good  reason to tear-up the whole device; I just wanted to =)&lt;/p&gt;
-&lt;h2 id=&#34;let-the-tear-up-begin&#34;&gt;Let the tear up begin!&lt;/h2&gt;
+&lt;p&gt;Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)&lt;/p&gt;
+&lt;h2 id=&#34;let-the-tear-down-begin&#34;&gt;Let the tear-down begin&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;tearup.jpg&#34; alt=&#34;In the middle of it tearup&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;I took out the old coin battery and replaced it with the new one:
-&lt;img src=&#34;new2032.jpg&#34; alt=&#34;New coin battery (back)&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Then I cleaned the old thermal paste,&lt;br&gt;
-&lt;img src=&#34;cpu-oldpaste.jpg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And replaced it with a new one (probably a little too much):&lt;br&gt;
-&lt;img src=&#34;cpu-newpaste.jpg&#34; alt=&#34;CPU and GPU woth the new thermal paste&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I removed the old coin battery and replaced it with a new one:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new2032.jpg&#34; alt=&#34;New coin battery (back)&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then I cleaned off the old thermal paste:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-oldpaste.jpg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And replaced it with new paste (probably a little too much):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-newpaste.jpg&#34; alt=&#34;CPU with the new thermal paste&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
 &lt;h2 id=&#34;installing-arch&#34;&gt;Installing Arch&lt;/h2&gt;
-&lt;p&gt;With the help of &lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Linux Wiki&lt;/a&gt;, I went to &lt;a href=&#34;https://archlinux.org/download/**&#34;&gt;the official Arch Linux download page&lt;/a&gt;, picked a mirror close to my location and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB). Then I plugged in my USB memory (an 8GB one was enough) and opened &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; to make it bootable with these settings:&lt;/p&gt;
+&lt;p&gt;With the help of the &lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Wiki&lt;/a&gt;, I went to &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;the official Arch Linux download page&lt;/a&gt;, picked a mirror close to my location, and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB).&lt;/p&gt;
+&lt;p&gt;Then I plugged in a USB drive (8GB was enough) and opened &lt;a href=&#34;https://rufus.ie/&#34;&gt;Rufus&lt;/a&gt; to make it bootable with these settings:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: my USB stick&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Boot selection&lt;/strong&gt;: &lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Partition scheme&lt;/strong&gt;: &lt;code&gt;GPT&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Target system&lt;/strong&gt;: &lt;code&gt;UEFI (non-CSM)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then I hit &lt;strong&gt;START&lt;/strong&gt; and selected &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Then I setted UEFI instead of Legacy in BIOS because appearently it&amp;rsquo;s the less painful choice.&lt;/p&gt;
-&lt;h2 id=&#34;archinstall&#34;&gt;archinstall&lt;/h2&gt;
-&lt;p&gt;After booting up at archiso, I connected my device to a Wi-Fi using &lt;code&gt;iwtcl&lt;/code&gt; network configuration tool.
-Then I typed  &lt;code&gt;archinstall&lt;/code&gt; to fetch the Arch Linux database and go to guided installer. these were my settings:&lt;/p&gt;
+&lt;p&gt;Then I clicked &lt;strong&gt;START&lt;/strong&gt; and selected &lt;strong&gt;Write in ISO Image Mode (Recommended)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After that, I switched the BIOS mode from Legacy to UEFI because apparently it&amp;rsquo;s the less painful option nowadays.&lt;/p&gt;
+&lt;h3 id=&#34;archinstall&#34;&gt;archinstall&lt;/h3&gt;
+&lt;p&gt;After booting into Arch ISO, I connected to Wi-Fi using the &lt;code&gt;iwctl&lt;/code&gt; network configuration tool.&lt;/p&gt;
+&lt;p&gt;Then I typed  &lt;code&gt;archinstall&lt;/code&gt; to go to the guided installer. Because I&amp;rsquo;m not a wierdo.&lt;/p&gt;
+&lt;p&gt;These were my settings:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en, us (added Persian later in the settings)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;mirror regions&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;Language/keyboard&lt;/strong&gt;: en_US (added Persian later)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mirror regions:&lt;/strong&gt;:
 &lt;ul&gt;
-&lt;li&gt;(&lt;del&gt;Iran&lt;/del&gt; failed at first attempt):&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Iran&lt;/del&gt; (failed at first attempt)&lt;/li&gt;
 &lt;li&gt;Germany&lt;/li&gt;
 &lt;li&gt;Netherlands&lt;/li&gt;
 &lt;li&gt;Sweden&lt;/li&gt;
-&lt;li&gt;Finland
-&lt;img src=&#34;archinstall-mirrors.jpg&#34; alt=&#34;archinstall mirrors and repositries&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;Finland&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Disk&lt;/strong&gt;: picked my 180 GB SSD&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Disk layout&lt;/strong&gt;: “&lt;strong&gt;Erase all&lt;/strong&gt;” for a clean install&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;archinstall-mirrors.jpg&#34; alt=&#34;archinstall mirrors&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Disk&lt;/strong&gt;: selected the 180GB SSD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Disk layout&lt;/strong&gt;: &lt;code&gt;Erase all&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Bootloader&lt;/strong&gt;: &lt;code&gt;systemd-boot&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Filesystem&lt;/strong&gt;: &lt;code&gt;ext4&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: e.g., &lt;code&gt;jfryusef&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Root password&lt;/strong&gt;: really?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;User account&lt;/strong&gt;: added one, ticked “&lt;strong&gt;superuser (wheel)&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: &lt;code&gt;jfryusef&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Root password&lt;/strong&gt;: I&amp;rsquo;m not gonna tell you that&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User account&lt;/strong&gt;: created one and enabled &lt;code&gt;(wheel)&lt;/code&gt; (admin)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Network&lt;/strong&gt;: &lt;code&gt;NetworkManager&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt;: &lt;code&gt;linux&lt;/code&gt; (plain)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt;: &lt;code&gt;linux&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Microcode&lt;/strong&gt;: &lt;code&gt;intel-ucode&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Profile&lt;/strong&gt;: “&lt;strong&gt;Desktop&lt;/strong&gt;” → picked &lt;strong&gt;XFCE4&lt;/strong&gt; (light and stable)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Audio&lt;/strong&gt;: &lt;del&gt;&lt;code&gt;pipewire&lt;/code&gt;&lt;/del&gt; (Could not get it to workfor now)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optional packages&lt;/strong&gt;: added &lt;code&gt;firefox&lt;/code&gt; and a few more (optional)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Profile&lt;/strong&gt;: &lt;code&gt;Desktop&lt;/code&gt; → &lt;code&gt;XFCE4&lt;/code&gt; (light and stable)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audio&lt;/strong&gt;: &lt;del&gt;&lt;code&gt;pipewire&lt;/code&gt;&lt;/del&gt; (could not get it working at first)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optional packages&lt;/strong&gt;: &lt;code&gt;firefox&lt;/code&gt; and a few others (optional)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Timezone&lt;/strong&gt;: Asia/Tehran&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then I hit &lt;strong&gt;Install&lt;/strong&gt;. When it finished, &lt;strong&gt;Reboot&lt;/strong&gt; (removed USB).&lt;br&gt;
-I saw XFCE’s login screen and logged in!&lt;/p&gt;
-&lt;p&gt;Old ThinkPads + modern Linux kernels sometimes hard-freeze because of deep C-states. Mine was having it too.&lt;br&gt;
-Fix: added this kernel boot parameter in GRUB:
-&lt;code&gt;intel_idle.max_cstate=1&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;installing-stuff&#34;&gt;Installing Stuff&lt;/h2&gt;
-&lt;p&gt;I opened Terminal and installed these:&lt;/p&gt;
+&lt;p&gt;Then I hit &lt;strong&gt;Install&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.&lt;/p&gt;
+&lt;h3 id=&#34;the-hard-freeze-problem&#34;&gt;The hard-freeze problem&lt;/h3&gt;
+&lt;p&gt;Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.&lt;/p&gt;
+&lt;p&gt;Fix: add this kernel boot parameter: &lt;code&gt;intel_idle.max_cstate=1&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;installing-stuff&#34;&gt;Installing stuff&lt;/h2&gt;
+&lt;p&gt;I opened a terminal and installed these packages:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;man-db&lt;/code&gt; &lt;code&gt;man-pages&lt;/code&gt;&lt;br&gt;
-(built-in documentation system for commands)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;fwupd&lt;/code&gt;&lt;br&gt;
-(firmware updater)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;bluez&lt;/code&gt; &lt;code&gt;bluez-utils&lt;/code&gt;&lt;br&gt;
-(core Bluetooth protocol stack)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;gvfs&lt;/code&gt; &lt;code&gt;gvfs-mtp&lt;/code&gt;&lt;br&gt;
-(virtual filesystem support and MTP support for Android devices)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;thunar-archive-plugin&lt;/code&gt; &lt;code&gt;p7zip&lt;/code&gt; &lt;code&gt;unzip&lt;/code&gt; &lt;code&gt;unrar&lt;/code&gt;&lt;br&gt;
-(file manager integration tools and archive utilities)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;brightnessctl&lt;/code&gt;&lt;br&gt;
-(screen brightness control utility)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;pipewire&lt;/code&gt; &lt;code&gt;pipewire-pulse&lt;/code&gt; &lt;code&gt;wireplumber&lt;/code&gt;&lt;br&gt;
-(Linux audio stack)&lt;/li&gt;
-&lt;li&gt;sudo pacman -S &lt;code&gt;blueman&lt;/code&gt;&lt;br&gt;
-(GUI Bluetooth manager)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;man-db&lt;/code&gt; &lt;code&gt;man-pages&lt;/code&gt;&lt;br&gt;
+(built-in documentation system for commands)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;fwupd&lt;/code&gt;&lt;br&gt;
+(firmware updater)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;bluez&lt;/code&gt; &lt;code&gt;bluez-utils&lt;/code&gt;&lt;br&gt;
+(Bluetooth stack)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;gvfs&lt;/code&gt; &lt;code&gt;gvfs-mtp&lt;/code&gt;&lt;br&gt;
+(virtual filesystem support + Android MTP support)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;thunar-archive-plugin&lt;/code&gt; &lt;code&gt;p7zip&lt;/code&gt; &lt;code&gt;unzip&lt;/code&gt; &lt;code&gt;unrar&lt;/code&gt;&lt;br&gt;
+(archive utilities + Thunar integration)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;brightnessctl&lt;/code&gt;&lt;br&gt;
+(screen brightness utility)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;pipewire&lt;/code&gt; &lt;code&gt;pipewire-pulse&lt;/code&gt; &lt;code&gt;wireplumber&lt;/code&gt;&lt;br&gt;
+(Linux audio stack)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sudo pacman -S &lt;code&gt;blueman&lt;/code&gt;&lt;br&gt;
+(GUI Bluetooth manager)&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then I typed these commands to enable the ones that needed enabling:&lt;/p&gt;
+&lt;p&gt;Then I enabled the required services:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl --user enable -- now pipewire pipewire-pulse wireplumber
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable --now bluetooth
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo timedatectl set-ntp true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I needed yay AUR to install some of my apps so I installed it:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also needed an AUR helper, so I installed yay:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S --needed git base-devel
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://aur.archlinux.org/yay.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd yay
@@ -134,133 +155,51 @@ Fix: added this kernel boot parameter in GRUB:
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;tweaking-things&#34;&gt;Tweaking things&lt;/h2&gt;
-&lt;p&gt;I set some of these keyboard shortcuts:&lt;/p&gt;
-&lt;p&gt;Alt+T: Terminal (xfce4-terminal)&lt;br&gt;
-Windows button (Super L): Application Finder (xfce4-appfinder)&lt;br&gt;
-Super+E: ThunarFileManager (thunar)&lt;br&gt;
-&lt;a href=&#34;https://en.wikipedia.org/wiki/ThinkVantage_Technologies&#34;&gt;ThinkVantage&lt;/a&gt; button (Launch1): Log out (xfce4-session-logout)&lt;/p&gt;
-&lt;p&gt;Alt+1: Workspace 1&lt;br&gt;
-Alt+2: Workspace 2&lt;br&gt;
-Alt+3: Workspace 3&lt;br&gt;
-Alt+4: Workspace 4&lt;br&gt;
-Alt+F: maximize window&lt;br&gt;
-Alt+Up: Tile window to the left&lt;br&gt;
-Alt+Down: Tile window to the right&lt;br&gt;
-Alt+Page Up: Tile window to the top-left&lt;br&gt;
-Alt+Page Down: Tile window to the top-right&lt;br&gt;
-Alt+Left: Tile window to the bottom-left (regret it because it interfears with going backwards for browsers)&lt;br&gt;
-Alt+Right: Tile window to the bottom-right&lt;/p&gt;
-&lt;p&gt;also I changed Volume steps to 10% in Volume Control (xfce4-pulseaudio-plugin)&lt;/p&gt;
+&lt;h3 id=&#34;keyboard-shortcuts&#34;&gt;Keyboard shortcuts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt+T&lt;/code&gt;: terminal (&lt;code&gt;xfce4-terminal&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Super&lt;/code&gt;: application finder (&lt;code&gt;xfce4-appfinder&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Super+E&lt;/code&gt;: Thunar (&lt;code&gt;thunar&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/ThinkVantage_Technologies&#34;&gt;ThinkVantage&lt;/a&gt; button (&lt;code&gt;Launch1&lt;/code&gt;): logout menu (&lt;code&gt;xfce4-session-logout&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also changed the volume step size to 10% in &lt;code&gt;xfce4-pulseaudio-plugin&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;workspace-shortcut&#34;&gt;Workspace shortcut&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt+1&lt;/code&gt;: workspace 1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+2&lt;/code&gt;: workspace 2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+3&lt;/code&gt;: workspace 3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+4&lt;/code&gt;: workspace 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;winndows-management&#34;&gt;Winndows management&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt+F&lt;/code&gt;: maximize window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Up&lt;/code&gt;: tile window to the left&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Down&lt;/code&gt;: tile window to the right&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Page Up&lt;/code&gt;: tile window to the top-left&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Page Down&lt;/code&gt;: tile window to the top-right&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Left&lt;/code&gt;: tile window to the bottom-left&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Alt+Right&lt;/code&gt;: tile window to the bottom-right&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(later regretted using Alt+Left and Alt+Right because they interfere with browser navigation shortcuts. But I kept using them anyway.)&lt;/p&gt;
 &lt;h2 id=&#34;ricing&#34;&gt;Ricing?&lt;/h2&gt;
-&lt;p&gt;I tried to use &lt;a href=&#34;https://github.com/googlefonts/opensans&#34;&gt;Open Sans&lt;/a&gt; + &lt;a href=&#34;https://github.com/JetBrains/JetBrainsMono&#34;&gt;JetBrains Mono&lt;/a&gt; as my main fonts and &lt;a href=&#34;https://github.com/morhetz/gruvbox&#34;&gt;Gruvbox&lt;/a&gt; as my main color palatte using &lt;a href=&#34;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&#34;&gt;this theme&lt;/a&gt; throughout the whole UI.&lt;/p&gt;
-&lt;p&gt;I switched my diplay manager from LighDM,&lt;/p&gt;
+&lt;p&gt;I used &lt;a href=&#34;https://github.com/googlefonts/opensans&#34;&gt;Open Sans&lt;/a&gt; + &lt;a href=&#34;https://github.com/JetBrains/JetBrainsMono&#34;&gt;JetBrains Mono&lt;/a&gt; as my main fonts, and &lt;a href=&#34;https://github.com/morhetz/gruvbox&#34;&gt;Gruvbox&lt;/a&gt; as the primary color palatte using &lt;a href=&#34;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&#34;&gt;this GTK theme&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For icons and cursors, I kept the default &lt;code&gt;elementary&lt;/code&gt; theme.&lt;/p&gt;
+&lt;p&gt;These:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panel-items.png&#34; alt=&#34;Panel items&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;are the items on my panel (a 24px bottom row):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panel.png&#34; alt=&#34;Panel ScreenShot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decoration theme. A practical choice.&lt;/p&gt;
+&lt;p&gt;Then I switched my display manager from LightDM:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl disable lightdm.service
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to Ly (a lightweight login manager that runs in the terminal):&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to Ly (a TUI login manager):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ly
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ly.service
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These are the items on my panel (a 24px buttom row):
-&lt;img src=&#34;panel.png&#34; alt=&#34;Panel ScreenShot&#34; /&gt;
-&lt;img src=&#34;Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel items&#34; /&gt;
-I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decorations&lt;/p&gt;
-&lt;p&gt;I downloaded &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;This VS Code theme&lt;/a&gt;
-and created this Obsidian theme:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ax1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#83A598&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@callouts-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;callouts-default&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h1-l&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h1-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h1-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;900&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h2-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;800&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h2-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.8em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h2-l&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h3-l&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h3-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.6em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h6-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h5-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h1-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h6-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h5-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h4-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h2-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h3-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;700&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h4-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h6-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h4-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.4em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h5-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.2em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@icon-muted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@active-line-on&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@checkbox-shape&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;checkbox-square&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@metadata-heading-off&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@metadata-add-property-off&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@metadata-dividers&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@metadata-icons-off&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@sidebar-tabs-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sidebar-tabs-underline&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@sidebar-tabs-names&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tab-names-off&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@vault-profile-display&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vault-profile-default&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@hide-help&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ribbon-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ribbon-hidden&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tabs-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tabs-underline&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tag-radius&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;4px&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@hl2@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#665C54&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@window-title-off&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@titlebar-text-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-advanced@@hide-settings-desc&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-advanced@@cursor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@inline-title-size&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2em&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@inline-title-weight&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;900&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@inline-title-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#689D6A&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-red@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#CC241D&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-orange@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D65D0E&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-yellow@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D79921&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-green@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#98971A&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-blue@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#458588&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-purple@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#B16286&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-cyan@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#689D6A&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@color-pink@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D3869B&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ax2@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#458588&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@blockquote-border-thickness&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@blockquote-border-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D5C4A1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@blockquote-font-style&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;normal&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@blockquote-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D5C4A1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-node@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D65D0E&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-line@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D79921&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@icon-color-hover@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D5C4A1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@icon-color-active@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#EBDBB2&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@icon-color-focused@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#FBF1C7&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@indentation-guide-color-active@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#504945&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@indentation-guide-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#32302F&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@minimal-tab-text-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#BDAE93&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@minimal-tab-text-color-active@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#FBF1C7&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tag-background-hover@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#282828&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tx1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#EBDBB2&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@text-formatting@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D5C4A1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tag-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D5C4A1&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@sp1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1D2021&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-node-attachment@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#B16286&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@base@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#282828&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@bg1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#1D2021&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ui3@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#665C54&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ui1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#3C3836&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ui2@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#504945&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@ax3@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#689D6A&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@canvas-dot-pattern@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#3C3836&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@code-normal@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#EBDBB2&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@code-background@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#282828&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@code-comment@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#928374&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@code-operator@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#D65D0E&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@code-punctuation@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#458588&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-node-focused@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#8EC07C&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-node-tag@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#458588&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@graph-node-unresolved@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#928374&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@h3-variant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;small-caps&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@icon-color@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#BDAE93&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@image-muted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@hl1@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#3C3836&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tx2@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#A89984&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;minimal-style@@tx3@@dark&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;#665C54&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;Here&lt;/a&gt; is the GitHub page for the Obsidian theme.&lt;/p&gt;
-&lt;p&gt;I used the default &amp;ldquo;elementary&amp;rdquo; theme for my cursor and icons.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also installed &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this VS Code theme&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;my-obsidian-theme&#34;&gt;My Obsidian theme&lt;/h3&gt;
+&lt;p&gt;Since I couldn&amp;rsquo;t find any good ones for my usecases, I created &lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;my own Obsidian Gruvbox theme&lt;/a&gt; that uses &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal theme&lt;/a&gt; as the base.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once again, feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 
@@ -268,18 +207,18 @@ and created this Obsidian theme:&lt;/p&gt;
     </item>
     <item>
       <title>How I Made jopen?</title>
-      <link>http://localhost:1313/posts/how-i-made-jopen/</link>
-      <guid>http://localhost:1313/posts/how-i-made-jopen/</guid>
-      <pubDate>Sun, 06 Jul 2025 13:41:37 &#43;0330</pubDate>
+      <link>http://localhost:1313/posts/jopen/</link>
+      <guid>http://localhost:1313/posts/jopen/</guid>
+      <pubDate>Sun, 06 Jul 2025 18:00:00 &#43;0330</pubDate>
 
 <description>
   
   
   &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s all plain text — future-proof.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s plain text and future-proof.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; WorkFlow&lt;/h1&gt;
+&lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; workflow&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://obsidian.md/&#34;&gt;&lt;del&gt;Obsidian&lt;/del&gt;&lt;/a&gt; for writing posts &amp;amp; local Markdown management&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for cloud-based version control + repo hosting&lt;/li&gt;
@@ -298,8 +237,8 @@ and created this Obsidian theme:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;customCSS&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;css/terminal.css&amp;#34;&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;centerTheme&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;showLastUpdated&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Updated on&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# A reference from the movie Star Wars: Episode IV - A New Hope:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;missingContentMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is not the webpage you&amp;#39;re looking for.&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;minuteReadingTime&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min[s] read&amp;#34;&lt;/span&gt;
@@ -327,7 +266,7 @@ and created this Obsidian theme:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Search&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.google.com/search?q=site%3Ajfryusef.link+QUERY&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;c-creating-a-git-repository-and-connecting-to-github&#34;&gt;C. Creating a Git Repository and connecting to GitHub&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;c-creating-a-git-repo-and-connecting-it-to-github&#34;&gt;C. Creating a Git repo and connecting it to GitHub&lt;/h2&gt;
 &lt;p&gt;I initialized the local Hugo files in &lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; and turned on Discussions as a feature on &lt;a href=&#34;https://github.com/jfryusef/jopen&#34;&gt;jopen&amp;rsquo;s GitHub repo&lt;/a&gt; (so I can use Giscus in step F).&lt;/p&gt;
 &lt;h2 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h2&gt;
 &lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
@@ -450,7 +389,9 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!-- more --&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;Feel free to share your own setups if you have something similar and If you have any questions, ask them in the comment section below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 
@@ -460,29 +401,23 @@ I added the following content to the file:&lt;/p&gt;
       <title>Hello World!</title>
       <link>http://localhost:1313/posts/hello-world/</link>
       <guid>http://localhost:1313/posts/hello-world/</guid>
-      <pubDate>Fri, 07 Mar 2025 12:41:37 &#43;0330</pubDate>
+      <pubDate>Fri, 07 Mar 2025 23:59:59 &#43;0330</pubDate>
 
 <description>
   
   
   &lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;the quick brown fox jumps over the lazy dog&lt;/li&gt;
-&lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/li&gt;
-&lt;li&gt;-=`[];&amp;rsquo;,./!@#$%^&amp;amp;*()_+~{}|:&amp;quot;&amp;lt;&amp;gt;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;Test URL&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the quick brown fox jumps over the lazy dog;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;URL&lt;/a&gt; test&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, ==but there may not be poop without &amp;ldquo;p&amp;rdquo;==.&lt;/p&gt;
+&lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, &lt;code&gt;but there may not be poop without &amp;quot;p&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked item&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Checked Item&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
   &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
   &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,

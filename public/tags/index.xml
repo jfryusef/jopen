@@ -8,8 +8,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <item>
       <title>Setting Up Arch on an Old ThinkPad</title>
-      <link>http://localhost:1313/posts/x230/</link>
-      <guid>http://localhost:1313/posts/x230/</guid>
+      <link>http://localhost:1313/posts/kalaantar/</link>
+      <guid>http://localhost:1313/posts/kalaantar/</guid>
       <pubDate>Fri, 29 May 2026 18:00:00 &#43;0330</pubDate>
 
 <description>
@@ -32,7 +32,7 @@
 &lt;p&gt;Then I cleaned off the old thermal paste:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;cpu-oldpaste.jpg&#34; alt=&#34;Old thermal paste on CPU&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And replaced it with new paste (probably a little too much):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cpu-newpaste.jpg&#34; alt=&#34;CPU and GPU with the new thermal paste&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-newpaste.jpg&#34; alt=&#34;CPU with the new thermal paste&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
 &lt;h2 id=&#34;installing-arch&#34;&gt;Installing Arch&lt;/h2&gt;
 &lt;p&gt;With the help of the &lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Wiki&lt;/a&gt;, I went to &lt;a href=&#34;https://archlinux.org/download/&#34;&gt;the official Arch Linux download page&lt;/a&gt;, picked a mirror close to my location, and downloaded &lt;strong&gt;&lt;code&gt;archlinux-2025.08.01-x86_64.iso&lt;/code&gt;&lt;/strong&gt; (around 900MB).&lt;/p&gt;
@@ -185,7 +185,7 @@
 &lt;p&gt;I used &lt;a href=&#34;https://github.com/googlefonts/opensans&#34;&gt;Open Sans&lt;/a&gt; + &lt;a href=&#34;https://github.com/JetBrains/JetBrainsMono&#34;&gt;JetBrains Mono&lt;/a&gt; as my main fonts, and &lt;a href=&#34;https://github.com/morhetz/gruvbox&#34;&gt;Gruvbox&lt;/a&gt; as the primary color palatte using &lt;a href=&#34;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&#34;&gt;this GTK theme&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For icons and cursors, I kept the default &lt;code&gt;elementary&lt;/code&gt; theme.&lt;/p&gt;
 &lt;p&gt;These:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;Screenshot_2025-08-23_02-12-58.png&#34; alt=&#34;Panel items&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panel-items.png&#34; alt=&#34;Panel items&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;are the items on my panel (a 24px bottom row):&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;panel.png&#34; alt=&#34;Panel ScreenShot&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decoration theme. A practical choice.&lt;/p&gt;
@@ -197,8 +197,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also installed &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this VS Code theme&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;my-obsidian-theme&#34;&gt;My Obsidian theme&lt;/h3&gt;
 &lt;p&gt;Since I couldn&amp;rsquo;t find any good ones for my usecases, I created &lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;my own Obsidian Gruvbox theme&lt;/a&gt; that uses &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal theme&lt;/a&gt; as the base.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Once again, feel free to share your similar projects, and if you have any questions, ask them in the comment section below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once again, feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 
@@ -206,15 +207,15 @@
     </item>
     <item>
       <title>How I Made jopen?</title>
-      <link>http://localhost:1313/posts/how-i-made-jopen/</link>
-      <guid>http://localhost:1313/posts/how-i-made-jopen/</guid>
+      <link>http://localhost:1313/posts/jopen/</link>
+      <guid>http://localhost:1313/posts/jopen/</guid>
       <pubDate>Sun, 06 Jul 2025 18:00:00 &#43;0330</pubDate>
 
 <description>
   
   
   &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s all plain text — future-proof.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s plain text and future-proof.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; workflow&lt;/h1&gt;
@@ -236,8 +237,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;customCSS&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;css/terminal.css&amp;#34;&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;centerTheme&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;showLastUpdated&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Updated on&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# A reference from the movie Star Wars: Episode IV - A New Hope:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;missingContentMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is not the webpage you&amp;#39;re looking for.&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;minuteReadingTime&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min[s] read&amp;#34;&lt;/span&gt;
@@ -388,7 +389,9 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!-- more --&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;Feel free to share your similar projects and if you have any questions, ask them in the comment section below.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 
@@ -404,29 +407,23 @@ I added the following content to the file:&lt;/p&gt;
   
   
   &lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
-&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
-&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;the quick brown fox jumps over the lazy dog&lt;br&gt;
-&lt;del&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;1234567890!?@#$%^&amp;amp;*~()[]{}-=+_.,;&amp;rsquo;&amp;quot;`:&amp;lt;&amp;gt;/|\&lt;/li&gt;
+&lt;li&gt;the quick brown fox jumps over the lazy dog;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;Test URL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;URL&lt;/a&gt; test&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, &lt;code&gt;but there may not be poop without &amp;quot;p&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Checked Item&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Checked Item&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
   &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
   &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
   &amp;#34;age&amp;#34;: 22
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;image-test.jpg&#34; alt=&#34;alt text test&#34; /&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;
 </description>
 
 

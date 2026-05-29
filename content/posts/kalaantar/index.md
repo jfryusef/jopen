@@ -2,11 +2,11 @@
 title = "Setting Up Arch on an Old ThinkPad"
 date = "2026-05-29T18:00:00+03:30"
 lastmod = ""
-dateFormat = "06-01-02" # This value can be configured for per-post date formatting‍
+dateFormat = "06-01-02" # per-post date formatting‍
 author = "yusef"
-authorTwitter = "" #do not include @
+authorTwitter = "" # do not include @
 cover = "cover.jpg"
-tags = ["Software", "Hardware", "Linux", "Arch", "Obsidian", "Gruvbox", "Laptop", "ThinkPad"]
+tags = ["software", "hardware", "linux", "arch", "obsidian", "gruvbox", "laptop", "thinkpad"]
 description = "Breathing new life into a ThinkPad X230 using Arch + XFCE"
 showFullContent = false
 readingTime = true

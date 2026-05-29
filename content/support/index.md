@@ -8,9 +8,9 @@ hideComments = false
 draft = false
 +++
 
-# (Ł) Litecoin (minimum 0.0005 LTC)
+# (Ł) Litecoin
 
-> **Only send from personal wallets (not exchanges)**
+> **0.0005 LTC - only send from personal wallets (not exchanges)**
 
 ```
 ltc1q2u7gzswvftusppj566a86nwkgx548gqpa7kny8

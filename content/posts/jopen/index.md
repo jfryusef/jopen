@@ -6,7 +6,7 @@ dateFormat = "06-01-02" # This value can be configured for per-post date formatt
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["Software", "Markdown", "Obsidian", "Git", "GitHub", "Blog", "Hugo", "jopen"]
+tags = ["software", "markdown", "obsidian", "git", "github", "blog", "hugo", "jopen"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
@@ -48,13 +48,14 @@ And here's the list of changes I made to the `/themes/terminal/config.toml` file
 [params]
 customCSS = ["css/terminal.css"]
 centerTheme = true
-showLastUpdated = true
+showLastUpdated = false
 updatedDatePrefix = "@"
-readMore = ">"
+readMore = "Read →"
 # A reference from the movie Star Wars: Episode IV - A New Hope:
 missingContentMessage = "This is not the webpage you're looking for."
-minuteReadingTime = "min[s] read"
-words = "word[s]"
+missingBackButtonLabel = "Homepage"
+minuteReadingTime = "minutes"
+words = "words"
 
 [params.logo]
 logoText = "jopen"
@@ -123,21 +124,19 @@ And here is the list of the community plugins that I use:
 And here's the metadata (frontmatter) for this post:
 
 ```toml
-+++
 title = "How I made jopen?"
-date = "2025-06-20T13:41:37+03:30"
-lastmod = "2025-07-19"
-# This value can be configured for per-post date formatting‍:
-#dateFormat = "2006-01-02"
+date = "2025-06-20T18:00:00+03:30"
+lastmod = "2026-05-30"
+# per-post date formatting‍:
+dateFormat = "06-01-02"
 author = "yusef"
 cover = ""
-tags = ["jopen", "Markdown", "Obsidian", "Git", "GitHub", "Hugo", "Website", "Software"]
+tags = ["software", "markdown", "obsidian", "git", "github", "blog", "hugo", "jopen"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
 readingTime = true
 # Until the post is finished:
 draft = true
-+++
 ```
 
 ## F. Enabling Giscus
@@ -219,21 +218,32 @@ I created `content/_index.md` with this content:
 
 ```markdown
 ---
+
 title: ""
----
 
 ---
 
-## Welcome to my little corner of the Internet =)
+---
 
-jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!  
-I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made jopen, _to learn in public._
+
+      ██╗ ██████╗ ██████╗ ███████╗███╗   ██╗
+      ██║██╔═══██╗██╔══██╗██╔════╝████╗  ██║
+      ██║██║   ██║██████╔╝█████╗  ██╔██╗ ██║
+ ██   ██║██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║
+ ╚█████╔╝╚██████╔╝██║     ███████╗██║ ╚████║
+  ╚════╝  ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝
+
+
+# Welcome to my little corner of the Internet =)
+
+jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!
+
+I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made jopen, *to learn in public.*
 
 ---
 
 <!-- more -->
-```
 
----
+```
 
 > Feel free to share similar projects.

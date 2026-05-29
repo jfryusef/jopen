@@ -8,8 +8,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <item>
       <title>Setting Up Arch on an Old ThinkPad</title>
-      <link>http://localhost:1313/posts/x230/</link>
-      <guid>http://localhost:1313/posts/x230/</guid>
+      <link>http://localhost:1313/posts/kalantaar/</link>
+      <guid>http://localhost:1313/posts/kalantaar/</guid>
       <pubDate>Fri, 29 May 2026 18:00:00 &#43;0330</pubDate>
 
 <description>
@@ -197,8 +197,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also installed &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this VS Code theme&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;my-obsidian-theme&#34;&gt;My Obsidian theme&lt;/h3&gt;
 &lt;p&gt;Since I couldn&amp;rsquo;t find any good ones for my usecases, I created &lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;my own Obsidian Gruvbox theme&lt;/a&gt; that uses &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal theme&lt;/a&gt; as the base.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Once again, feel free to share similar projects and ask questions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once again, feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 
@@ -206,15 +207,15 @@
     </item>
     <item>
       <title>How I Made jopen?</title>
-      <link>http://localhost:1313/posts/how-i-made-jopen/</link>
-      <guid>http://localhost:1313/posts/how-i-made-jopen/</guid>
+      <link>http://localhost:1313/posts/jopen/</link>
+      <guid>http://localhost:1313/posts/jopen/</guid>
       <pubDate>Sun, 06 Jul 2025 18:00:00 &#43;0330</pubDate>
 
 <description>
   
   
   &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s all plain text — future-proof.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s plain text and future-proof.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; workflow&lt;/h1&gt;
@@ -388,7 +389,9 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!-- more --&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;p&gt;Feel free to share similar projects and ask questions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Feel free to share similar projects.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
 

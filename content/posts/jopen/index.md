@@ -16,7 +16,7 @@ draft = false
 
 jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, _To Learn In Public_.
 
-I don't like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (~~Obsidian~~ VS Code). Plus, it’s all plain text — future-proof.
+I don't like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (~~Obsidian~~ VS Code). Plus, it’s plain text and future-proof.
 
 Here's how I made it:
 
@@ -24,7 +24,7 @@ Here's how I made it:
 
 # Tools & workflow
 
-- [~Obsidian~](https://obsidian.md/) for writing posts & local Markdown management
+- [~~Obsidian~~](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
 - [Hugo](https://gohugo.io/) (with [Terminal](https://github.com/panr/hugo-theme-terminal/) theme) as the static site generator
 - [Cloudflare Pages](https://pages.cloudflare.com/) for free, automated deployment
@@ -236,4 +236,4 @@ I wanted to take notes on the process of my projects, and there was [no reason t
 
 ---
 
-Feel free to share similar projects and ask questions.
+> Feel free to share similar projects.

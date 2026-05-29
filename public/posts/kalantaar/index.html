@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Setting Up Arch on an Old ThinkPad :: jopen</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Breathing new life into a ThinkPad X230 using Arch &#43; XFCE" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/kalantaar/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.8c9933e331d7110a0f9acb75a25892d17384b06d39ea606c8d8cddc6a885a130.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.fe8dc560fccb53a458b0db19ccb7b265764ac46b68596b7e099c6793054dd457.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.136d113ee85227457ab6b7b701621d8cc2fad8abe89578a9e3c20f51492ffe1f.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.fc74ca360273c1d828da3c02b8174eba435607b369d98418ccc6f2243cd4e75d.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.b7ff8844c17a3c7a72fad8daf1be50a1e4d9a6617c1d8f47019c1c2b65405aa3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting Up Arch on an Old ThinkPad">
+<meta property="og:description" content="Breathing new life into a ThinkPad X230 using Arch &#43; XFCE" />
+<meta property="og:url" content="http://localhost:1313/posts/kalantaar/" />
+<meta property="og:site_name" content="jopen" />
+
+  
+  
+    
+  
+  <meta property="og:image" content="http://localhost:1313/posts/kalantaar/cover.jpg">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-05-29 18:00:00 &#43;0330 &#43;0330" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    jopen
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+        
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY">Search</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+        
+          <li><a href="https://www.google.com/search?q=site%3Ajfryusef.link&#43;QUERY" >Search</a></li>
+        
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/kalantaar/">Setting Up Arch on an Old ThinkPad</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-05-29&nbsp;[Updated on 2026-05-29]</time><span class="post-author">yusef</span><span class="post-reading-time">4 min[s] read (814 word[s])</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/software/">Software</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/hardware/">Hardware</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/linux/">Linux</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/arch/">Arch</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/obsidian/">Obsidian</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/gruvbox/">Gruvbox</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/laptop/">Laptop</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/thinkpad/">ThinkPad</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/posts/kalantaar/cover.jpg"
+    class="post-cover"
+    alt="Setting Up Arch on an Old ThinkPad"
+    title="Cover Image" />
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Recently, I bought a used ThinkPad X230 for around $60. It came with a 3rd-gen i7 CPU, 8GB RAM, and a 180GB SSD. Decent specs for a family laptop.</p>
+<p>The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:</p>
+<p><img src="ram-before.jpg" alt="Minimum RAM usage on a fresh install of Windows 10"></p>
+<p>While on Arch + XFCE, it dropped to under 1GB:</p>
+<p><img src="ram-after.jpg" alt="RAM usage on a fresh install of Arch + XFCE"></p>
+<p>Here is how.</p>
+<h1 id="hardware">Hardware<a href="#hardware" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.</p>
+<p><img src="coin-battery-error.jpg" alt="The error I got when trying to boot without the main battery"></p>
+<p>Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)</p>
+<h2 id="let-the-tear-down-begin">Let the tear-down begin<a href="#let-the-tear-down-begin" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><img src="tearup.jpg" alt="In the middle of it tearup"></p>
+<p>I removed the old coin battery and replaced it with a new one:</p>
+<p><img src="new2032.jpg" alt="New coin battery (back)"></p>
+<p>Then I cleaned off the old thermal paste:</p>
+<p><img src="cpu-oldpaste.jpg" alt="Old thermal paste on CPU"></p>
+<p>And replaced it with new paste (probably a little too much):</p>
+<p><img src="cpu-newpaste.jpg" alt="CPU and GPU with the new thermal paste"></p>
+<h1 id="software">Software<a href="#software" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<h2 id="installing-arch">Installing Arch<a href="#installing-arch" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>With the help of the <a href="https://wiki.archlinux.org/">Arch Wiki</a>, I went to <a href="https://archlinux.org/download/">the official Arch Linux download page</a>, picked a mirror close to my location, and downloaded <strong><code>archlinux-2025.08.01-x86_64.iso</code></strong> (around 900MB).</p>
+<p>Then I plugged in a USB drive (8GB was enough) and opened <a href="https://rufus.ie/">Rufus</a> to make it bootable with these settings:</p>
+<ul>
+<li><strong>Device</strong>: my USB stick</li>
+<li><strong>Boot selection</strong>: <code>archlinux-2025.08.01-x86_64.iso</code></li>
+<li><strong>Partition scheme</strong>: <code>GPT</code></li>
+<li><strong>Target system</strong>: <code>UEFI (non-CSM)</code></li>
+</ul>
+<p>Then I clicked <strong>START</strong> and selected <strong>Write in ISO Image Mode (Recommended)</strong></p>
+<p>After that, I switched the BIOS mode from Legacy to UEFI because apparently it&rsquo;s the less painful option nowadays.</p>
+<h3 id="archinstall">archinstall<a href="#archinstall" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>After booting into Arch ISO, I connected to Wi-Fi using the <code>iwctl</code> network configuration tool.</p>
+<p>Then I typed  <code>archinstall</code> to go to the guided installer. Because I&rsquo;m not a wierdo.</p>
+<p>These were my settings:</p>
+<ul>
+<li><strong>Language/keyboard</strong>: en_US (added Persian later)</li>
+<li><strong>mirror regions:</strong>:
+<ul>
+<li><del>Iran</del> (failed at first attempt)</li>
+<li>Germany</li>
+<li>Netherlands</li>
+<li>Sweden</li>
+<li>Finland</li>
+</ul>
+</li>
+</ul>
+<p><img src="archinstall-mirrors.jpg" alt="archinstall mirrors"></p>
+<ul>
+<li><strong>Disk</strong>: selected the 180GB SSD</li>
+<li><strong>Disk layout</strong>: <code>Erase all</code></li>
+<li><strong>Bootloader</strong>: <code>systemd-boot</code></li>
+<li><strong>Filesystem</strong>: <code>ext4</code></li>
+<li><strong>Hostname</strong>: <code>jfryusef</code></li>
+<li><strong>Root password</strong>: I&rsquo;m not gonna tell you that</li>
+<li><strong>User account</strong>: created one and enabled <code>(wheel)</code> (admin)</li>
+<li><strong>Network</strong>: <code>NetworkManager</code></li>
+<li><strong>Kernel</strong>: <code>linux</code></li>
+<li><strong>Microcode</strong>: <code>intel-ucode</code></li>
+<li><strong>Profile</strong>: <code>Desktop</code> → <code>XFCE4</code> (light and stable)</li>
+<li><strong>Audio</strong>: <del><code>pipewire</code></del> (could not get it working at first)</li>
+<li><strong>Optional packages</strong>: <code>firefox</code> and a few others (optional)</li>
+<li><strong>Timezone</strong>: Asia/Tehran</li>
+</ul>
+<p>Then I hit <strong>Install</strong>.</p>
+<p>Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.</p>
+<h3 id="the-hard-freeze-problem">The hard-freeze problem<a href="#the-hard-freeze-problem" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.</p>
+<p>Fix: add this kernel boot parameter: <code>intel_idle.max_cstate=1</code></p>
+<h2 id="installing-stuff">Installing stuff<a href="#installing-stuff" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I opened a terminal and installed these packages:</p>
+<ul>
+<li>
+<p>sudo pacman -S <code>man-db</code> <code>man-pages</code><br>
+(built-in documentation system for commands)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>fwupd</code><br>
+(firmware updater)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>bluez</code> <code>bluez-utils</code><br>
+(Bluetooth stack)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>gvfs</code> <code>gvfs-mtp</code><br>
+(virtual filesystem support + Android MTP support)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>thunar-archive-plugin</code> <code>p7zip</code> <code>unzip</code> <code>unrar</code><br>
+(archive utilities + Thunar integration)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>brightnessctl</code><br>
+(screen brightness utility)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>pipewire</code> <code>pipewire-pulse</code> <code>wireplumber</code><br>
+(Linux audio stack)</p>
+</li>
+<li>
+<p>sudo pacman -S <code>blueman</code><br>
+(GUI Bluetooth manager)</p>
+</li>
+</ul>
+<p>Then I enabled the required services:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl --user enable -- now pipewire pipewire-pulse wireplumber
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable --now bluetooth
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo timedatectl set-ntp true
+</span></span></code></pre></div><p>I also needed an AUR helper, so I installed yay:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S --needed git base-devel
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay.git
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd yay
+</span></span><span style="display:flex;"><span>makepkg -si
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>pacman</th>
+          <th>yay</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>sudo pacman -S firefox</code></td>
+          <td><code>yay -S obsidian</code></td>
+      </tr>
+      <tr>
+          <td><code>sudo pacman -S obs-studio</code></td>
+          <td><code>yay -S anydesk-bin</code></td>
+      </tr>
+      <tr>
+          <td><code>sudo pacman -S qbittorrent</code></td>
+          <td><code>yay -S hiddify-app-bin</code></td>
+      </tr>
+      <tr>
+          <td>&ndash;snip&ndash;</td>
+          <td>&ndash;snip&ndash;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="tweaking-things">Tweaking things<a href="#tweaking-things" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="keyboard-shortcuts">Keyboard shortcuts<a href="#keyboard-shortcuts" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+T</code>: terminal (<code>xfce4-terminal</code>)</li>
+<li><code>Super</code>: application finder (<code>xfce4-appfinder</code>)</li>
+<li><code>Super+E</code>: Thunar (<code>thunar</code>)</li>
+<li><a href="https://en.wikipedia.org/wiki/ThinkVantage_Technologies">ThinkVantage</a> button (<code>Launch1</code>): logout menu (<code>xfce4-session-logout</code>)</li>
+</ul>
+<p>I also changed the volume step size to 10% in <code>xfce4-pulseaudio-plugin</code>.</p>
+<h3 id="workspace-shortcut">Workspace shortcut<a href="#workspace-shortcut" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+1</code>: workspace 1</li>
+<li><code>Alt+2</code>: workspace 2</li>
+<li><code>Alt+3</code>: workspace 3</li>
+<li><code>Alt+4</code>: workspace 4</li>
+</ul>
+<h3 id="winndows-management">Winndows management<a href="#winndows-management" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>Alt+F</code>: maximize window</li>
+<li><code>Alt+Up</code>: tile window to the left</li>
+<li><code>Alt+Down</code>: tile window to the right</li>
+<li><code>Alt+Page Up</code>: tile window to the top-left</li>
+<li><code>Alt+Page Down</code>: tile window to the top-right</li>
+<li><code>Alt+Left</code>: tile window to the bottom-left</li>
+<li><code>Alt+Right</code>: tile window to the bottom-right</li>
+</ul>
+<p>(later regretted using Alt+Left and Alt+Right because they interfere with browser navigation shortcuts. But I kept using them anyway.)</p>
+<h2 id="ricing">Ricing?<a href="#ricing" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>I used <a href="https://github.com/googlefonts/opensans">Open Sans</a> + <a href="https://github.com/JetBrains/JetBrainsMono">JetBrains Mono</a> as my main fonts, and <a href="https://github.com/morhetz/gruvbox">Gruvbox</a> as the primary color palatte using <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">this GTK theme</a>.</p>
+<p>For icons and cursors, I kept the default <code>elementary</code> theme.</p>
+<p>These:</p>
+<p><img src="Screenshot_2025-08-23_02-12-58.png" alt="Panel items"></p>
+<p>are the items on my panel (a 24px bottom row):</p>
+<p><img src="panel.png" alt="Panel ScreenShot"></p>
+<p>I set <code>Smoothwall</code> as my window decoration theme. A practical choice.</p>
+<p>Then I switched my display manager from LightDM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl disable lightdm.service
+</span></span></code></pre></div><p>to Ly (a TUI login manager):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S ly
+</span></span><span style="display:flex;"><span>sudo systemctl enable ly.service
+</span></span></code></pre></div><p>I also installed <a href="https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/">this Gruvbox Firefox theme</a> and <a href="https://github.com/jdinhify/vscode-theme-gruvbox">this VS Code theme</a>.</p>
+<h3 id="my-obsidian-theme">My Obsidian theme<a href="#my-obsidian-theme" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Since I couldn&rsquo;t find any good ones for my usecases, I created <a href="https://github.com/jfryusef/obsidian-gruvbox-aqua">my own Obsidian Gruvbox theme</a> that uses <a href="https://github.com/kepano/obsidian-minimal">Minimal theme</a> as the base.</p>
+<blockquote>
+<p>Once again, feel free to share similar projects.</p>
+</blockquote>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    <script src="https://giscus.app/client.js"
+        data-repo="jfryusef/jopen"
+        data-repo-id="R_kgDOOEtP5w"
+        data-category="Comments"
+        data-category-id="DIC_kwDOOEtP584CoVYP"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="gruvbox_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+</footer>
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

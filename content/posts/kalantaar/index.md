@@ -235,6 +235,4 @@ Since I couldn't find any good ones for my usecases, I created [my own Obsidian 
 
 <!-- TODO: add obsidian-gruvbox-aqua screenshot. -->
 
----
-
-Once again, feel free to share similar projects and ask questions.
+> Once again, feel free to share similar projects.

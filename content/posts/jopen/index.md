@@ -49,8 +49,8 @@ And here's the list of changes I made to the `/themes/terminal/config.toml` file
 customCSS = ["css/terminal.css"]
 centerTheme = true
 showLastUpdated = true
-updatedDatePrefix = "Updated on"
-readMore = "Read"
+updatedDatePrefix = ""
+readMore = ""
 # A reference from the movie Star Wars: Episode IV - A New Hope:
 missingContentMessage = "This is not the webpage you're looking for."
 minuteReadingTime = "min[s] read"

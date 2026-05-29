@@ -2,7 +2,7 @@
 title = "Hello World!"
 date = "2025-03-07T23:59:59+03:30"
 lastmod = "9999-12-31"
-#dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
+#dateFormat = "06-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = "image-test.jpg"

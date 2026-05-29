@@ -2,7 +2,7 @@
 title = "How I Made jopen?"
 date = "2025-07-06T18:00:00+03:30"
 lastmod = "2026-05-29"
-#dateFormat = "2006-01-02" # This value can be configured for per-post date formatting‍
+dateFormat = "06-01-02" # This value can be configured for per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
 cover = ""

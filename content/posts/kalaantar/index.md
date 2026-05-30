@@ -104,8 +104,7 @@ Then I hit **Install**.
 Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.
 
 ### The hard-freeze problem
-Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.
-
+Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.  
 Fix: add this kernel boot parameter: `intel_idle.max_cstate=1`
 
 ## Installing stuff

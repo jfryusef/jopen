@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>9999-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/arch/</loc>
     <lastmod>2026-05-29T18:00:00+03:30</lastmod>
@@ -24,7 +24,7 @@
     <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>9999-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/kalaantar/</loc>
     <lastmod>2026-05-29T18:00:00+03:30</lastmod>
@@ -33,37 +33,37 @@
     <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>9999-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/thinkpad/</loc>
     <lastmod>2026-05-29T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/github/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/jopen/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/jopen/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-06T18:00:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hello-world/</loc>
-    <lastmod>9999-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-07T23:59:59+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tag/</loc>
-    <lastmod>9999-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-07T23:59:59+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>

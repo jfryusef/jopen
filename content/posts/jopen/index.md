@@ -13,8 +13,7 @@ hideComments = false
 draft = false
 +++
 
-jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, _To Learn In Public_.
-
+jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, _To Learn In Public_.  
 I don't like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (~~Obsidian~~ VS Code). Plus, it’s plain text and future-proof.
 
 Here's how I made it:
@@ -231,8 +230,7 @@ title: ""
 
 # Welcome to my little corner of the Internet =)
 
-jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!
-
+jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!  
 I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made this blog, *to learn in public.*
 
 ---

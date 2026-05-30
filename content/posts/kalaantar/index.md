@@ -1,7 +1,6 @@
 +++
 title = "Setting Up Arch on an Old ThinkPad"
 date = "2026-05-29T18:00:00+03:30"
-lastmod = ""
 dateFormat = "06-01-02" # per-post date formatting‍
 author = "yusef"
 authorTwitter = "" # do not include @

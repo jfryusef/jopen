@@ -1,11 +1,10 @@
 +++
 title = "How I Made jopen?"
 date = "2025-07-06T18:00:00+03:30"
-lastmod = "2026-05-29"
-dateFormat = "06-01-02" # This value can be configured for per-post date formatting‍
+dateFormat = "06-01-02" # per-post date formatting‍
 author = "yusef"
 authorTwitter = "" #do not include @
-cover = ""
+cover = "cover.png"
 tags = ["software", "markdown", "obsidian", "git", "github", "blog", "hugo", "jopen"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
@@ -126,11 +125,10 @@ And here's the metadata (frontmatter) for this post:
 ```toml
 title = "How I made jopen?"
 date = "2025-06-20T18:00:00+03:30"
-lastmod = "2026-05-30"
 # per-post date formatting‍:
 dateFormat = "06-01-02"
 author = "yusef"
-cover = ""
+cover = "cover.png"
 tags = ["software", "markdown", "obsidian", "git", "github", "blog", "hugo", "jopen"]
 description = "How I built a blog using just Markdown and Git"
 showFullContent = false
@@ -214,7 +212,7 @@ From now on, cloudflare will forward every email sent to mail@jfryusef.link to m
 
 ## D. Adding an intro card on top of my homepage
 
-I created `content/_index.md` with this content:
+I made a logo using [this ASCII-art generator](https://patorjk.com/software/taag/#p=display&f=Pagga&t=jopen&x=none&w=40) and created `content/_index.md` with this content:
 
 ```markdown
 ---
@@ -225,11 +223,11 @@ title: ""
 
 ---
 
- ░░░▀░░░░░░░░░░░░░░░░░  
- ░▀▀█░█▀█░█▀█░█▀█░█▀█░  
- ░░░█░█░█░█░█░█▀▀░█░█░  
- ░░░█░▀▀▀░█▀▀░▀▀▀░▀░▀░  
- ░▀▀▀░░░░░▀░░░░░░░░░░░
+ ░░░░▀░░░░░░░░░░░░░░░░░░
+ ░░▀▀█░█▀█░█▀█░█▀█░█▀█░░
+ ░░░░█░█░█░█░█░█▀▀░█░█░░
+ ░░░░█░▀▀▀░█▀▀░▀▀▀░▀░▀░░
+ ░░▀▀▀░░░░░▀░░░░░░░░░░░░
 
 # Welcome to my little corner of the Internet =)
 

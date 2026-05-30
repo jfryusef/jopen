@@ -82,7 +82,9 @@
 
   
   
-  <meta property="og:image" content="http://localhost:1313/">
+    
+  
+  <meta property="og:image" content="http://localhost:1313/posts/jopen/cover.png">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -174,7 +176,7 @@
   <h1 class="post-title">
     <a href="http://localhost:1313/posts/jopen/">How I Made jopen?</a>
   </h1>
-  <div class="post-meta"><time class="post-date">25-07-06</time><span class="post-author">yusef</span><span class="post-reading-time">5 minutes (997 words)</span></div>
+  <div class="post-meta"><time class="post-date">25-07-06</time><span class="post-author">yusef</span><span class="post-reading-time">5 minutes (1002 words)</span></div>
 
   
     <span class="post-tags">
@@ -198,6 +200,10 @@
     </span>
   
   
+  <img src="/posts/jopen/cover.png"
+    class="post-cover"
+    alt="How I Made jopen?"
+    title="Cover Image" />
 
 
   
@@ -292,11 +298,10 @@
 <p>And here&rsquo;s the metadata (frontmatter) for this post:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;How I made jopen?&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">&#34;2025-06-20T18:00:00+03:30&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lastmod</span> = <span style="color:#e6db74">&#34;2026-05-30&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># per-post date formatting‍:</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">dateFormat</span> = <span style="color:#e6db74">&#34;06-01-02&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;yusef&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cover</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cover</span> = <span style="color:#e6db74">&#34;cover.png&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#34;software&#34;</span>, <span style="color:#e6db74">&#34;markdown&#34;</span>, <span style="color:#e6db74">&#34;obsidian&#34;</span>, <span style="color:#e6db74">&#34;git&#34;</span>, <span style="color:#e6db74">&#34;github&#34;</span>, <span style="color:#e6db74">&#34;blog&#34;</span>, <span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;jopen&#34;</span>]
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;How I built a blog using just Markdown and Git&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">showFullContent</span> = <span style="color:#66d9ef">false</span>
@@ -361,7 +366,7 @@ I added the following content to the file:</p>
 </span></span></code></pre></div><h2 id="c-using-cloudflare-email-routing">C. Using Cloudflare Email Routing<a href="#c-using-cloudflare-email-routing" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>From now on, cloudflare will forward every email sent to <a href="mailto:mail@jfryusef.link">mail@jfryusef.link</a> to my main Gmail inbox. This way people can&rsquo;t see my actual email address until I answer them.</p>
 <h2 id="d-adding-an-intro-card-on-top-of-my-homepage">D. Adding an intro card on top of my homepage<a href="#d-adding-an-intro-card-on-top-of-my-homepage" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>I created <code>content/_index.md</code> with this content:</p>
+<p>I made a logo using <a href="https://patorjk.com/software/taag/#p=display&amp;f=Pagga&amp;t=jopen&amp;x=none&amp;w=40">this ASCII-art generator</a> and created <code>content/_index.md</code> with this content:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>title: &#34;&#34;
@@ -370,11 +375,11 @@ I added the following content to the file:</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> ░░░▀░░░░░░░░░░░░░░░░░  
-</span></span><span style="display:flex;"><span> ░▀▀█░█▀█░█▀█░█▀█░█▀█░  
-</span></span><span style="display:flex;"><span> ░░░█░█░█░█░█░█▀▀░█░█░  
-</span></span><span style="display:flex;"><span> ░░░█░▀▀▀░█▀▀░▀▀▀░▀░▀░  
-</span></span><span style="display:flex;"><span> ░▀▀▀░░░░░▀░░░░░░░░░░░
+</span></span><span style="display:flex;"><span> ░░░░▀░░░░░░░░░░░░░░░░░░
+</span></span><span style="display:flex;"><span> ░░▀▀█░█▀█░█▀█░█▀█░█▀█░░
+</span></span><span style="display:flex;"><span> ░░░░█░█░█░█░█░█▀▀░█░█░░
+</span></span><span style="display:flex;"><span> ░░░░█░▀▀▀░█▀▀░▀▀▀░▀░▀░░
+</span></span><span style="display:flex;"><span> ░░▀▀▀░░░░░▀░░░░░░░░░░░░
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Welcome to my little corner of the Internet =)
 </span></span><span style="display:flex;"><span>

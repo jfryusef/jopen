@@ -81,8 +81,8 @@
 &lt;p&gt;Then I hit &lt;strong&gt;Install&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Once the installation finished, I rebooted the system and removed the USB drive. XFCE booted correctly and I could log in immediately.&lt;/p&gt;
 &lt;h3 id=&#34;the-hard-freeze-problem&#34;&gt;The hard-freeze problem&lt;/h3&gt;
-&lt;p&gt;Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.&lt;/p&gt;
-&lt;p&gt;Fix: add this kernel boot parameter: &lt;code&gt;intel_idle.max_cstate=1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Appearently, sometimes some old ThinkPads on modern Linux kernels hard-freeze because of aggressive C-states. Mine had it too.&lt;br&gt;
+Fix: add this kernel boot parameter: &lt;code&gt;intel_idle.max_cstate=1&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;installing-stuff&#34;&gt;Installing stuff&lt;/h2&gt;
 &lt;p&gt;I opened a terminal and installed these packages:&lt;/p&gt;
 &lt;ul&gt;
@@ -214,8 +214,8 @@
 <description>
   
   
-  &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s plain text and future-proof.&lt;/p&gt;
+  &lt;p&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, jopen itself is one of them! I wanted to take notes on the process of my projects, and there was no reason to keep them private. So, I made this blog, &lt;em&gt;To Learn In Public&lt;/em&gt;.&lt;br&gt;
+I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, and lets me focus on writing in a tool I already use (&lt;del&gt;Obsidian&lt;/del&gt; VS Code). Plus, it’s plain text and future-proof.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how I made it:&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; workflow&lt;/h1&gt;
@@ -388,8 +388,7 @@ I added the following content to the file:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Welcome to my little corner of the Internet =)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, [&lt;span style=&#34;color:#f92672&#34;&gt;jopen itself is one of them&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://jfryusef.link/posts/how-i-made-jopen/&lt;/span&gt;)!
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;jopen is a blog about mostly tech-related projects I do for fun. In fact, [&lt;span style=&#34;color:#f92672&#34;&gt;jopen itself is one of them&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://jfryusef.link/posts/how-i-made-jopen/&lt;/span&gt;)!  
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;I wanted to take notes on the process of my projects, and there was [&lt;span style=&#34;color:#f92672&#34;&gt;no reason to keep them private&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;https://github.com/jfryusef/jopen&lt;/span&gt;). So, I made this blog, &lt;span style=&#34;font-style:italic&#34;&gt;*to learn in public.*&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---

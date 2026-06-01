@@ -19,11 +19,11 @@
 &lt;p&gt;The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ram-before.jpg&#34; alt=&#34;Minimum RAM usage on a fresh install of Windows 10&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;While on Arch + XFCE, it dropped to under 1GB:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ram-after.jpg&#34; alt=&#34;RAM usage on a fresh install of Arch + XFCE&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ram-after.jpg&#34; alt=&#34;RAM usage of Arch + XFCE&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Here is how.&lt;/p&gt;
 &lt;h1 id=&#34;hardware&#34;&gt;Hardware&lt;/h1&gt;
 &lt;p&gt;Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;The error I got when trying to boot without the main battery&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coin-battery-error.jpg&#34; alt=&#34;Real Time Clock Error&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)&lt;/p&gt;
 &lt;h2 id=&#34;let-the-tear-down-begin&#34;&gt;Let the tear-down begin&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;tearup.jpg&#34; alt=&#34;In the middle of it tearup&#34; /&gt;&lt;/p&gt;
@@ -128,7 +128,8 @@ Fix: add this kernel boot parameter: &lt;code&gt;intel_idle.max_cstate=1&lt;/cod
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://aur.archlinux.org/yay.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd yay
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;makepkg -si
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example packages that I&amp;rsquo;ve installed using &lt;code&gt;pacman&lt;/code&gt; vs &lt;code&gt;yay&lt;/code&gt;:&lt;/p&gt;
+&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;pacman&lt;/th&gt;
@@ -187,16 +188,16 @@ Fix: add this kernel boot parameter: &lt;code&gt;intel_idle.max_cstate=1&lt;/cod
 &lt;p&gt;These:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;panel-items.png&#34; alt=&#34;Panel items&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;are the items on my panel (a 24px bottom row):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;panel.png&#34; alt=&#34;Panel ScreenShot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panel.png&#34; alt=&#34;Panel screenshot&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I set &lt;code&gt;Smoothwall&lt;/code&gt; as my window decoration theme. A practical choice.&lt;/p&gt;
 &lt;p&gt;Then I switched my display manager from LightDM:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl disable lightdm.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to Ly (a TUI login manager):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ly
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ly.service
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also installed &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this VS Code theme&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I also installed &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/&#34;&gt;this Gruvbox Firefox theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/jdinhify/vscode-theme-gruvbox&#34;&gt;this Gruvbox VS Code theme&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;my-obsidian-theme&#34;&gt;My Obsidian theme&lt;/h3&gt;
-&lt;p&gt;Since I couldn&amp;rsquo;t find any good ones for my usecases, I created &lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;my own Obsidian Gruvbox theme&lt;/a&gt; that uses &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal theme&lt;/a&gt; as the base.&lt;/p&gt;
+&lt;p&gt;Since I couldn&amp;rsquo;t find any good ones for my usecases, I created &lt;a href=&#34;https://github.com/jfryusef/obsidian-gruvbox-aqua&#34;&gt;my own Gruvbox Obsidian theme&lt;/a&gt; that uses the &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal theme&lt;/a&gt; as the base.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Once again, feel free to share similar projects.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -222,7 +223,7 @@ I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, a
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://obsidian.md/&#34;&gt;&lt;del&gt;Obsidian&lt;/del&gt;&lt;/a&gt; for writing posts &amp;amp; local Markdown management&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for cloud-based version control + repo hosting&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; (with &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/&#34;&gt;Terminal&lt;/a&gt; theme) as the static site generator&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; (with &lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/&#34;&gt;Terminal theme&lt;/a&gt;) as the static site generator&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://pages.cloudflare.com/&#34;&gt;Cloudflare Pages&lt;/a&gt; for free, automated deployment&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://giscus.app/&#34;&gt;Giscus&lt;/a&gt; to integrate a comment system via &lt;a href=&#34;https://github.com/features/discussions&#34;&gt;GitHub Discussions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -272,7 +273,7 @@ I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, a
 &lt;h2 id=&#34;d-deploying-via-cloudflare-pages&#34;&gt;D. Deploying via Cloudflare Pages&lt;/h2&gt;
 &lt;p&gt;Added &lt;code&gt;jfryusef.link&lt;/code&gt; and &lt;code&gt;www.jfryusef.link&lt;/code&gt; as two custom domains.&lt;/p&gt;
 &lt;h2 id=&#34;e-setting-up-obsidian&#34;&gt;&lt;del&gt;E. Setting up Obsidian&lt;/del&gt;&lt;/h2&gt;
-&lt;p&gt;I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn&amp;rsquo;t make the &lt;a href=&#34;https://github.com/Vinzent03/obsidian-git&#34;&gt;Git plugin&lt;/a&gt; to work properly.&lt;/p&gt;
+&lt;p&gt;I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn&amp;rsquo;t make the &lt;a href=&#34;https://github.com/Vinzent03/obsidian-git&#34;&gt;Git Obsidian-plugin&lt;/a&gt; to work properly.&lt;/p&gt;
 &lt;p&gt;Here is the list of all the core plugins that are enabled in my vault:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Backlinks&lt;/li&gt;
@@ -294,12 +295,12 @@ I don&amp;rsquo;t like bloated CMSs. This stack is [almost] free, open-source, a
 &lt;/ul&gt;
 &lt;p&gt;And here is the list of the community plugins that I use:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mgmeyers/obsidian-style-settings&#34;&gt;Style Settings&lt;/a&gt; - to control and adjust theme, plugin, and snippet CSS variables&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/kepano/obsidian-minimal-settings&#34;&gt;Minimal Theme Settings&lt;/a&gt; - to change the colors, fonts and features of &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ozntel/file-explorer-note-count&#34;&gt;File Explorer Note Count&lt;/a&gt; - to see the number of notes under each folder within the file explorer&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/javalent/settings-search&#34;&gt;Settings Search&lt;/a&gt; - to globally search settings in Obsidian&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mgmeyers/obsidian-style-settings&#34;&gt;Style Settings plugin&lt;/a&gt; - to control and adjust theme, plugin, and snippet CSS variables&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kepano/obsidian-minimal-settings&#34;&gt;Minimal Theme Settings plugin&lt;/a&gt; - to change the colors, fonts and features of &lt;a href=&#34;https://github.com/kepano/obsidian-minimal&#34;&gt;Minimal Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ozntel/file-explorer-note-count&#34;&gt;File Explorer Note Count plugin&lt;/a&gt; - to see the number of notes under each folder within the file explorer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/javalent/settings-search&#34;&gt;Settings Search plugin&lt;/a&gt; - to globally search settings in Obsidian&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;jopen-obsidian-vault.jpg&#34; alt=&#34;jopen&amp;rsquo;s Obsidian vault screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jopen-obsidian-vault.jpg&#34; alt=&#34;Vault screenshot&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here&amp;rsquo;s the metadata (frontmatter) for this post:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How I made jopen?&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-06-20T18:00:00+03:30&amp;#34;&lt;/span&gt;
@@ -404,8 +405,8 @@ I added the following content to the file:&lt;/p&gt;
     </item>
     <item>
       <title>Hello World!</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <link>http://localhost:1313/posts/test/</link>
+      <guid>http://localhost:1313/posts/test/</guid>
       <pubDate>Fri, 07 Mar 2025 23:59:59 &#43;0330</pubDate>
 
 <description>
@@ -415,7 +416,7 @@ I added the following content to the file:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jfryusef.link&#34;&gt;URL&lt;/a&gt; test&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jfryusef/jopen&#34;&gt;URL test&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, &lt;code&gt;but there may not be poop without &amp;quot;p&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;

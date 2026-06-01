@@ -18,7 +18,7 @@ draft = false
 
 1. the quick brown fox jumps over the lazy dog;
 
-[URL](https://www.jfryusef.link) test
+[URL test](https://github.com/jfryusef/jopen)
 
 > There is **pee** without _poop_, `but there may not be poop without "p"`.
 

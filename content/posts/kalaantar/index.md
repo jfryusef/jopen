@@ -21,7 +21,7 @@ The previous owner had a fresh install of Windows 10 on it, and idle RAM usage w
 
 While on Arch + XFCE, it dropped to under 1GB:
 
-![RAM usage on a fresh install of Arch + XFCE](ram-after.jpg)
+![RAM usage of Arch + XFCE](ram-after.jpg)
 
 Here is how.
 
@@ -29,7 +29,7 @@ Here is how.
 
 Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.
 
-![The error I got when trying to boot without the main battery](coin-battery-error.jpg)
+![Real Time Clock Error](coin-battery-error.jpg)
 
 Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)
 
@@ -157,6 +157,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+Example packages that I've installed using `pacman` vs `yay`:
 
 | pacman | yay |
 | - | - |
@@ -208,7 +209,7 @@ These:
 
  are the items on my panel (a 24px bottom row):
 
-![Panel ScreenShot](panel.png)
+![Panel screenshot](panel.png)
 
 I set `Smoothwall` as my window decoration theme. A practical choice.
 
@@ -225,11 +226,11 @@ sudo pacman -S ly
 sudo systemctl enable ly.service
 ```
 
-I also installed [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/) and [this VS Code theme](https://github.com/jdinhify/vscode-theme-gruvbox).
+I also installed [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/) and [this Gruvbox VS Code theme](https://github.com/jdinhify/vscode-theme-gruvbox).
 
 ###  My Obsidian theme
 
-Since I couldn't find any good ones for my usecases, I created [my own Obsidian Gruvbox theme](https://github.com/jfryusef/obsidian-gruvbox-aqua) that uses [Minimal theme](https://github.com/kepano/obsidian-minimal) as the base.
+Since I couldn't find any good ones for my usecases, I created [my own Gruvbox Obsidian theme](https://github.com/jfryusef/obsidian-gruvbox-aqua) that uses the [Minimal theme](https://github.com/kepano/obsidian-minimal) as the base.
 
 <!-- TODO: add obsidian-gruvbox-aqua screenshot. -->
 

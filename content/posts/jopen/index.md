@@ -24,7 +24,7 @@ Here's how I made it:
 
 - [~~Obsidian~~](https://obsidian.md/) for writing posts & local Markdown management
 - [GitHub](https://github.com/) for cloud-based version control + repo hosting
-- [Hugo](https://gohugo.io/) (with [Terminal](https://github.com/panr/hugo-theme-terminal/) theme) as the static site generator
+- [Hugo](https://gohugo.io/) (with [Terminal theme](https://github.com/panr/hugo-theme-terminal/)) as the static site generator
 - [Cloudflare Pages](https://pages.cloudflare.com/) for free, automated deployment
 - [Giscus](https://giscus.app/) to integrate a comment system via [GitHub Discussions](https://github.com/features/discussions)
 
@@ -89,7 +89,7 @@ Added `jfryusef.link` and `www.jfryusef.link` as two custom domains.
 
 ## ~~E. Setting up Obsidian~~
 
-I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git plugin](https://github.com/Vinzent03/obsidian-git) to work properly.
+I merged the Obsidian vault root and local files of Hugo, and every once in a while, I push its content to GitHub to sync manually because I couldn't make the [Git Obsidian-plugin](https://github.com/Vinzent03/obsidian-git) to work properly.
 
 Here is the list of all the core plugins that are enabled in my vault:
 
@@ -112,12 +112,12 @@ Here is the list of all the core plugins that are enabled in my vault:
 
 And here is the list of the community plugins that I use:
 
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) - to control and adjust theme, plugin, and snippet CSS variables
-- [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings) - to change the colors, fonts and features of [Minimal Theme](https://github.com/kepano/obsidian-minimal)
-- [File Explorer Note Count](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
-- [Settings Search](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
+- [Style Settings plugin](https://github.com/mgmeyers/obsidian-style-settings) - to control and adjust theme, plugin, and snippet CSS variables
+- [Minimal Theme Settings plugin](https://github.com/kepano/obsidian-minimal-settings) - to change the colors, fonts and features of [Minimal Theme](https://github.com/kepano/obsidian-minimal)
+- [File Explorer Note Count plugin](https://github.com/ozntel/file-explorer-note-count) - to see the number of notes under each folder within the file explorer
+- [Settings Search plugin](https://github.com/javalent/settings-search) - to globally search settings in Obsidian
 
-![jopen's Obsidian vault screenshot](jopen-obsidian-vault.jpg)
+![Vault screenshot](jopen-obsidian-vault.jpg)
 
 And here's the metadata (frontmatter) for this post:
 

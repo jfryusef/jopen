@@ -176,7 +176,7 @@
   <h1 class="post-title">
     <a href="http://localhost:1313/posts/kalaantar/">Setting Up Arch on an Old ThinkPad</a>
   </h1>
-  <div class="post-meta"><time class="post-date">26-05-29</time><span class="post-author">yusef</span><span class="post-reading-time">4 minutes (814 words)</span></div>
+  <div class="post-meta"><time class="post-date">26-05-29</time><span class="post-author">yusef</span><span class="post-reading-time">4 minutes (825 words)</span></div>
 
   
     <span class="post-tags">
@@ -213,11 +213,11 @@
 <p>The previous owner had a fresh install of Windows 10 on it, and idle RAM usage was over 2GB:</p>
 <p><img src="ram-before.jpg" alt="Minimum RAM usage on a fresh install of Windows 10"></p>
 <p>While on Arch + XFCE, it dropped to under 1GB:</p>
-<p><img src="ram-after.jpg" alt="RAM usage on a fresh install of Arch + XFCE"></p>
+<p><img src="ram-after.jpg" alt="RAM usage of Arch + XFCE"></p>
 <p>Here is how.</p>
 <h1 id="hardware">Hardware<a href="#hardware" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <p>Bofor installing Linux, I wanted to replace the thermal paste on the CPU and also swap the coin battery. This way, booting without the main battery (which was the upgraded 9-cell version, but completely dead anyway) would not require  manually setting the date and time every time.</p>
-<p><img src="coin-battery-error.jpg" alt="The error I got when trying to boot without the main battery"></p>
+<p><img src="coin-battery-error.jpg" alt="Real Time Clock Error"></p>
 <p>Alright, you got me. I had no reason to tear the whole thing apart. I just wanted to =)</p>
 <h2 id="let-the-tear-down-begin">Let the tear-down begin<a href="#let-the-tear-down-begin" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><img src="tearup.jpg" alt="In the middle of it tearup"></p>
@@ -322,7 +322,8 @@ Fix: add this kernel boot parameter: <code>intel_idle.max_cstate=1</code></p>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay.git
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd yay
 </span></span><span style="display:flex;"><span>makepkg -si
-</span></span></code></pre></div><table>
+</span></span></code></pre></div><p>Example packages that I&rsquo;ve installed using <code>pacman</code> vs <code>yay</code>:</p>
+<table>
   <thead>
       <tr>
           <th>pacman</th>
@@ -381,16 +382,16 @@ Fix: add this kernel boot parameter: <code>intel_idle.max_cstate=1</code></p>
 <p>These:</p>
 <p><img src="panel-items.png" alt="Panel items"></p>
 <p>are the items on my panel (a 24px bottom row):</p>
-<p><img src="panel.png" alt="Panel ScreenShot"></p>
+<p><img src="panel.png" alt="Panel screenshot"></p>
 <p>I set <code>Smoothwall</code> as my window decoration theme. A practical choice.</p>
 <p>Then I switched my display manager from LightDM:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl disable lightdm.service
 </span></span></code></pre></div><p>to Ly (a TUI login manager):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S ly
 </span></span><span style="display:flex;"><span>sudo systemctl enable ly.service
-</span></span></code></pre></div><p>I also installed <a href="https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/">this Gruvbox Firefox theme</a> and <a href="https://github.com/jdinhify/vscode-theme-gruvbox">this VS Code theme</a>.</p>
+</span></span></code></pre></div><p>I also installed <a href="https://addons.mozilla.org/en-US/firefox/addon/gruvboxgruvboxgruvboxgruvboxgr/">this Gruvbox Firefox theme</a> and <a href="https://github.com/jdinhify/vscode-theme-gruvbox">this Gruvbox VS Code theme</a>.</p>
 <h3 id="my-obsidian-theme">My Obsidian theme<a href="#my-obsidian-theme" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>Since I couldn&rsquo;t find any good ones for my usecases, I created <a href="https://github.com/jfryusef/obsidian-gruvbox-aqua">my own Obsidian Gruvbox theme</a> that uses <a href="https://github.com/kepano/obsidian-minimal">Minimal theme</a> as the base.</p>
+<p>Since I couldn&rsquo;t find any good ones for my usecases, I created <a href="https://github.com/jfryusef/obsidian-gruvbox-aqua">my own Gruvbox Obsidian theme</a> that uses the <a href="https://github.com/kepano/obsidian-minimal">Minimal theme</a> as the base.</p>
 <blockquote>
 <p>Once again, feel free to share similar projects.</p>
 </blockquote>

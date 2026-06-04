@@ -230,7 +230,7 @@ I also installed [this Gruvbox Firefox theme](https://addons.mozilla.org/en-US/f
 
 ###  My Obsidian theme
 
-Since I couldn't find any good ones for my usecases, I created [my own Gruvbox Obsidian theme](https://github.com/jfryusef/obsidian-gruvbox-aqua) that uses the [Minimal theme](https://github.com/kepano/obsidian-minimal) as the base.
+Since I couldn't find any good ones for my usecases, I created [my own Gruvbox Obsidian theme](https://github.com/jfryusef/obsidian-gruvbox-aqua) that uses the [Style Settings plugin](https://github.com/kepano/obsidian-minimal) to convert style tweaks to CSS.
 
 <!-- TODO: add obsidian-gruvbox-aqua screenshot. -->
 

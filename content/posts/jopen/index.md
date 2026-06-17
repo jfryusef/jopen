@@ -157,7 +157,8 @@ Nothing special. I just enabled comments in almost every page, because why not?
 	data-loading="lazy"
 	crossorigin="anonymous"
 	async
-></script>
+>
+</script>
 ```
 
 ---
@@ -230,7 +231,7 @@ title: ""
 
 # Welcome to my little corner of the Internet =)
 
-jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/how-i-made-jopen/)!  
+jopen is a blog about mostly tech-related projects I do for fun. In fact, [jopen itself is one of them](https://jfryusef.link/posts/jopen/)!  
 I wanted to take notes on the process of my projects, and there was [no reason to keep them private](https://github.com/jfryusef/jopen). So, I made this blog, *to learn in public.*
 
 ---
@@ -238,6 +239,66 @@ I wanted to take notes on the process of my projects, and there was [no reason t
 <!-- more -->
 
 
+```
+
+## E. `not by AI` badge in the footer
+
+After putting `Written-By-a-Human-Not-AI-Badge-black.svg` in `static/images`, here is the content of my `themes/terminal/layouts/partials/footer.html`:
+
+```html
+<footer class="footer">
+
+  <!-- Comment section: -->
+  <div class="footer__inner">
+    {{ partial "giscus.html" . }}
+  </div>
+
+  <!-- "not by AI" badge: -->
+  <div class="not-by-ai">
+    <a href="https://notbyai.fyi" target="_blank" rel="noopener">
+      <img
+        src="/images/Written-By-a-Human-Not-By-AI-Badge-black.svg"
+        alt="Written by a Human, Not by AI"
+      >
+    </a>
+  </div>
+  
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
+
+{{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
+
+<!-- Extended footer section -->
+{{ partial "extended_footer.html" . }}
+```
+
+## F. [imood](https://www.imood.com) indicator
+
+Edited my `hugo.toml` like this:
+
+```toml
+baseURL = 'https://jfryusef.link/'
+languageCode = 'en-us'
+title = 'jopen'
+theme = 'terminal'
+
+# forcing Hugo to render te HTML:
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
+And added this imood-generated-HTML on top of my About page
+
+```html
+<div class="imood">
+    <a href="https://www.imood.com/users/jfryusef">
+        <img src="https://moods.imood.com/display/uname-jfryusef/fg-ebdbb2/trans-1/imood.gif"
+             alt="The current mood of jfryusef at www.imood.com" border="0">
+    </a>
+</div>
 ```
 
 > Feel free to share similar projects.

@@ -2,3 +2,8 @@ baseURL = 'https://jfryusef.link/'
 languageCode = 'en-us'
 title = 'jopen'
 theme = 'terminal'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

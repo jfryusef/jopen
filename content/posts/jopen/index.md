@@ -241,7 +241,7 @@ I wanted to take notes on the process of my projects, and there was [no reason t
 
 ```
 
-## E. `not by AI` badge in the footer
+## E. ~~not-by-AI badge in the footer~~
 
 After putting `Written-By-a-Human-Not-AI-Badge-black.svg` in `static/images`, here is the content of my `themes/terminal/layouts/partials/footer.html`:
 

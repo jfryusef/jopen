@@ -290,7 +290,7 @@ theme = 'terminal'
     [markup.goldmark.renderer]
       unsafe = true
 ```
-And added this imood-generated-HTML on top of my About page
+~~And added this imood-generated-HTML on top of my About page~~
 
 ```html
 <div class="imood">
@@ -300,5 +300,26 @@ And added this imood-generated-HTML on top of my About page
     </a>
 </div>
 ```
+
+## G. Intranet-ready [support-page](https://jfryusef.link/support/)
+
+Added an extra payment-method as a HTML comment on my support page:
+
+```html
+<!-- intrnaet
+
+# Litecoin 【Ł】
+
+> 0.0005 LTC  
+> **only send from personal wallets (not exchanges)**
+
+`ltc1q2u7gzswvftusppj566a86nwkgx548gqpa7kny8`
+
+![ltc qr-code](ltc.jpg)
+
+-->
+```
+
+This way I can un-comment it right before [my country's Internet-blackouts](https://en.wikipedia.org/wiki/Internet_censorship_in_Iran).
 
 > Feel free to share similar projects.

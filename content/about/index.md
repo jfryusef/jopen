@@ -7,13 +7,6 @@ hideComments = false
 draft = false
 +++
 
-<div class="imood">
-    <a href="https://www.imood.com/users/jfryusef">
-        <img src="https://moods.imood.com/display/uname-jfryusef/fg-ebdbb2/trans-1/imood.gif"
-             alt="The current mood of jfryusef at www.imood.com" border="0">
-    </a>
-</div>
-
 ![A portrait of me](avatar.jpeg)  
 
 # Who am I?

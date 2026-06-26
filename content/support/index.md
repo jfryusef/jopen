@@ -8,9 +8,9 @@ hideComments = false
 draft = false
 +++
 
-# Bitcoin 【₿】
+# Bitcoin (BTC) 【₿】
 
-> BTC
+> BTC Mainnet
 
 ```
 bc1qj2lavszzvd7pnuvkm06stmpktnlvpq2wt2ejxk

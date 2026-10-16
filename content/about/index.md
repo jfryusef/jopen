@@ -10,7 +10,7 @@ draft = false
 ![A portrait of me](avatar.jpeg)  
 
 # Who am I?
-I'm yusef. I was born in 2002, and I’m currently a fifth-grade teacher in Tehran (GMT +03:30). Right now I'm trying to self-study computer science in my free time.
+I'm yusef. I was born in 2002, and I’m currently a sixth-grade teacher in Tehran (GMT +03:30). Right now I'm trying to self-study computer-science in my free time.
 
 ## Contact me
 

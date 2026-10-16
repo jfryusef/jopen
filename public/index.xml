@@ -10,27 +10,38 @@
       <title>making a crappy theft-detector via an old motherbord</title>
       <link>http://localhost:1313/posts/heshmat/</link>
       <guid>http://localhost:1313/posts/heshmat/</guid>
-      <pubDate>Fri, 05 Jun 2026 18:00:00 &#43;0330</pubDate>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 &#43;0330</pubDate>
 
 <description>
   
   
-  &lt;p&gt;nephew story&lt;/p&gt;
-&lt;p&gt;cpu: intel-celeron 2.40ghz/128/400 + new arctic mx-4 thermal-paste (for chipset as well)
+  &lt;p&gt;someone gave me a msi 845pe for free to do whatever i want with it, i decided to install a lightweight linux, plug a web-cam and make it a theft-detector, so when something suddenly moves, a telegram-bot would send me a warning-message.&lt;/p&gt;
+&lt;p&gt;it had a intel-celeron 2.40ghz/128/400 cpu that i renewed its thermal paste with arctic-mx4 alogside its chipset as well.
 &lt;img src=&#34;cpu.jpg&#34; alt=&#34;cpu&#34; /&gt;
-ram: kingston 512mb
+it also had a 512mb kingston ddr1 inside one of its two 1gb-max ram slots. enough for my lightweight task and os.
 &lt;img src=&#34;ram.jpg&#34; alt=&#34;ram&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;power: 220v ac to 300w pc cable
-main 20pin + cpu 4pin
+&lt;p&gt;i bought a power-cord for 2$ to plug its 220v-to-300w power-supply to wall, then connected its main-20pin and cpu-4pin to the motherboard.
 &lt;img src=&#34;20pin.jpg&#34; alt=&#34;20pin&#34; /&gt;
 &lt;img src=&#34;4pin.jpg&#34; alt=&#34;4pin&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;turning it on via short-circuting pwsw in jfp1
+&lt;p&gt;now i can turn it on via short-circuting pwsw in jfp1 using my screw-driver
 &lt;img src=&#34;pwsw.jpg&#34; alt=&#34;pwsw&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;making sure it boots even without an os
-&lt;img src=&#34;boot-fail.jpg&#34; alt=&#34;boot-fail&#34; /&gt;
-using a vga cable + vga to hdmi
+&lt;p&gt;i made sure it boots even without an os using a vga cable + vga to hdmi
 &lt;img src=&#34;vga2hdmi.jpg&#34; alt=&#34;vga2hdmi&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;install linux on a 32gb micro sd-card as the main storage using a caed reader&lt;/p&gt;
+&lt;p&gt;check if the motherborad support booting from usb in bios
+&lt;img src=&#34;usboot.png&#34; alt=&#34;usboot&#34; /&gt;
+i thought id did, but it didnt. only floppy disk&lt;/p&gt;
+&lt;p&gt;buy a used 40gb ide-hdd for 2$ to directly put linux on it
+&lt;img src=&#34;hdd.jpg&#34; alt=&#34;hdd&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;to do that, buy an usb-to-ide cable for 10$ to connect the hdd to laptop.
+also, put it on master-mode&lt;img src=&#34;jumper-guide.jpg&#34; alt=&#34;jumper-guide&#34; /&gt;&lt;img src=&#34;jumper-master.jpg&#34; alt=&#34;jumper-master&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;download antiX-26-Core 32bit and install it permanently onto the hdd. how? by temporarily booting the antiX ISO on the T490:
+first, unmount the USB partitions:
+write the iso on the usb:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[jfryusef@archlinux ~]$ sudo dd if=~/antiX-26_386-core.iso of=/dev/sda bs=4M status=progress conv=fsync
+143+1 records in
+143+1 records out
+602931200 bytes (603 MB, 575 MiB) copied, 120.791 s, 5.0 MB/s
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;i booted the antix linux on the t490&lt;/p&gt;
 
 </description>
 

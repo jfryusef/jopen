@@ -520,19 +520,27 @@ I added the following content to the file:&lt;/p&gt;
   &lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;the quick brown fox jumps over the lazy dog;&lt;/li&gt;
+&lt;li&gt;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/jfryusef/jopen&#34;&gt;URL test&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;foo&lt;/li&gt;
+&lt;li&gt;bar&lt;/li&gt;
+&lt;li&gt;baz&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is &lt;strong&gt;pee&lt;/strong&gt; without &lt;em&gt;poop&lt;/em&gt;, &lt;code&gt;but there may not be poop without &amp;quot;p&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unchecked Item&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;del&gt;Checked Item&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
-  &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
-  &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
-  &amp;#34;age&amp;#34;: 22
+    &amp;#34;firstName&amp;#34;: &amp;#34;yusef&amp;#34;,
+    &amp;#34;lastName&amp;#34;: &amp;#34;jfr&amp;#34;,
+    &amp;#34;birthdate&amp;#34;: 20021215
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
